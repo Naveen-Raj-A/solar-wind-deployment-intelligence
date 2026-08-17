@@ -1,0 +1,278 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-22T14:09:46",
+    "site_information": {
+        "requested_location": "trichy",
+        "resolved_location": "Tiruchirappalli, Tamil Nadu, India",
+        "latitude": 10.8071144,
+        "longitude": 78.6880939,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "trichy",
+                "resolved_location": "Tiruchirappalli, Tamil Nadu, India",
+                "latitude": 10.8071144,
+                "longitude": 78.6880939
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 11.0,
+                "longitude": 78.5,
+                "distance_from_location_km": 29.695177772728936
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.4418,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.64,
+                "maximum_c": 43.99,
+                "minimum_c": 13.61,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 68.62,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.27,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.83,
+                "wind_speed_50m_ms": 5.43,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.09002947807312012,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\trichy\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "trichy",
+                "resolved_location": "Tiruchirappalli, Tamil Nadu, India",
+                "latitude": 10.8071144,
+                "longitude": 78.6880939
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 78.6380939,
+                "south": 10.757114399999999,
+                "east": 78.7380939,
+                "north": 10.8571144
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.678756237030029,
+                "maximum_ms": 6.340541839599609,
+                "mean_ms": 5.894808292388916,
+                "median_ms": 5.86186408996582,
+                "standard_deviation_ms": 0.12588708102703094
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1245,
+                    "percentage": 77.8125
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 355,
+                    "percentage": 22.1875
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.3269689083099365,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\trichy\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\trichy\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "trichy",
+                "resolved_location": "Tiruchirappalli, Tamil Nadu, India",
+                "latitude": 10.8071144,
+                "longitude": 78.6880939
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 78.6380939,
+                "south": 10.757114399999999,
+                "east": 78.7380939,
+                "north": 10.8571144
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.37378494904211,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 48.0,
+                "maximum_m": 113.0,
+                "mean_m": 76.46170524691358,
+                "median_m": 76.0,
+                "standard_deviation_m": 7.0722909261416005
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 28.655734234660155,
+                "mean_degrees": 2.222046836405384,
+                "median_degrees": 2.0893614858240728,
+                "standard_deviation_degrees": 1.59475016305839
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 105234,
+                    "percentage": 81.652066635113
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 22364,
+                    "percentage": 17.352441399430482
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 1179,
+                    "percentage": 0.9147973712184108
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 104,
+                    "percentage": 0.08069459423809561
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.00450803454348,
+                "moderate_terrain_percentage": 0.9147973712184108,
+                "steep_terrain_percentage": 0.08069459423809561
+            },
+            "processing": {
+                "processing_time_seconds": 2.1201000213623047,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\trichy\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\trichy\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\trichy\\srtm_analysis_summary.json"
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+﻿"""
+Unified Analysis Service
+
+Single-responsibility orchestration layer for the complete
+Solar-Wind Deployment Intelligence workflow.
+
+Flow:
+    project/site details
+        -> live data collection
+        -> site evaluation
+        -> scoring
+        -> deployment optimization
+        -> consolidated response
+"""
+
+from __future__ import annotations
+
+from typing import Any
+
+from engine.realtime_pipeline import build_realtime_site_report
+from engine.scoring import calculate_deployment_score
+from engine.optimization import optimize_site
+from engine.ml_integration import apply_ml_prediction
+
+
+class AnalysisService:
+    """
+    Orchestrates the complete analysis workflow.
+
+    Data retrieval remains in realtime_pipeline.py.
+    Scoring remains in scoring.py.
+    Deployment optimization remains in optimization.py.
+    """
+
+    def analyze(
+        self,
+        *,
+        latitude: float,
+        longitude: float,
+        available_land_area_km2: float,
+        used_land_area_km2: float = 0.0,
+        nasa_days: int = 30,
+        osm_radius_m: int = 5000,
+        sentinel_radius_m: int = 500,
+        sentinel_days: int = 30,
+        require_sentinel: bool = False,
+    ) -> dict[str, Any]:
+        """
+        Execute the complete analysis workflow exactly once.
+
+        Returns one consolidated response.
+        """
+
+        self._validate_inputs(
+            latitude=latitude,
+            longitude=longitude,
+            available_land_area_km2=available_land_area_km2,
+            used_land_area_km2=used_land_area_km2,
+            nasa_days=nasa_days,
+            osm_radius_m=osm_radius_m,
+            sentinel_radius_m=sentinel_radius_m,
+            sentinel_days=sentinel_days,
+        )
+
+        # ----------------------------------------------------------
+        # STEP 1 â€” RETRIEVE SITE FEATURES
+        # ----------------------------------------------------------
+
+        report = build_realtime_site_report(
+            latitude=latitude,
+            longitude=longitude,
+            available_land_area_km2=available_land_area_km2,
+            used_land_area_km2=used_land_area_km2,
+            nasa_days=nasa_days,
+            osm_radius_m=osm_radius_m,
+            sentinel_radius_m=sentinel_radius_m,
+            sentinel_days=sentinel_days,
+            require_sentinel=require_sentinel,
+        )
+
+        # ----------------------------------------------------------
+        # STEP 2 â€” EVALUATE SITE / CALCULATE SCORE
+        # ----------------------------------------------------------
+
+        report = apply_ml_prediction(report)
+
+        scoring = calculate_deployment_score(report)
+
+        # ----------------------------------------------------------
+        # STEP 3 â€” PREPARE OPTIMIZATION INPUT
+        # ----------------------------------------------------------
+
+        evaluated_site = {
+            **scoring,
+            "site_information": report["site_information"],
+            "datasets": report["datasets"],
+            "land_area_km2": available_land_area_km2,
+            "used_land_area_km2": used_land_area_km2,
+            "runtime_metadata": report["runtime_metadata"],
+        }
+
+        # ----------------------------------------------------------
+        # STEP 4 â€” DEPLOYMENT RECOMMENDATION
+        # ----------------------------------------------------------
+
+        deployment_plan = optimize_site(evaluated_site)
+
+        # ----------------------------------------------------------
+        # STEP 5 â€” CONSOLIDATED RESPONSE
+        # ----------------------------------------------------------
+
+        return {
+            "status": "success",
+
+            "site": {
+                "latitude": latitude,
+                "longitude": longitude,
+                "available_land_area_km2": (
+                    available_land_area_km2
+                ),
+                "used_land_area_km2": used_land_area_km2,
+                "land_reserve_percent": report[
+                    "site_information"
+                ]["land_reserve_percent"],
+            },
+
+            "solar_features": report["datasets"].get(
+                "nasa_power",
+                {},
+            ).get(
+                "solar_resource",
+                {},
+            ),
+
+            "wind_features": report["datasets"].get(
+                "wind",
+                {},
+            ).get(
+                "wind_speed_statistics",
+                {},
+            ),
+
+            "terrain_features": report["datasets"].get(
+                "srtm",
+                {},
+            ),
+
+            "environmental_features": report["datasets"].get(
+                "sentinel",
+                {},
+            ),
+
+            "infrastructure_features": report["datasets"].get(
+                "osm",
+                {},
+            ),
+
+            "current_conditions": report.get(
+                "current_conditions",
+                {},
+            ),
+
+            "ml_prediction": report.get("ml_prediction", {}),
+
+            "ml_explainability": report.get(
+                "ml_explainability",
+                {},
+            ),
+
+            "evaluation": scoring,
+
+            "deployment_recommendation": deployment_plan,
+
+            "pipeline": {
+                "steps": [
+                    "site_details_received",
+                    "solar_features_retrieved",
+                    "wind_features_retrieved",
+                    "site_evaluated",
+                    "site_score_calculated",
+                    "deployment_recommendation_generated",
+                ],
+                "completed": True,
+            },
+
+            "runtime_metadata": report.get(
+                "runtime_metadata",
+                {},
+            ),
+        }
+
+    @staticmethod
+    def _validate_inputs(
+        *,
+        latitude: float,
+        longitude: float,
+        available_land_area_km2: float,
+        used_land_area_km2: float,
+        nasa_days: int,
+        osm_radius_m: int,
+        sentinel_radius_m: int,
+        sentinel_days: int,
+    ) -> None:
+
+        if not -90.0 <= latitude <= 90.0:
+            raise ValueError(
+                "latitude must be between -90 and 90."
+            )
+
+        if not -180.0 <= longitude <= 180.0:
+            raise ValueError(
+                "longitude must be between -180 and 180."
+            )
+
+        if available_land_area_km2 <= 0:
+            raise ValueError(
+                "available_land_area_km2 must be greater than zero."
+            )
+
+        if used_land_area_km2 < 0:
+            raise ValueError(
+                "used_land_area_km2 cannot be negative."
+            )
+
+        if used_land_area_km2 > available_land_area_km2:
+            raise ValueError(
+                "used_land_area_km2 cannot exceed "
+                "available_land_area_km2."
+            )
+
+        if nasa_days < 1 or nasa_days > 365:
+            raise ValueError(
+                "nasa_days must be between 1 and 365."
+            )
+
+        if osm_radius_m < 100 or osm_radius_m > 50000:
+            raise ValueError(
+                "osm_radius_m must be between 100 and 50000."
+            )
+
+        if sentinel_radius_m < 10 or sentinel_radius_m > 5000:
+            raise ValueError(
+                "sentinel_radius_m must be between 10 and 5000."
+            )
+
+        if sentinel_days < 1 or sentinel_days > 365:
+            raise ValueError(
+                "sentinel_days must be between 1 and 365."
+            )
+
+
+analysis_service = AnalysisService()
+
+

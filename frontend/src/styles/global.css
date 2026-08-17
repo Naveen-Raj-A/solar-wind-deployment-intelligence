@@ -1,0 +1,27 @@
+@import './variables.css';
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-secondary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: var(--font-size-base);
+}
+
+h1 { font-size: var(--h1-size); color: var(--navy-deep); font-weight: 800; margin-bottom: var(--space-16); }
+h2 { font-size: var(--h2-size); color: var(--navy-deep); font-weight: 800; margin-bottom: var(--space-16); }
+h3 { font-size: var(--h3-size); color: var(--navy-deep); font-weight: 800; margin-bottom: var(--space-16); }
+h4 { font-size: var(--h4-size); color: var(--navy-deep); font-weight: 800; margin-bottom: var(--space-16); }
+h5 { font-size: var(--h5-size); color: var(--navy-deep); font-weight: 800; margin-bottom: var(--space-16); }
+h6 { font-size: var(--h6-size); color: var(--navy-deep); font-weight: 800; margin-bottom: var(--space-16); }
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.btn {
+  font-size: var(--font-size-base);
+}

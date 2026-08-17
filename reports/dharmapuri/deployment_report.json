@@ -1,0 +1,415 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-26T16:11:12",
+    "site_information": {
+        "requested_location": "Dharmapuri",
+        "resolved_location": "Dharmapuri, Tamil Nadu, India",
+        "latitude": 12.1456131,
+        "longitude": 78.1132217,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Dharmapuri",
+                "resolved_location": "Dharmapuri, Tamil Nadu, India",
+                "latitude": 12.1456131,
+                "longitude": 78.1132217
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 12.0,
+                "longitude": 78.0,
+                "distance_from_location_km": 20.34035503412202
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.4382,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 25.87,
+                "maximum_c": 43.27,
+                "minimum_c": 10.86,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 68.02,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.38,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.21,
+                "wind_speed_50m_ms": 4.68,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.1883232593536377,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\dharmapuri\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Dharmapuri",
+                "resolved_location": "Dharmapuri, Tamil Nadu, India",
+                "latitude": 12.1456131,
+                "longitude": 78.1132217
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 78.0632217,
+                "south": 12.0956131,
+                "east": 78.1632217,
+                "north": 12.195613100000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.219111919403076,
+                "maximum_ms": 6.140653610229492,
+                "mean_ms": 5.8169097900390625,
+                "median_ms": 5.851187705993652,
+                "standard_deviation_ms": 0.14103607833385468
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1503,
+                    "percentage": 93.9375
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 97,
+                    "percentage": 6.0625
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.29542088508605957,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\dharmapuri\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\dharmapuri\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Dharmapuri",
+                "resolved_location": "Dharmapuri, Tamil Nadu, India",
+                "latitude": 12.1456131,
+                "longitude": 78.1132217
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 78.0632217,
+                "south": 12.0956131,
+                "east": 78.1632217,
+                "north": 12.195613100000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.230060741422378,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 366.0,
+                "maximum_m": 496.0,
+                "mean_m": 458.4491203703704,
+                "median_m": 461.0,
+                "standard_deviation_m": 18.560406572257147
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 26.759056995050763,
+                "mean_degrees": 2.363431566069928,
+                "median_degrees": 2.0913859710834446,
+                "standard_deviation_degrees": 1.8697673156896177
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 102449,
+                    "percentage": 79.491158510564
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 23977,
+                    "percentage": 18.60398351968095
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 2219,
+                    "percentage": 1.721743313599367
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 236,
+                    "percentage": 0.18311465615567848
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 98.09514203024496,
+                "moderate_terrain_percentage": 1.721743313599367,
+                "steep_terrain_percentage": 0.18311465615567848
+            },
+            "processing": {
+                "processing_time_seconds": 3.659245491027832,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\dharmapuri\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\dharmapuri\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\dharmapuri\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Dharmapuri",
+            "total_pixels": 1236463,
+            "valid_pixels": 1206552,
+            "invalid_pixels": 29911,
+            "valid_percentage": 97.58092235675471,
+            "ndvi_statistics": {
+                "minimum": -0.08760806918144226,
+                "maximum": 0.6155875325202942,
+                "mean": 0.16895534098148346,
+                "median": 0.14688988029956818,
+                "standard_deviation": 0.07787540555000305
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4002474844455719,
+                "mean": -0.07038585096597672,
+                "median": -0.08437541127204895,
+                "standard_deviation": 0.07653462141752243
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 29911,
+                    "percentage": 2.419077643245289
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 42372,
+                    "percentage": 3.42687164921231
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 1156760,
+                    "percentage": 93.55395187724986
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 5844,
+                    "percentage": 0.4726384857452265
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 1576,
+                    "percentage": 0.12746034454730956
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "DHARMAPURI",
+                "resolved_location": "Dharmapuri, Tamil Nadu, India",
+                "latitude": 12.1456131,
+                "longitude": 78.1132217
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 78.06727773380128,
+                    "south": 12.10069754125045,
+                    "east": 78.15916566619872,
+                    "north": 12.190528658749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.07193279266357422,
+                "bounding_box_matches": 1346,
+                "features_inside_radius": 857
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 122,
+                    "nearest_distance_km": 1.1068617440854565,
+                    "nearest_feature": {
+                        "feature_id": 9919817,
+                        "osm_id": 767901158,
+                        "osm_type": "way",
+                        "center_latitude": 12.155191421508789,
+                        "center_longitude": 78.11599349975586
+                    }
+                },
+                "road": {
+                    "count": 733,
+                    "nearest_distance_km": 0.21938665759530648,
+                    "nearest_feature": {
+                        "feature_id": 25854960,
+                        "osm_id": 1394878730,
+                        "osm_type": "way",
+                        "center_latitude": 12.146104335784912,
+                        "center_longitude": 78.11126708984375
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 2,
+                    "nearest_distance_km": 1.848753379012097,
+                    "nearest_feature": {
+                        "feature_id": 6322459,
+                        "osm_id": 545359197,
+                        "osm_type": "way",
+                        "center_latitude": 12.159584999084473,
+                        "center_longitude": 78.12244033813477
+                    }
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": false,
+                "nearest_road_distance_km": 0.21938665759530648,
+                "nearest_power_infrastructure_distance_km": 1.848753379012097,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\dharmapuri",
+                "file": "datasets\\openstreetmap\\processed\\dharmapuri\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.3091
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

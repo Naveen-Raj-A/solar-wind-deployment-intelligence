@@ -1,0 +1,419 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-23T09:08:16",
+    "site_information": {
+        "requested_location": "thoothukudi",
+        "resolved_location": "Thoothukudi, Tamil Nadu, India",
+        "latitude": 8.8457035,
+        "longitude": 77.9938178,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "thoothukudi",
+                "resolved_location": "Thoothukudi, Tamil Nadu, India",
+                "latitude": 8.8457035,
+                "longitude": 77.9938178
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 9.0,
+                "longitude": 78.0,
+                "distance_from_location_km": 17.17044675692729
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.5639,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.9,
+                "maximum_c": 40.95,
+                "minimum_c": 17.67,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 73.77,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.88,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.54,
+                "wind_speed_50m_ms": 6.12,
+                "classification_50m": "GOOD",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.1006155014038086,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\thoothukudi\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "thoothukudi",
+                "resolved_location": "Thoothukudi, Tamil Nadu, India",
+                "latitude": 8.8457035,
+                "longitude": 77.9938178
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 77.9438178,
+                "south": 8.7957035,
+                "east": 78.0438178,
+                "north": 8.895703500000002
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 6.569399356842041,
+                "maximum_ms": 7.136772632598877,
+                "mean_ms": 6.879499912261963,
+                "median_ms": 6.889402389526367,
+                "standard_deviation_ms": 0.1167617067694664
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.3234236240386963,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\thoothukudi\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\thoothukudi\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "thoothukudi",
+                "resolved_location": "Thoothukudi, Tamil Nadu, India",
+                "latitude": 8.8457035,
+                "longitude": 77.9938178
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 2,
+                "intersecting_tiles": [
+                    "srtm_S8.5_N10.5_W76.0_E78.0.tif",
+                    "srtm_S8.5_N10.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 77.9438178,
+                "south": 8.7957035,
+                "east": 78.0438178,
+                "north": 8.895703500000002
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.55443435770357,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 5.0,
+                "maximum_m": 58.0,
+                "mean_m": 34.838032407407404,
+                "median_m": 35.0,
+                "standard_deviation_m": 6.745693149473299
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 17.18658374147397,
+                "mean_degrees": 1.912519022413062,
+                "median_degrees": 1.8745342972231023,
+                "standard_deviation_degrees": 1.1276604769000833
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 113470,
+                    "percentage": 88.0424577711222
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 15327,
+                    "percentage": 11.89236582583934
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 81,
+                    "percentage": 0.06284867435851678
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 3,
+                    "percentage": 0.0023277286799450654
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.93482359696154,
+                "moderate_terrain_percentage": 0.06284867435851678,
+                "steep_terrain_percentage": 0.0023277286799450654
+            },
+            "processing": {
+                "processing_time_seconds": 5.316643714904785,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\thoothukudi\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\thoothukudi\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\thoothukudi\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "thoothukudi",
+            "total_pixels": 1240987,
+            "valid_pixels": 1219008,
+            "invalid_pixels": 21979,
+            "valid_percentage": 98.2289097307224,
+            "ndvi_statistics": {
+                "minimum": -0.15831662714481354,
+                "maximum": 0.7165876626968384,
+                "mean": 0.1345089226961136,
+                "median": 0.11273996531963348,
+                "standard_deviation": 0.07393784821033478
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.35672515630722046,
+                "mean": -0.08019863814115524,
+                "median": -0.08395763486623764,
+                "standard_deviation": 0.06704024225473404
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 21979,
+                    "percentage": 1.7710902692775994
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 820,
+                    "percentage": 0.06607643754527645
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 34668,
+                    "percentage": 2.793582849780054
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 1179672,
+                    "percentage": 95.05917467306266
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 4,
+                    "percentage": 0.00032232408558671445
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 3844,
+                    "percentage": 0.30975344624883255
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "THOOTHUKUDI",
+                "resolved_location": "Thoothukudi, Tamil Nadu, India",
+                "latitude": 8.8457035,
+                "longitude": 77.9938178
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 77.94836158658661,
+                    "south": 8.80078794125045,
+                    "east": 78.03927401341339,
+                    "north": 8.890619058749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.04042768478393555,
+                "bounding_box_matches": 334,
+                "features_inside_radius": 235
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 12,
+                    "nearest_distance_km": 0.8680996792285556,
+                    "nearest_feature": {
+                        "feature_id": 9976383,
+                        "osm_id": 776923628,
+                        "osm_type": "way",
+                        "center_latitude": 8.853363990783691,
+                        "center_longitude": 77.99229431152344
+                    }
+                },
+                "road": {
+                    "count": 165,
+                    "nearest_distance_km": 0.4219000094248486,
+                    "nearest_feature": {
+                        "feature_id": 6413727,
+                        "osm_id": 549416804,
+                        "osm_type": "way",
+                        "center_latitude": 8.845113754272461,
+                        "center_longitude": 77.99002456665039
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 57,
+                    "nearest_distance_km": 0.6813876647784859,
+                    "nearest_feature": {
+                        "feature_id": 25177,
+                        "osm_id": 6478298933,
+                        "osm_type": "node",
+                        "center_latitude": 8.850047588348389,
+                        "center_longitude": 77.9981918334961
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 4.222902040640919,
+                    "nearest_feature": {
+                        "feature_id": 16651344,
+                        "osm_id": 1011035031,
+                        "osm_type": "way",
+                        "center_latitude": 8.855680465698242,
+                        "center_longitude": 78.03090286254883
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.4219000094248486,
+                "nearest_power_infrastructure_distance_km": 0.6813876647784859,
+                "nearest_substation_distance_km": 4.222902040640919
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\thoothukudi",
+                "file": "datasets\\openstreetmap\\processed\\thoothukudi\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.2308
+            }
+        }
+    }
+}

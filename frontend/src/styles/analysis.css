@@ -1,0 +1,72 @@
+@import '../styles/variables.css';
+
+.analysis-container {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-primary);
+  padding-bottom: var(--space-48);
+}
+
+.analysis-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-24) var(--space-48);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.analysis-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.analysis-kicker {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-24);
+  padding: var(--space-48);
+}
+
+.kpi-card {
+  background: var(--white);
+  padding: var(--space-24);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy-deep);
+}
+
+.kpi-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  margin-top: var(--space-24);
+}

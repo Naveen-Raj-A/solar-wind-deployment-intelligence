@@ -1,0 +1,422 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-26T15:58:48",
+    "site_information": {
+        "requested_location": "Coimbatore",
+        "resolved_location": "Coimbatore, Coimbatore North, Coimbatore, Tamil Nadu, 641001, India",
+        "latitude": 11.0018115,
+        "longitude": 76.9628425,
+        "country": "India",
+        "state": "641001",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Coimbatore",
+                "resolved_location": "Coimbatore, Coimbatore North, Coimbatore, Tamil Nadu, 641001, India",
+                "latitude": 11.0018115,
+                "longitude": 76.9628425
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 11.0,
+                "longitude": 77.0,
+                "distance_from_location_km": 4.060806071359945
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.4833,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 24.57,
+                "maximum_c": 41.13,
+                "minimum_c": 12.0,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 75.18,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 3.13,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.27,
+                "wind_speed_50m_ms": 4.65,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.1166541576385498,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\coimbatore\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Coimbatore",
+                "resolved_location": "Coimbatore, Coimbatore North, Coimbatore, Tamil Nadu, 641001, India",
+                "latitude": 11.0018115,
+                "longitude": 76.9628425
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 76.9128425,
+                "south": 10.9518115,
+                "east": 77.01284249999999,
+                "north": 11.051811500000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.177094459533691,
+                "maximum_ms": 8.267972946166992,
+                "mean_ms": 6.300685882568359,
+                "median_ms": 6.1372480392456055,
+                "standard_deviation_ms": 0.6898930668830872
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 683,
+                    "percentage": 42.6875
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 895,
+                    "percentage": 55.93749999999999
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 22,
+                    "percentage": 1.375
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.2646291255950928,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\coimbatore\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\coimbatore\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Coimbatore",
+                "resolved_location": "Coimbatore, Coimbatore North, Coimbatore, Tamil Nadu, 641001, India",
+                "latitude": 11.0018115,
+                "longitude": 76.9628425
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W76.0_E78.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 76.9128425,
+                "south": 10.9518115,
+                "east": 77.01284249999999,
+                "north": 11.051811500000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.353907345073477,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 387.0,
+                "maximum_m": 473.0,
+                "mean_m": 418.79239197530865,
+                "median_m": 417.0,
+                "standard_deviation_m": 15.239028662847778
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 14.764973657560024,
+                "mean_degrees": 2.3477833686102794,
+                "median_degrees": 2.0896398838940367,
+                "standard_deviation_degrees": 1.4522435932804025
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 99326,
+                    "percentage": 77.0679929547412
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 29016,
+                    "percentage": 22.513791792428677
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 539,
+                    "percentage": 0.4182152528301301
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.58178474716988,
+                "moderate_terrain_percentage": 0.4182152528301301,
+                "steep_terrain_percentage": 0.0
+            },
+            "processing": {
+                "processing_time_seconds": 3.101045846939087,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\coimbatore\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\coimbatore\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\coimbatore\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "Coimbatore",
+            "total_pixels": 1226514,
+            "valid_pixels": 1209180,
+            "invalid_pixels": 17334,
+            "valid_percentage": 98.58672628278194,
+            "ndvi_statistics": {
+                "minimum": -0.34657520055770874,
+                "maximum": 0.6841481924057007,
+                "mean": 0.184469535946846,
+                "median": 0.1518518477678299,
+                "standard_deviation": 0.12626880407333374
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.48333585262298584,
+                "mean": -0.022582368925213814,
+                "median": -0.04110661894083023,
+                "standard_deviation": 0.09623471647500992
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 17334,
+                    "percentage": 1.413273717218067
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 4,
+                    "percentage": 0.00032612754522166074
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 190140,
+                    "percentage": 15.502472862111643
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 988980,
+                    "percentage": 80.6334049183295
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 26684,
+                    "percentage": 2.175596854173699
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 3372,
+                    "percentage": 0.27492552062186
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "COIMBATORE",
+                "resolved_location": "Coimbatore, Coimbatore North, Coimbatore, Tamil Nadu, 641001, India",
+                "latitude": 11.0018115,
+                "longitude": 76.9628425
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 76.91708598921211,
+                    "south": 10.95689594125045,
+                    "east": 77.00859901078788,
+                    "north": 11.046727058749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.9684185981750488,
+                "bounding_box_matches": 85071,
+                "features_inside_radius": 69975
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 61112,
+                    "nearest_distance_km": 0.006064678964179689,
+                    "nearest_feature": {
+                        "feature_id": 23911695,
+                        "osm_id": 1308559391,
+                        "osm_type": "way",
+                        "center_latitude": 11.00184440612793,
+                        "center_longitude": 76.96288681030273
+                    }
+                },
+                "road": {
+                    "count": 8834,
+                    "nearest_distance_km": 0.03337929630689258,
+                    "nearest_feature": {
+                        "feature_id": 24493388,
+                        "osm_id": 1327811950,
+                        "osm_type": "way",
+                        "center_latitude": 11.001512050628662,
+                        "center_longitude": 76.96286392211914
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 20,
+                    "nearest_distance_km": 0.8109011375222333,
+                    "nearest_feature": {
+                        "feature_id": 21374,
+                        "osm_id": 4878934412,
+                        "osm_type": "node",
+                        "center_latitude": 11.00462818145752,
+                        "center_longitude": 76.95598983764648
+                    }
+                },
+                "substation": {
+                    "count": 9,
+                    "nearest_distance_km": 1.4518019249444631,
+                    "nearest_feature": {
+                        "feature_id": 1055437,
+                        "osm_id": 337856922,
+                        "osm_type": "way",
+                        "center_latitude": 10.989227771759033,
+                        "center_longitude": 76.96638870239258
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.03337929630689258,
+                "nearest_power_infrastructure_distance_km": 0.8109011375222333,
+                "nearest_substation_distance_km": 1.4518019249444631
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\coimbatore",
+                "file": "datasets\\openstreetmap\\processed\\coimbatore\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 2.5056
+            }
+        }
+    }
+}

@@ -1,0 +1,334 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-24T14:17:48",
+    "site_information": {
+        "requested_location": "leh",
+        "resolved_location": "Leh, Leh district, Ladakh, 194101, India",
+        "latitude": 34.1642029,
+        "longitude": 77.5848133,
+        "country": "India",
+        "state": "194101",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "leh",
+                "resolved_location": "Leh, Leh district, Ladakh, 194101, India",
+                "latitude": 34.1642029,
+                "longitude": 77.5848133
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 34.0,
+                "longitude": 77.5,
+                "distance_from_location_km": 19.859141704038944
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.0815,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": -2.75,
+                "maximum_c": 24.7,
+                "minimum_c": -39.37,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 52.19,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 0.71,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 2.77,
+                "wind_speed_50m_ms": 3.17,
+                "classification_50m": "LOW",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.10716128349304199,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\leh\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "status": "failed",
+            "module": "WIND",
+            "error": "Requested coordinates are outside the Global Wind Atlas dataset bounds."
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "leh",
+                "resolved_location": "Leh, Leh district, Ladakh, 194101, India",
+                "latitude": 34.1642029,
+                "longitude": 77.5848133
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S32.5_N34.5_W76.0_E78.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 77.5348133,
+                "south": 34.1142029,
+                "east": 77.63481329999999,
+                "north": 34.2142029
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 25.586023491601217,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 3181.0,
+                "maximum_m": 4627.0,
+                "mean_m": 3660.1269984567903,
+                "median_m": 3635.0,
+                "standard_deviation_m": 302.1944929672367
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 69.39828767673548,
+                "mean_degrees": 16.84640940860154,
+                "median_degrees": 14.380138410467795,
+                "standard_deviation_degrees": 12.047536266546562
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 11112,
+                    "percentage": 8.621907030516523
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 32950,
+                    "percentage": 25.56622000139664
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 21786,
+                    "percentage": 16.903965673761068
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 63033,
+                    "percentage": 48.907907294325774
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "CHALLENGING TERRAIN",
+                "favorable_terrain_percentage": 34.18812703191316,
+                "moderate_terrain_percentage": 16.903965673761068,
+                "steep_terrain_percentage": 48.907907294325774
+            },
+            "processing": {
+                "processing_time_seconds": 3.05260968208313,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\leh\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\leh\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\leh\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "leh",
+            "total_pixels": 1077483,
+            "valid_pixels": 652992,
+            "invalid_pixels": 424491,
+            "valid_percentage": 60.603461957172414,
+            "ndvi_statistics": {
+                "minimum": -0.5898622870445251,
+                "maximum": 0.45591816306114197,
+                "mean": 0.047450389713048935,
+                "median": 0.041436463594436646,
+                "standard_deviation": 0.03068706765770912
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.40752798318862915,
+                "mean": -0.07731511443853378,
+                "median": -0.07680394500494003,
+                "standard_deviation": 0.04959189146757126
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 384583,
+                    "percentage": 35.69272090603749
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 1520,
+                    "percentage": 0.14106951107349258
+                },
+                "3": {
+                    "class_name": "Cloud Shadows",
+                    "pixel_count": 37676,
+                    "percentage": 3.4966676968453334
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 651472,
+                    "percentage": 60.462392446098924
+                },
+                "11": {
+                    "class_name": "Snow or Ice",
+                    "pixel_count": 2232,
+                    "percentage": 0.20714943994476015
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "LEH",
+                "resolved_location": "Leh, Leh district, Ladakh, 194101, India",
+                "latitude": 34.1642029,
+                "longitude": 77.5848133
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 77.5305301915152,
+                    "south": 34.11928734125045,
+                    "east": 77.63909640848479,
+                    "north": 34.20911845874955
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.18691349029541016,
+                "bounding_box_matches": 5854,
+                "features_inside_radius": 5178
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 4071,
+                    "nearest_distance_km": 0.02379925081735143,
+                    "nearest_feature": {
+                        "feature_id": 303304,
+                        "osm_id": 168837739,
+                        "osm_type": "way",
+                        "center_latitude": 34.16439437866211,
+                        "center_longitude": 77.58469772338867
+                    }
+                },
+                "road": {
+                    "count": 1095,
+                    "nearest_distance_km": 0.02260103143215873,
+                    "nearest_feature": {
+                        "feature_id": 59795,
+                        "osm_id": 27302613,
+                        "osm_type": "way",
+                        "center_latitude": 34.16436767578125,
+                        "center_longitude": 77.58495712280273
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 10,
+                    "nearest_distance_km": 1.4238819050706362,
+                    "nearest_feature": {
+                        "feature_id": 10057480,
+                        "osm_id": 782262639,
+                        "osm_type": "way",
+                        "center_latitude": 34.1722469329834,
+                        "center_longitude": 77.59685516357422
+                    }
+                },
+                "substation": {
+                    "count": 2,
+                    "nearest_distance_km": 2.119691684605139,
+                    "nearest_feature": {
+                        "feature_id": 10057481,
+                        "osm_id": 782262640,
+                        "osm_type": "way",
+                        "center_latitude": 34.1457462310791,
+                        "center_longitude": 77.590576171875
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.02260103143215873,
+                "nearest_power_infrastructure_distance_km": 1.4238819050706362,
+                "nearest_substation_distance_km": 2.119691684605139
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\leh",
+                "file": "datasets\\openstreetmap\\processed\\leh\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.409
+            }
+        }
+    }
+}

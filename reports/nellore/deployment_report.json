@@ -1,0 +1,413 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-23T10:52:41",
+    "site_information": {
+        "requested_location": "nellore",
+        "resolved_location": "Nellore, Sri Potti Sriramulu Nellore, Andhra Pradesh, 524001, India",
+        "latitude": 14.4493717,
+        "longitude": 79.9873763,
+        "country": "India",
+        "state": "524001",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "nellore",
+                "resolved_location": "Nellore, Sri Potti Sriramulu Nellore, Andhra Pradesh, 524001, India",
+                "latitude": 14.4493717,
+                "longitude": 79.9873763
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 14.5,
+                "longitude": 80.0,
+                "distance_from_location_km": 5.791360131944969
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.2466,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 28.37,
+                "maximum_c": 43.12,
+                "minimum_c": 17.64,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 69.62,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.75,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.45,
+                "wind_speed_50m_ms": 5.72,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.09275436401367188,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\nellore\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "nellore",
+                "resolved_location": "Nellore, Sri Potti Sriramulu Nellore, Andhra Pradesh, 524001, India",
+                "latitude": 14.4493717,
+                "longitude": 79.9873763
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.9373763,
+                "south": 14.3993717,
+                "east": 80.03737629999999,
+                "north": 14.499371700000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.619598865509033,
+                "maximum_ms": 5.989193439483643,
+                "mean_ms": 5.797969818115234,
+                "median_ms": 5.790121078491211,
+                "standard_deviation_ms": 0.0730004832148552
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.14078235626220703,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\nellore\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\nellore\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "nellore",
+                "resolved_location": "Nellore, Sri Potti Sriramulu Nellore, Andhra Pradesh, 524001, India",
+                "latitude": 14.4493717,
+                "longitude": 79.9873763
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 2,
+                "intersecting_tiles": [
+                    "srtm_S12.5_N14.5_W78.0_E80.0.tif",
+                    "srtm_S12.5_N14.5_W80.0_E82.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.9373763,
+                "south": 14.3993717,
+                "east": 80.03737629999999,
+                "north": 14.499371700000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 29.944106129312598,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": -19.0,
+                "maximum_m": 42.0,
+                "mean_m": 18.39128086419753,
+                "median_m": 18.0,
+                "standard_deviation_m": 5.0408272544067225
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 36.380733578599916,
+                "mean_degrees": 2.106370939256239,
+                "median_degrees": 1.8647419238653338,
+                "standard_deviation_degrees": 1.83420952775775
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 102691,
+                    "percentage": 79.67892862407957
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 24446,
+                    "percentage": 18.96788510331236
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 1512,
+                    "percentage": 1.173175254692313
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 232,
+                    "percentage": 0.18001101791575172
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 98.64681372739193,
+                "moderate_terrain_percentage": 1.173175254692313,
+                "steep_terrain_percentage": 0.18001101791575172
+            },
+            "processing": {
+                "processing_time_seconds": 4.398580074310303,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\nellore\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\nellore\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\nellore\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "nellore",
+            "total_pixels": 856653,
+            "valid_pixels": 849832,
+            "invalid_pixels": 6821,
+            "valid_percentage": 99.20376161643046,
+            "ndvi_statistics": {
+                "minimum": -0.18863992393016815,
+                "maximum": 0.634803056716919,
+                "mean": 0.16953232884407043,
+                "median": 0.16640853881835938,
+                "standard_deviation": 0.12071411311626434
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4791244566440582,
+                "mean": -0.04885039106011391,
+                "median": -0.07093282788991928,
+                "standard_deviation": 0.09016267210245132
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 6821,
+                    "percentage": 0.7962383835695432
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 56,
+                    "percentage": 0.006537069268420236
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 77672,
+                    "percentage": 9.066915075298866
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 669616,
+                    "percentage": 78.1665388436158
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 91060,
+                    "percentage": 10.629741563970475
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 11428,
+                    "percentage": 1.3340290642769008
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "NELLORE",
+                "resolved_location": "Nellore, Sri Potti Sriramulu Nellore, Andhra Pradesh, 524001, India",
+                "latitude": 14.4493717,
+                "longitude": 79.9873763
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.94099358672443,
+                    "south": 14.40445614125045,
+                    "east": 80.03375901327556,
+                    "north": 14.494287258749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.6188645362854004,
+                "bounding_box_matches": 47723,
+                "features_inside_radius": 41354
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 36825,
+                    "nearest_distance_km": 0.019974968549452292,
+                    "nearest_feature": {
+                        "feature_id": 5296820,
+                        "osm_id": 416363096,
+                        "osm_type": "way",
+                        "center_latitude": 14.449457168579102,
+                        "center_longitude": 79.98721313476562
+                    }
+                },
+                "road": {
+                    "count": 4525,
+                    "nearest_distance_km": 0.02101733439354401,
+                    "nearest_feature": {
+                        "feature_id": 26310563,
+                        "osm_id": 1449970801,
+                        "osm_type": "way",
+                        "center_latitude": 14.44918966293335,
+                        "center_longitude": 79.98732376098633
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "substation": {
+                    "count": 4,
+                    "nearest_distance_km": 1.891966254973726,
+                    "nearest_feature": {
+                        "feature_id": 26535077,
+                        "osm_id": 1467269609,
+                        "osm_type": "way",
+                        "center_latitude": 14.433765888214111,
+                        "center_longitude": 79.99437713623047
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": false,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.02101733439354401,
+                "nearest_power_infrastructure_distance_km": null,
+                "nearest_substation_distance_km": 1.891966254973726
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\nellore",
+                "file": "datasets\\openstreetmap\\processed\\nellore\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.9636
+            }
+        }
+    }
+}

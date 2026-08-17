@@ -1,0 +1,384 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-23T09:32:04",
+    "site_information": {
+        "requested_location": "assam",
+        "resolved_location": "Assam, India",
+        "latitude": 26.4073841,
+        "longitude": 93.2551303,
+        "country": "India",
+        "state": "Assam",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "assam",
+                "resolved_location": "Assam, India",
+                "latitude": 26.4073841,
+                "longitude": 93.2551303
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 26.5,
+                "longitude": 93.5,
+                "distance_from_location_km": 26.463425436098547
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 4.3812,
+                "classification": "MODERATE",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 23.78,
+                "maximum_c": 39.54,
+                "minimum_c": 6.97,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 74.76,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 4.77,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 1.48,
+                "wind_speed_50m_ms": 2.67,
+                "classification_50m": "LOW",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.11240577697753906,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\assam\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "assam",
+                "resolved_location": "Assam, India",
+                "latitude": 26.4073841,
+                "longitude": 93.2551303
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 93.20513030000001,
+                "south": 26.3573841,
+                "east": 93.3051303,
+                "north": 26.457384100000002
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 2.280019760131836,
+                "maximum_ms": 4.452407360076904,
+                "mean_ms": 3.4181933403015137,
+                "median_ms": 3.439879894256592,
+                "standard_deviation_ms": 0.33425796031951904
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 1541,
+                    "percentage": 96.3125
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 59,
+                    "percentage": 3.6875
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.3159496784210205,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\assam\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\assam\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "assam",
+                "resolved_location": "Assam, India",
+                "latitude": 26.4073841,
+                "longitude": 93.2551303
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S24.5_N26.5_W92.0_E94.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 93.20513030000001,
+                "south": 26.3573841,
+                "east": 93.3051303,
+                "north": 26.457384100000002
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 27.695625925366816,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 319.0,
+                "maximum_m": 866.0,
+                "mean_m": 631.6103240740741,
+                "median_m": 663.0,
+                "standard_deviation_m": 131.5809958212611
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 58.691975053017146,
+                "mean_degrees": 12.896959109348934,
+                "median_degrees": 11.82021969612785,
+                "standard_deviation_degrees": 7.811285279288492
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 9924,
+                    "percentage": 7.700126473258277
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 30216,
+                    "percentage": 23.444883264406702
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 42528,
+                    "percentage": 32.99788176690125
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 46213,
+                    "percentage": 35.85710849543377
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "CHALLENGING TERRAIN",
+                "favorable_terrain_percentage": 31.145009737664978,
+                "moderate_terrain_percentage": 32.99788176690125,
+                "steep_terrain_percentage": 35.85710849543377
+            },
+            "processing": {
+                "processing_time_seconds": 2.3554880619049072,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\assam\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\assam\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\assam\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "assam",
+            "total_pixels": 1112111,
+            "valid_pixels": 1104392,
+            "invalid_pixels": 7719,
+            "valid_percentage": 99.30591460744476,
+            "ndvi_statistics": {
+                "minimum": 0.012772351503372192,
+                "maximum": 0.7894420027732849,
+                "mean": 0.5370597839355469,
+                "median": 0.5471497178077698,
+                "standard_deviation": 0.07284704595804214
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.6048855185508728,
+                "mean": 0.22061146795749664,
+                "median": 0.22974473237991333,
+                "standard_deviation": 0.08012751489877701
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 7719,
+                    "percentage": 0.6940853925552395
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 1448,
+                    "percentage": 0.1302028304728575
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 1096900,
+                    "percentage": 98.63224084646227
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 6044,
+                    "percentage": 0.5434709305096344
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "ASSAM",
+                "resolved_location": "Assam, India",
+                "latitude": 26.4073841,
+                "longitude": 93.2551303
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 93.20498198803797,
+                    "south": 26.36246854125045,
+                    "east": 93.30527861196204,
+                    "north": 26.452299658749553
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.012708187103271484,
+                "bounding_box_matches": 2,
+                "features_inside_radius": 0
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "road": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "power_infrastructure": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": false,
+                "road_access_available": false,
+                "power_infrastructure_available": false,
+                "substation_available": false,
+                "nearest_road_distance_km": null,
+                "nearest_power_infrastructure_distance_km": null,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\assam",
+                "file": "datasets\\openstreetmap\\processed\\assam\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.1795
+            }
+        }
+    }
+}

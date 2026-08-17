@@ -1,0 +1,413 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-23T10:51:13",
+    "site_information": {
+        "requested_location": "Darjeeling",
+        "resolved_location": "Darjeeling, Darjeeling Pulbazar, Darjeeling, West Bengal, 734101, India",
+        "latitude": 27.0377554,
+        "longitude": 88.263176,
+        "country": "India",
+        "state": "734101",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Darjeeling",
+                "resolved_location": "Darjeeling, Darjeeling Pulbazar, Darjeeling, West Bengal, 734101, India",
+                "latitude": 27.0377554,
+                "longitude": 88.263176
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 27.0,
+                "longitude": 88.5,
+                "distance_from_location_km": 23.832208554139317
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 4.0697,
+                "classification": "MODERATE",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 18.76,
+                "maximum_c": 33.36,
+                "minimum_c": 1.39,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 69.37,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 4.67,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 1.94,
+                "wind_speed_50m_ms": 2.48,
+                "classification_50m": "LOW",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.2121906280517578,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\darjeeling\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Darjeeling",
+                "resolved_location": "Darjeeling, Darjeeling Pulbazar, Darjeeling, West Bengal, 734101, India",
+                "latitude": 27.0377554,
+                "longitude": 88.263176
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 88.213176,
+                "south": 26.9877554,
+                "east": 88.313176,
+                "north": 27.087755400000002
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 0.5412533283233643,
+                "maximum_ms": 3.6193251609802246,
+                "mean_ms": 1.6177905797958374,
+                "median_ms": 1.5696773529052734,
+                "standard_deviation_ms": 0.569221556186676
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 1.1184682846069336,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\darjeeling\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\darjeeling\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Darjeeling",
+                "resolved_location": "Darjeeling, Darjeeling Pulbazar, Darjeeling, West Bengal, 734101, India",
+                "latitude": 27.0377554,
+                "longitude": 88.263176
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S26.5_N28.5_W88.0_E90.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 88.213176,
+                "south": 26.9877554,
+                "east": 88.313176,
+                "north": 27.087755400000002
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 27.54264507597852,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 530.0,
+                "maximum_m": 2582.0,
+                "mean_m": 1625.4391435185184,
+                "median_m": 1657.0,
+                "standard_deviation_m": 454.2330021384112
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 64.03290486818412,
+                "mean_degrees": 26.16938356559165,
+                "median_degrees": 26.161613917585992,
+                "standard_deviation_degrees": 8.142193392223597
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 310,
+                    "percentage": 0.24053196359432347
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 1690,
+                    "percentage": 1.3112871563690538
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 8693,
+                    "percentage": 6.744981804920819
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 118188,
+                    "percentage": 91.7031990751158
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "CHALLENGING TERRAIN",
+                "favorable_terrain_percentage": 1.5518191199633773,
+                "moderate_terrain_percentage": 6.744981804920819,
+                "steep_terrain_percentage": 91.7031990751158
+            },
+            "processing": {
+                "processing_time_seconds": 4.090214252471924,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\darjeeling\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\darjeeling\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\darjeeling\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "Darjeeling",
+            "total_pixels": 1123476,
+            "valid_pixels": 1098972,
+            "invalid_pixels": 24504,
+            "valid_percentage": 97.8189120194824,
+            "ndvi_statistics": {
+                "minimum": -0.08885478973388672,
+                "maximum": 0.7643623352050781,
+                "mean": 0.4294358789920807,
+                "median": 0.45017290115356445,
+                "standard_deviation": 0.11520275473594666
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.5446165800094604,
+                "mean": 0.11346887052059174,
+                "median": 0.12423501163721085,
+                "standard_deviation": 0.11230912059545517
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 24504,
+                    "percentage": 2.1810879805176078
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 70848,
+                    "percentage": 6.3061427213398416
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 961112,
+                    "percentage": 85.54806689239467
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 66536,
+                    "percentage": 5.922333899433544
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 476,
+                    "percentage": 0.04236850631433159
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "DARJEELING",
+                "resolved_location": "Darjeeling, Darjeeling Pulbazar, Darjeeling, West Bengal, 734101, India",
+                "latitude": 27.0377554,
+                "longitude": 88.263176
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 88.21274914792905,
+                    "south": 26.99283984125045,
+                    "east": 88.31360285207096,
+                    "north": 27.082670958749553
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.24688386917114258,
+                "bounding_box_matches": 15711,
+                "features_inside_radius": 13353
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 12202,
+                    "nearest_distance_km": 0.022012993476043304,
+                    "nearest_feature": {
+                        "feature_id": 1745143,
+                        "osm_id": 348921854,
+                        "osm_type": "way",
+                        "center_latitude": 27.03794574737549,
+                        "center_longitude": 88.26311492919922
+                    }
+                },
+                "road": {
+                    "count": 1148,
+                    "nearest_distance_km": 0.007984974237235074,
+                    "nearest_feature": {
+                        "feature_id": 1828879,
+                        "osm_id": 350291479,
+                        "osm_type": "way",
+                        "center_latitude": 27.037717819213867,
+                        "center_longitude": 88.26310729980469
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 2,
+                    "nearest_distance_km": 2.910408132270698,
+                    "nearest_feature": {
+                        "feature_id": 178016,
+                        "osm_id": 116541276,
+                        "osm_type": "way",
+                        "center_latitude": 27.01166534423828,
+                        "center_longitude": 88.2655258178711
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 3.043412057156093,
+                    "nearest_feature": {
+                        "feature_id": 16978346,
+                        "osm_id": 1026855646,
+                        "osm_type": "way",
+                        "center_latitude": 27.062418937683105,
+                        "center_longitude": 88.2765007019043
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.007984974237235074,
+                "nearest_power_infrastructure_distance_km": 2.910408132270698,
+                "nearest_substation_distance_km": 3.043412057156093
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\darjeeling",
+                "file": "datasets\\openstreetmap\\processed\\darjeeling\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.9154
+            }
+        }
+    }
+}

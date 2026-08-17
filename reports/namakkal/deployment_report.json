@@ -1,0 +1,456 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-31T13:51:38",
+    "site_information": {
+        "requested_location": "Namakkal",
+        "resolved_location": "Namakkal, Tamil Nadu, India",
+        "latitude": 11.3033889,
+        "longitude": 78.118604,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Namakkal",
+                "resolved_location": "Namakkal, Tamil Nadu, India",
+                "latitude": 11.3033889,
+                "longitude": 78.118604
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 11.5,
+                "longitude": 78.0,
+                "distance_from_location_km": 25.398544652910484
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.4418,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 26.99,
+                "maximum_c": 43.74,
+                "minimum_c": 12.18,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 66.66,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.2,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.25,
+                "wind_speed_50m_ms": 4.72,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.3746349811553955,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\namakkal\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Namakkal",
+                "resolved_location": "Namakkal, Tamil Nadu, India",
+                "latitude": 11.3033889,
+                "longitude": 78.118604
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 78.06860400000001,
+                "south": 11.2533889,
+                "east": 78.168604,
+                "north": 11.3533889
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 3.4064102172851562,
+                "maximum_ms": 4.497940540313721,
+                "mean_ms": 3.9561681747436523,
+                "median_ms": 3.988128662109375,
+                "standard_deviation_ms": 0.23733119666576385
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 845,
+                    "percentage": 52.81249999999999
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 755,
+                    "percentage": 47.1875
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.35230493545532227,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\namakkal\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\namakkal\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Namakkal",
+                "resolved_location": "Namakkal, Tamil Nadu, India",
+                "latitude": 11.3033889,
+                "longitude": 78.118604
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 78.06860400000001,
+                "south": 11.2533889,
+                "east": 78.168604,
+                "north": 11.3533889
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.322425953095728,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 157.0,
+                "maximum_m": 265.0,
+                "mean_m": 192.97030864197532,
+                "median_m": 193.0,
+                "standard_deviation_m": 15.554833253978043
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 31.527501108655493,
+                "mean_degrees": 2.047802045392636,
+                "median_degrees": 1.8888667211795556,
+                "standard_deviation_degrees": 1.444145708523522
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 111632,
+                    "percentage": 86.61633599987586
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 16458,
+                    "percentage": 12.76991953817863
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 596,
+                    "percentage": 0.4624420977490864
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 195,
+                    "percentage": 0.15130236419642926
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.38625553805448,
+                "moderate_terrain_percentage": 0.4624420977490864,
+                "steep_terrain_percentage": 0.15130236419642926
+            },
+            "processing": {
+                "processing_time_seconds": 4.4136598110198975,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\namakkal\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\namakkal\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\namakkal\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Namakkal",
+            "total_pixels": 1238720,
+            "valid_pixels": 1210104,
+            "invalid_pixels": 28616,
+            "valid_percentage": 97.68987341772151,
+            "ndvi_statistics": {
+                "minimum": -0.13991770148277283,
+                "maximum": 0.619309663772583,
+                "mean": 0.17931924760341644,
+                "median": 0.14707061648368835,
+                "standard_deviation": 0.08965201675891876
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.39850226044654846,
+                "mean": -0.09646779298782349,
+                "median": -0.11947152763605118,
+                "standard_deviation": 0.08866846561431885
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 28616,
+                    "percentage": 2.3101265822784813
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 200,
+                    "percentage": 0.016145698785843453
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 80564,
+                    "percentage": 6.50381038491346
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 1129340,
+                    "percentage": 91.16991733402222
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "NAMAKKAL",
+                "resolved_location": "Namakkal, Tamil Nadu, India",
+                "latitude": 11.3033889,
+                "longitude": 78.118604
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 78.07279998382275,
+                    "south": 11.258473341250449,
+                    "east": 78.16440801617726,
+                    "north": 11.348304458749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.13684892654418945,
+                "bounding_box_matches": 1119,
+                "features_inside_radius": 742
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 46,
+                    "nearest_distance_km": 4.389486851927303,
+                    "nearest_feature": {
+                        "feature_id": 9643497,
+                        "osm_id": 733175512,
+                        "osm_type": "way",
+                        "center_latitude": 11.263979434967041,
+                        "center_longitude": 78.11627578735352
+                    }
+                },
+                "road": {
+                    "count": 695,
+                    "nearest_distance_km": 0.21817887691690055,
+                    "nearest_feature": {
+                        "feature_id": 11513094,
+                        "osm_id": 824178915,
+                        "osm_type": "way",
+                        "center_latitude": 11.303333759307861,
+                        "center_longitude": 78.11660385131836
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 1,
+                    "nearest_distance_km": 2.2143362956497037,
+                    "nearest_feature": {
+                        "feature_id": 1070411,
+                        "osm_id": 340337195,
+                        "osm_type": "way",
+                        "center_latitude": 11.318949222564697,
+                        "center_longitude": 78.10593032836914
+                    }
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": false,
+                "nearest_road_distance_km": 0.21817887691690055,
+                "nearest_power_infrastructure_distance_km": 2.2143362956497037,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\namakkal",
+                "file": "datasets\\openstreetmap\\processed\\namakkal\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4418
+            },
+            "status": "success",
+            "error": null
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 7.5,
+        "terrain_score": 20,
+        "sentinel_score": 15.0,
+        "osm_score": 9.0,
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 74.0,
+        "normalized_score": 74.0,
+        "recommendation": "SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 7.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "SUCCESS",
+                "score": 15.0,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 9.0,
+                "weight": 15
+            }
+        }
+    }
+}

@@ -1,0 +1,342 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-30T20:50:52",
+    "site_information": {
+        "requested_location": "kargil",
+        "resolved_location": "Kargil, Kargil tehsil, Kargil district, Ladakh, 194103, India",
+        "latitude": 34.5593048,
+        "longitude": 76.1255767,
+        "country": "India",
+        "state": "194103",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "kargil",
+                "resolved_location": "Kargil, Kargil tehsil, Kargil district, Ladakh, 194103, India",
+                "latitude": 34.5593048,
+                "longitude": 76.1255767
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 34.5,
+                "longitude": 76.0,
+                "distance_from_location_km": 13.259672633213812
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 4.6582,
+                "classification": "MODERATE",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": -1.39,
+                "maximum_c": 25.31,
+                "minimum_c": -38.35,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 58.97,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 0.98,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 2.14,
+                "wind_speed_50m_ms": 2.33,
+                "classification_50m": "LOW",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.13239216804504395,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\kargil\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "status": "failed",
+            "module": "WIND",
+            "error": "Requested coordinates are outside the Global Wind Atlas dataset bounds."
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "kargil",
+                "resolved_location": "Kargil, Kargil tehsil, Kargil district, Ladakh, 194103, India",
+                "latitude": 34.5593048,
+                "longitude": 76.1255767
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S34.5_N36.5_W76.0_E78.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 76.0755767,
+                "south": 34.5093048,
+                "east": 76.1755767,
+                "north": 34.6093048
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 25.465670826097426,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 2607.0,
+                "maximum_m": 4885.0,
+                "mean_m": 3271.487515432099,
+                "median_m": 3103.0,
+                "standard_deviation_m": 506.0258926440764
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 76.12929442925982,
+                "mean_degrees": 25.12380090880766,
+                "median_degrees": 27.31910258354254,
+                "standard_deviation_degrees": 12.387420851536561
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 5929,
+                    "percentage": 4.600367781131432
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 11309,
+                    "percentage": 8.774761213832916
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 13567,
+                    "percentage": 10.526765000271569
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 98076,
+                    "percentage": 76.09810600476409
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "CHALLENGING TERRAIN",
+                "favorable_terrain_percentage": 13.375128994964347,
+                "moderate_terrain_percentage": 10.526765000271569,
+                "steep_terrain_percentage": 76.09810600476409
+            },
+            "processing": {
+                "processing_time_seconds": 5.657086610794067,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\kargil\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\kargil\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\kargil\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "kargil",
+            "total_pixels": 887040,
+            "valid_pixels": 532256,
+            "invalid_pixels": 354784,
+            "valid_percentage": 60.003607503607505,
+            "ndvi_statistics": {
+                "minimum": -0.2835967540740967,
+                "maximum": 0.38833725452423096,
+                "mean": 0.04563773423433304,
+                "median": 0.044289834797382355,
+                "standard_deviation": 0.04359959065914154
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.806251049041748,
+                "mean": -0.045088399201631546,
+                "median": -0.06689754128456116,
+                "standard_deviation": 0.10778240114450455
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 16688,
+                    "percentage": 1.8813131313131313
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 45708,
+                    "percentage": 5.152867965367966
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 485592,
+                    "percentage": 54.74296536796537
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 956,
+                    "percentage": 0.10777417027417029
+                },
+                "11": {
+                    "class_name": "Snow or Ice",
+                    "pixel_count": 338096,
+                    "percentage": 38.11507936507936
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "KARGIL",
+                "resolved_location": "Kargil, Kargil tehsil, Kargil district, Ladakh, 194103, India",
+                "latitude": 34.5593048,
+                "longitude": 76.1255767
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 76.07103704548338,
+                    "south": 34.51438924125045,
+                    "east": 76.18011635451661,
+                    "north": 34.60422035874955
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.04851222038269043,
+                "bounding_box_matches": 470,
+                "features_inside_radius": 414
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 116,
+                    "nearest_distance_km": 0.06582636726123026,
+                    "nearest_feature": {
+                        "feature_id": 25969429,
+                        "osm_id": 1412272092,
+                        "osm_type": "way",
+                        "center_latitude": 34.558998107910156,
+                        "center_longitude": 76.12496185302734
+                    }
+                },
+                "road": {
+                    "count": 291,
+                    "nearest_distance_km": 0.05565863913116918,
+                    "nearest_feature": {
+                        "feature_id": 25095929,
+                        "osm_id": 1347615058,
+                        "osm_type": "way",
+                        "center_latitude": 34.559431076049805,
+                        "center_longitude": 76.1249885559082
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 6,
+                    "nearest_distance_km": 0.40354629108557183,
+                    "nearest_feature": {
+                        "feature_id": 26505540,
+                        "osm_id": 1463530437,
+                        "osm_type": "way",
+                        "center_latitude": 34.560462951660156,
+                        "center_longitude": 76.12975311279297
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 1.365427077797904,
+                    "nearest_feature": {
+                        "feature_id": 10057463,
+                        "osm_id": 782262621,
+                        "osm_type": "way",
+                        "center_latitude": 34.5577392578125,
+                        "center_longitude": 76.14036560058594
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.05565863913116918,
+                "nearest_power_infrastructure_distance_km": 0.40354629108557183,
+                "nearest_substation_distance_km": 1.365427077797904
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\kargil",
+                "file": "datasets\\openstreetmap\\processed\\kargil\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4524
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

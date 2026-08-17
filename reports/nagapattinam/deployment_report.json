@@ -1,0 +1,462 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-08-15T22:02:24",
+    "site_information": {
+        "requested_location": "Nagapattinam",
+        "resolved_location": "Nagapattinam, Tamil Nadu, India",
+        "latitude": 10.6026203,
+        "longitude": 79.7619348,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Nagapattinam",
+                "resolved_location": "Nagapattinam, Tamil Nadu, India",
+                "latitude": 10.6026203,
+                "longitude": 79.7619348
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 10.5,
+                "longitude": 79.5,
+                "distance_from_location_km": 30.823339129866405
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.4252,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 28.34,
+                "maximum_c": 40.18,
+                "minimum_c": 17.6,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 71.81,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.79,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.31,
+                "wind_speed_50m_ms": 5.79,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.1800241470336914,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\nagapattinam\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Nagapattinam",
+                "resolved_location": "Nagapattinam, Tamil Nadu, India",
+                "latitude": 10.6026203,
+                "longitude": 79.7619348
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.71193480000001,
+                "south": 10.5526203,
+                "east": 79.8119348,
+                "north": 10.6526203
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 6.0493011474609375,
+                "maximum_ms": 6.369502544403076,
+                "mean_ms": 6.161302089691162,
+                "median_ms": 6.153256416320801,
+                "standard_deviation_ms": 0.06274962425231934
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.6218087673187256,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\nagapattinam\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\nagapattinam\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Nagapattinam",
+                "resolved_location": "Nagapattinam, Tamil Nadu, India",
+                "latitude": 10.6026203,
+                "longitude": 79.7619348
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.71193480000001,
+                "south": 10.5526203,
+                "east": 79.8119348,
+                "north": 10.6526203
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.39428512773831,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": -9.0,
+                "maximum_m": 12.0,
+                "mean_m": 0.9888966049382716,
+                "median_m": 1.0,
+                "standard_deviation_m": 2.0524507749892336
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 12.070592810253936,
+                "mean_degrees": 1.5989769628850785,
+                "median_degrees": 1.3257781288168804,
+                "standard_deviation_degrees": 0.9923574903058434
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 120851,
+                    "percentage": 93.76944623334704
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 8012,
+                    "percentage": 6.216587394573288
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 18,
+                    "percentage": 0.013966372079670395
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.98603362792034,
+                "moderate_terrain_percentage": 0.013966372079670395,
+                "steep_terrain_percentage": 0.0
+            },
+            "processing": {
+                "processing_time_seconds": 5.402001142501831,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\nagapattinam\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\nagapattinam\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\nagapattinam\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Nagapattinam",
+            "total_pixels": 1222100,
+            "valid_pixels": 1210060,
+            "invalid_pixels": 12040,
+            "valid_percentage": 99.01481057196628,
+            "ndvi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.6836336851119995,
+                "mean": 0.2955617606639862,
+                "median": 0.3032498359680176,
+                "standard_deviation": 0.15707828104496002
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4753565490245819,
+                "mean": 0.060022030025720596,
+                "median": 0.06095578521490097,
+                "standard_deviation": 0.11669668555259705
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 12040,
+                    "percentage": 0.9851894280337125
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 650716,
+                    "percentage": 53.24572457245724
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 459896,
+                    "percentage": 37.63161770722527
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 63900,
+                    "percentage": 5.228704688650683
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 35548,
+                    "percentage": 2.9087636036330906
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "NAGAPATTINAM",
+                "resolved_location": "Nagapattinam, Tamil Nadu, India",
+                "latitude": 10.6026203,
+                "longitude": 79.7619348
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.71623907519346,
+                    "south": 10.557704741250449,
+                    "east": 79.80763052480656,
+                    "north": 10.647535858749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.04431939125061035,
+                "bounding_box_matches": 1395,
+                "features_inside_radius": 938
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 330,
+                    "nearest_distance_km": 0.4841852196443385,
+                    "nearest_feature": {
+                        "feature_id": 8515432,
+                        "osm_id": 646963051,
+                        "osm_type": "way",
+                        "center_latitude": 10.60621690750122,
+                        "center_longitude": 79.75943756103516
+                    }
+                },
+                "road": {
+                    "count": 608,
+                    "nearest_distance_km": 0.29913623939715217,
+                    "nearest_feature": {
+                        "feature_id": 20636533,
+                        "osm_id": 1185713494,
+                        "osm_type": "way",
+                        "center_latitude": 10.600656509399414,
+                        "center_longitude": 79.7638053894043
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": false,
+                "substation_available": false,
+                "nearest_road_distance_km": 0.29913623939715217,
+                "nearest_power_infrastructure_distance_km": null,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\nagapattinam",
+                "file": "datasets\\openstreetmap\\processed\\nagapattinam\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.2478
+            },
+            "status": "success",
+            "error": null
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 22.5,
+        "terrain_score": 20,
+        "sentinel_score": 14.4,
+        "osm_score": 0.0,
+        "category_scores": {
+            "renewable_resource": 90.0,
+            "terrain": 70.0,
+            "infrastructure": 0.0,
+            "environmental": 96.0,
+            "economic": 20.4
+        },
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 79.4,
+        "normalized_score": 79.4,
+        "recommendation": "SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "SUCCESS",
+                "score": 14.4,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 0.0,
+                "weight": 15
+            }
+        }
+    }
+}

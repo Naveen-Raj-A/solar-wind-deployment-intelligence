@@ -1,0 +1,27 @@
+{
+  "model": "RandomForestRegressor",
+  "target": "solar_radiation_kwh_m2_day",
+  "features": [
+    "year",
+    "month",
+    "day",
+    "day_of_year",
+    "week_number",
+    "wind_speed_ms"
+  ],
+  "latitude": 13.0827,
+  "longitude": 80.2707,
+  "records": 289,
+  "train_records": 231,
+  "test_records": 58,
+  "history_start": "2025-08-16",
+  "history_end": "2026-05-31",
+  "split": "chronological_80_20",
+  "data_source": "NASA POWER Daily API",
+  "metrics": {
+    "mae": 1.1329,
+    "rmse": 1.5346,
+    "r2": -1.4997
+  },
+  "model_path": "C:\\Users\\anuma\\Downloads\\INFOSYS\\solar-wind-deployment-intelligence\\engine\\models\\solar_random_forest.joblib"
+}

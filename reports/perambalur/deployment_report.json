@@ -1,0 +1,467 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-08-15T22:58:30",
+    "site_information": {
+        "requested_location": "Perambalur",
+        "resolved_location": "Perambalur, Tamil Nadu, India",
+        "latitude": 11.2902641,
+        "longitude": 78.9300404,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Perambalur",
+                "resolved_location": "Perambalur, Tamil Nadu, India",
+                "latitude": 11.2902641,
+                "longitude": 78.9300404
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 11.5,
+                "longitude": 79.0,
+                "distance_from_location_km": 24.5367091855511
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.401,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 26.84,
+                "maximum_c": 43.87,
+                "minimum_c": 12.76,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 69.32,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.39,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.63,
+                "wind_speed_50m_ms": 5.17,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.16230320930480957,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\perambalur\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Perambalur",
+                "resolved_location": "Perambalur, Tamil Nadu, India",
+                "latitude": 11.2902641,
+                "longitude": 78.9300404
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 78.8800404,
+                "south": 11.2402641,
+                "east": 78.9800404,
+                "north": 11.3402641
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.04530143737793,
+                "maximum_ms": 6.889240264892578,
+                "mean_ms": 5.835656642913818,
+                "median_ms": 5.889147758483887,
+                "standard_deviation_ms": 0.24863135814666748
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1083,
+                    "percentage": 67.6875
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 517,
+                    "percentage": 32.3125
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.8726387023925781,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\perambalur\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\perambalur\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Perambalur",
+                "resolved_location": "Perambalur, Tamil Nadu, India",
+                "latitude": 11.2902641,
+                "longitude": 78.9300404
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 78.8800404,
+                "south": 11.2402641,
+                "east": 78.9800404,
+                "north": 11.3402641
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.32381353005676,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 88.0,
+                "maximum_m": 329.0,
+                "mean_m": 116.23690586419752,
+                "median_m": 116.0,
+                "standard_deviation_m": 11.937709754879943
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 37.71004861825563,
+                "mean_degrees": 2.3130328469108297,
+                "median_degrees": 2.0900623374997713,
+                "standard_deviation_degrees": 1.997035539218394
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 104100,
+                    "percentage": 80.77218519409378
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 23436,
+                    "percentage": 18.184216447730854
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 755,
+                    "percentage": 0.5858117177861748
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 590,
+                    "percentage": 0.45778664038919625
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 98.95640164182464,
+                "moderate_terrain_percentage": 0.5858117177861748,
+                "steep_terrain_percentage": 0.45778664038919625
+            },
+            "processing": {
+                "processing_time_seconds": 5.835069894790649,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\perambalur\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\perambalur\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\perambalur\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Perambalur",
+            "total_pixels": 1227615,
+            "valid_pixels": 665620,
+            "invalid_pixels": 561995,
+            "valid_percentage": 54.22058218578301,
+            "ndvi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.9579081535339355,
+                "mean": 0.2291739284992218,
+                "median": 0.19166147708892822,
+                "standard_deviation": 0.12445342540740967
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4638839662075043,
+                "mean": -0.0647127628326416,
+                "median": -0.09208214282989502,
+                "standard_deviation": 0.10542365163564682
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 561959,
+                    "percentage": 45.77648529872965
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 137604,
+                    "percentage": 11.209051697804279
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 518032,
+                    "percentage": 42.19824619282104
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 4268,
+                    "percentage": 0.34766600277774384
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 5716,
+                    "percentage": 0.46561829237994
+                },
+                "8": {
+                    "class_name": "Cloud Medium Probability",
+                    "pixel_count": 36,
+                    "percentage": 0.0029325154873474173
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "PERAMBALUR",
+                "resolved_location": "Perambalur, Tamil Nadu, India",
+                "latitude": 11.2902641,
+                "longitude": 78.9300404
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 78.88423847975298,
+                    "south": 11.245348541250449,
+                    "east": 78.97584232024701,
+                    "north": 11.335179658749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.06449174880981445,
+                "bounding_box_matches": 677,
+                "features_inside_radius": 483
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 71,
+                    "nearest_distance_km": 0.6274172622726105,
+                    "nearest_feature": {
+                        "feature_id": 6555954,
+                        "osm_id": 562058999,
+                        "osm_type": "way",
+                        "center_latitude": 11.286714553833008,
+                        "center_longitude": 78.93451309204102
+                    }
+                },
+                "road": {
+                    "count": 412,
+                    "nearest_distance_km": 0.2216000253494258,
+                    "nearest_feature": {
+                        "feature_id": 26116691,
+                        "osm_id": 1424648294,
+                        "osm_type": "way",
+                        "center_latitude": 11.292197227478027,
+                        "center_longitude": 78.93053436279297
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": false,
+                "substation_available": false,
+                "nearest_road_distance_km": 0.2216000253494258,
+                "nearest_power_infrastructure_distance_km": null,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\perambalur",
+                "file": "datasets\\openstreetmap\\processed\\perambalur\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4422
+            },
+            "status": "success",
+            "error": null
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 17.5,
+        "terrain_score": 20,
+        "sentinel_score": 11.25,
+        "osm_score": 0.0,
+        "category_scores": {
+            "renewable_resource": 80.0,
+            "terrain": 70.0,
+            "infrastructure": 0.0,
+            "environmental": 75.0,
+            "economic": 20.4
+        },
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 71.25,
+        "normalized_score": 71.25,
+        "recommendation": "SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 17.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "SUCCESS",
+                "score": 11.25,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 0.0,
+                "weight": 15
+            }
+        }
+    }
+}

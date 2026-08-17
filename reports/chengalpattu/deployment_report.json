@@ -1,0 +1,342 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-22T17:20:20",
+    "site_information": {
+        "requested_location": "chengalpattu",
+        "resolved_location": "Chengalpattu, Tamil Nadu, 603001, India",
+        "latitude": 12.6840886,
+        "longitude": 79.9836371,
+        "country": "India",
+        "state": "603001",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "chengalpattu",
+                "resolved_location": "Chengalpattu, Tamil Nadu, 603001, India",
+                "latitude": 12.6840886,
+                "longitude": 79.9836371
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 12.5,
+                "longitude": 80.0,
+                "distance_from_location_km": 20.546621901435746
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.3722,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.98,
+                "maximum_c": 40.18,
+                "minimum_c": 18.42,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 73.73,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 3.4,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.26,
+                "wind_speed_50m_ms": 5.49,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.09991812705993652,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\chengalpattu\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "chengalpattu",
+                "resolved_location": "Chengalpattu, Tamil Nadu, 603001, India",
+                "latitude": 12.6840886,
+                "longitude": 79.9836371
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.9336371,
+                "south": 12.6340886,
+                "east": 80.03363709999999,
+                "north": 12.734088600000002
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.246667385101318,
+                "maximum_ms": 6.884659767150879,
+                "mean_ms": 5.6291375160217285,
+                "median_ms": 5.613446235656738,
+                "standard_deviation_ms": 0.14950129389762878
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1555,
+                    "percentage": 97.1875
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 45,
+                    "percentage": 2.8125
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.2736690044403076,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\chengalpattu\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\chengalpattu\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "chengalpattu",
+                "resolved_location": "Chengalpattu, Tamil Nadu, 603001, India",
+                "latitude": 12.6840886,
+                "longitude": 79.9836371
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 2,
+                "intersecting_tiles": [
+                    "srtm_S12.5_N14.5_W78.0_E80.0.tif",
+                    "srtm_S12.5_N14.5_W80.0_E82.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.9336371,
+                "south": 12.6340886,
+                "east": 80.03363709999999,
+                "north": 12.734088600000002
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.1675826746668,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 16.0,
+                "maximum_m": 231.0,
+                "mean_m": 47.18521604938272,
+                "median_m": 41.0,
+                "standard_deviation_m": 21.484471508573474
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 37.753348591046354,
+                "mean_degrees": 3.9501881192710755,
+                "median_degrees": 2.114950088742051,
+                "standard_deviation_degrees": 5.384784049724787
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 88936,
+                    "percentage": 69.00629262653145
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 24717,
+                    "percentage": 19.178156594067396
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 6984,
+                    "percentage": 5.418952366912113
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 8244,
+                    "percentage": 6.396598412489041
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "SUITABLE",
+                "favorable_terrain_percentage": 88.18444922059885,
+                "moderate_terrain_percentage": 5.418952366912113,
+                "steep_terrain_percentage": 6.396598412489041
+            },
+            "processing": {
+                "processing_time_seconds": 3.6824324131011963,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\chengalpattu\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\chengalpattu\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\chengalpattu\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "chengalpattu",
+            "total_pixels": 1213212,
+            "valid_pixels": 1200016,
+            "invalid_pixels": 13196,
+            "valid_percentage": 98.9123088132989,
+            "ndvi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.7117353081703186,
+                "mean": 0.2951065003871918,
+                "median": 0.3075418472290039,
+                "standard_deviation": 0.15196940302848816
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.49955061078071594,
+                "mean": -0.0020270999521017075,
+                "median": -0.017885027453303337,
+                "standard_deviation": 0.11547112464904785
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 12204,
+                    "percentage": 1.0059247683010057
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 252,
+                    "percentage": 0.020771307900020772
+                },
+                "3": {
+                    "class_name": "Cloud Shadows",
+                    "pixel_count": 948,
+                    "percentage": 0.07813968210007814
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 643764,
+                    "percentage": 53.06277880535306
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 491136,
+                    "percentage": 40.482289987240485
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 55364,
+                    "percentage": 4.563423375304564
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 9500,
+                    "percentage": 0.783045337500783
+                },
+                "9": {
+                    "class_name": "Cloud High Probability",
+                    "pixel_count": 44,
+                    "percentage": 0.003626736300003627
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+:root {
+  /* Core Colors */
+  --navy-deep: #071A2B;
+  --navy: #102A43;
+  --green: #16A34A;
+  --green-bright: #22C55E;
+  --bg: #F4F7FA;
+  --white: #FFFFFF;
+  --border: #D9E2EC;
+  --text-primary: #102A43;
+  --text-secondary: #334E68;
+  --text-muted: #627D98;
+  --blue: #1687F7;
+
+  /* Typography (using clamp for responsiveness) */
+  --font-size-base: clamp(16px, 1.1vw, 18px);
+  --font-size-sm: clamp(14px, 0.9vw, 15px);
+  --h1-size: clamp(48px, 4vw, 64px);
+  --h2-size: clamp(32px, 3vw, 44px);
+  --h3-size: clamp(24px, 2vw, 32px);
+  --h4-size: clamp(20px, 1.5vw, 24px);
+  --h5-size: clamp(18px, 1.2vw, 20px);
+  --h6-size: clamp(16px, 1.1vw, 18px);
+
+  /* Shadows & Spacing */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+}

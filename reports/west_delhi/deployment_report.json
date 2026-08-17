@@ -1,0 +1,428 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-30T14:03:37",
+    "site_information": {
+        "requested_location": "west delhi",
+        "resolved_location": "West Delhi, Delhi, India",
+        "latitude": 28.6545456,
+        "longitude": 77.0810555,
+        "country": "India",
+        "state": "Delhi",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "west delhi",
+                "resolved_location": "West Delhi, Delhi, India",
+                "latitude": 28.6545456,
+                "longitude": 77.0810555
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 28.5,
+                "longitude": 77.0,
+                "distance_from_location_km": 18.91984646780438
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 4.89,
+                "classification": "MODERATE",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 25.71,
+                "maximum_c": 48.64,
+                "minimum_c": -0.83,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 43.52,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 1.77,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 2.93,
+                "wind_speed_50m_ms": 4.4,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.2438044548034668,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\west_delhi\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "west delhi",
+                "resolved_location": "West Delhi, Delhi, India",
+                "latitude": 28.6545456,
+                "longitude": 77.0810555
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 77.03105550000001,
+                "south": 28.604545599999998,
+                "east": 77.1310555,
+                "north": 28.7045456
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 4.380214214324951,
+                "maximum_ms": 4.64149808883667,
+                "mean_ms": 4.526471138000488,
+                "median_ms": 4.527348518371582,
+                "standard_deviation_ms": 0.04087061062455177
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.8226265907287598,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\west_delhi\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\west_delhi\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "west delhi",
+                "resolved_location": "West Delhi, Delhi, India",
+                "latitude": 28.6545456,
+                "longitude": 77.0810555
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S28.5_N30.5_W76.0_E78.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 77.03105550000001,
+                "south": 28.604545599999998,
+                "east": 77.1310555,
+                "north": 28.7045456
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 27.13508065866537,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 190.0,
+                "maximum_m": 242.0,
+                "mean_m": 216.4183950617284,
+                "median_m": 216.0,
+                "standard_deviation_m": 3.4903691858889045
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 26.590811647843818,
+                "mean_degrees": 3.235861865643796,
+                "median_degrees": 2.8152064410584305,
+                "standard_deviation_degrees": 2.1236746799774515
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 72399,
+                    "percentage": 56.17507623311426
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 52307,
+                    "percentage": 40.58550135396219
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 3973,
+                    "percentage": 3.0826886818072485
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 202,
+                    "percentage": 0.15673373111630107
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 96.76057758707645,
+                "moderate_terrain_percentage": 3.0826886818072485,
+                "steep_terrain_percentage": 0.15673373111630107
+            },
+            "processing": {
+                "processing_time_seconds": 4.045994997024536,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\west_delhi\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\west_delhi\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\west_delhi\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "west delhi",
+            "total_pixels": 948934,
+            "valid_pixels": 922048,
+            "invalid_pixels": 26886,
+            "valid_percentage": 97.16671549338521,
+            "ndvi_statistics": {
+                "minimum": -0.36744028329849243,
+                "maximum": 0.7075463533401489,
+                "mean": 0.1488446146249771,
+                "median": 0.08933529257774353,
+                "standard_deviation": 0.13815362751483917
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.6649209856987,
+                "mean": -0.005943904630839825,
+                "median": -0.022089380770921707,
+                "standard_deviation": 0.0778861790895462
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 26886,
+                    "percentage": 2.833284506614791
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 1040,
+                    "percentage": 0.10959666320313108
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 103480,
+                    "percentage": 10.904867988711544
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 816888,
+                    "percentage": 86.08480674103784
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 624,
+                    "percentage": 0.06575799792187866
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 16,
+                    "percentage": 0.0016861025108174013
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "WEST DELHI",
+                "resolved_location": "West Delhi, Delhi, India",
+                "latitude": 28.6545456,
+                "longitude": 77.0810555
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 77.02987124496276,
+                    "south": 28.609630041250448,
+                    "east": 77.13223975503725,
+                    "north": 28.69946115874955
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 1.692667007446289,
+                "bounding_box_matches": 58825,
+                "features_inside_radius": 47978
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 30166,
+                    "nearest_distance_km": 0.4086420412109965,
+                    "nearest_feature": {
+                        "feature_id": 1810780,
+                        "osm_id": 350041422,
+                        "osm_type": "way",
+                        "center_latitude": 28.657824516296387,
+                        "center_longitude": 77.08294677734375
+                    }
+                },
+                "road": {
+                    "count": 17783,
+                    "nearest_distance_km": 0.20210050954629402,
+                    "nearest_feature": {
+                        "feature_id": 294922,
+                        "osm_id": 165071963,
+                        "osm_type": "way",
+                        "center_latitude": 28.652731895446777,
+                        "center_longitude": 77.0809211730957
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 15,
+                    "nearest_distance_km": 0.4747577704551534,
+                    "nearest_feature": {
+                        "feature_id": 370087,
+                        "osm_id": 189289373,
+                        "osm_type": "way",
+                        "center_latitude": 28.6529598236084,
+                        "center_longitude": 77.0765380859375
+                    }
+                },
+                "substation": {
+                    "count": 14,
+                    "nearest_distance_km": 0.4630331986523254,
+                    "nearest_feature": {
+                        "feature_id": 370101,
+                        "osm_id": 189289411,
+                        "osm_type": "way",
+                        "center_latitude": 28.658705711364746,
+                        "center_longitude": 77.08126449584961
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.20210050954629402,
+                "nearest_power_infrastructure_distance_km": 0.4747577704551534,
+                "nearest_substation_distance_km": 0.4630331986523254
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\west_delhi",
+                "file": "datasets\\openstreetmap\\processed\\west_delhi\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 2.6214
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

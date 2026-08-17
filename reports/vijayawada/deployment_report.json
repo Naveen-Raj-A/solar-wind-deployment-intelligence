@@ -1,0 +1,429 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-29T15:38:20",
+    "site_information": {
+        "requested_location": "Vijayawada",
+        "resolved_location": "Vijayawada, Vijayawada (Urban), NTR, Andhra Pradesh, 520001, India",
+        "latitude": 16.5115306,
+        "longitude": 80.6160469,
+        "country": "India",
+        "state": "520001",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Vijayawada",
+                "resolved_location": "Vijayawada, Vijayawada (Urban), NTR, Andhra Pradesh, 520001, India",
+                "latitude": 16.5115306,
+                "longitude": 80.6160469
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 16.5,
+                "longitude": 80.5,
+                "distance_from_location_km": 12.438349917852332
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.123,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.99,
+                "maximum_c": 48.35,
+                "minimum_c": 11.33,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 69.9,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.81,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.38,
+                "wind_speed_50m_ms": 4.93,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.12915945053100586,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\vijayawada\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Vijayawada",
+                "resolved_location": "Vijayawada, Vijayawada (Urban), NTR, Andhra Pradesh, 520001, India",
+                "latitude": 16.5115306,
+                "longitude": 80.6160469
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 80.5660469,
+                "south": 16.4615306,
+                "east": 80.6660469,
+                "north": 16.5615306
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.136167526245117,
+                "maximum_ms": 7.020318984985352,
+                "mean_ms": 5.415270805358887,
+                "median_ms": 5.362788677215576,
+                "standard_deviation_ms": 0.22376959025859833
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1549,
+                    "percentage": 96.8125
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 51,
+                    "percentage": 3.1875
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.3650660514831543,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\vijayawada\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\vijayawada\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Vijayawada",
+                "resolved_location": "Vijayawada, Vijayawada (Urban), NTR, Andhra Pradesh, 520001, India",
+                "latitude": 16.5115306,
+                "longitude": 80.6160469
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 2,
+                "intersecting_tiles": [
+                    "srtm_S14.5_N16.5_W80.0_E82.0.tif",
+                    "srtm_S16.5_N18.5_W80.0_E82.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 80.5660469,
+                "south": 16.4615306,
+                "east": 80.6660469,
+                "north": 16.5615306
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 29.647068884086185,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": -12.0,
+                "maximum_m": 249.0,
+                "mean_m": 26.734984567901236,
+                "median_m": 21.0,
+                "standard_deviation_m": 28.14403920453984
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 53.61553276344297,
+                "mean_degrees": 3.822292241009389,
+                "median_degrees": 2.099880651289587,
+                "standard_deviation_degrees": 6.431136506759628
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 92169,
+                    "percentage": 71.51480823395225
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 24907,
+                    "percentage": 19.325579410463916
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 3985,
+                    "percentage": 3.091999596527029
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 7820,
+                    "percentage": 6.0676127590568045
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "SUITABLE",
+                "favorable_terrain_percentage": 90.84038764441617,
+                "moderate_terrain_percentage": 3.091999596527029,
+                "steep_terrain_percentage": 6.0676127590568045
+            },
+            "processing": {
+                "processing_time_seconds": 5.2742838859558105,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\vijayawada\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\vijayawada\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\vijayawada\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Vijayawada",
+            "total_pixels": 1188810,
+            "valid_pixels": 1180452,
+            "invalid_pixels": 8358,
+            "valid_percentage": 99.29694400282636,
+            "ndvi_statistics": {
+                "minimum": -0.1567080020904541,
+                "maximum": 0.6491389274597168,
+                "mean": 0.18347425758838654,
+                "median": 0.15988753736019135,
+                "standard_deviation": 0.13876523077487946
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.502170741558075,
+                "mean": -0.007483594119548798,
+                "median": -0.024496110156178474,
+                "standard_deviation": 0.09503161907196045
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 8358,
+                    "percentage": 0.7030559971736443
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 7728,
+                    "percentage": 0.6500618265324147
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 203176,
+                    "percentage": 17.09070414952768
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 864748,
+                    "percentage": 72.74063979946332
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 92160,
+                    "percentage": 7.752290105231281
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 12640,
+                    "percentage": 1.0632481220716516
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "VIJAYAWADA",
+                "resolved_location": "Vijayawada, Vijayawada (Urban), NTR, Andhra Pradesh, 520001, India",
+                "latitude": 16.5115306,
+                "longitude": 80.6160469
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 80.56919947321661,
+                    "south": 16.46661504125045,
+                    "east": 80.66289432678339,
+                    "north": 16.55644615874955
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 1.7047028541564941,
+                "bounding_box_matches": 98160,
+                "features_inside_radius": 77957
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 71373,
+                    "nearest_distance_km": 0.06937829572048182,
+                    "nearest_feature": {
+                        "feature_id": 848754,
+                        "osm_id": 279711125,
+                        "osm_type": "way",
+                        "center_latitude": 16.511892318725586,
+                        "center_longitude": 80.6165771484375
+                    }
+                },
+                "road": {
+                    "count": 6560,
+                    "nearest_distance_km": 0.09607263310292195,
+                    "nearest_feature": {
+                        "feature_id": 15208600,
+                        "osm_id": 955165347,
+                        "osm_type": "way",
+                        "center_latitude": 16.51218891143799,
+                        "center_longitude": 80.61546325683594
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 19,
+                    "nearest_distance_km": 1.9090911083880868,
+                    "nearest_feature": {
+                        "feature_id": 934502,
+                        "osm_id": 308740418,
+                        "osm_type": "way",
+                        "center_latitude": 16.51863193511963,
+                        "center_longitude": 80.5997428894043
+                    }
+                },
+                "substation": {
+                    "count": 5,
+                    "nearest_distance_km": 0.3313337064805356,
+                    "nearest_feature": {
+                        "feature_id": 22677960,
+                        "osm_id": 1245812583,
+                        "osm_type": "way",
+                        "center_latitude": 16.510634422302246,
+                        "center_longitude": 80.61308288574219
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.09607263310292195,
+                "nearest_power_infrastructure_distance_km": 1.9090911083880868,
+                "nearest_substation_distance_km": 0.3313337064805356
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\vijayawada",
+                "file": "datasets\\openstreetmap\\processed\\vijayawada\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 3.5036
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

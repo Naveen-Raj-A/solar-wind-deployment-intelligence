@@ -1,0 +1,483 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-08-15T20:34:04",
+    "site_information": {
+        "requested_location": "karur",
+        "resolved_location": "Karur, Tamil Nadu, India",
+        "latitude": 10.8217671,
+        "longitude": 78.3828654,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "karur",
+                "resolved_location": "Karur, Tamil Nadu, India",
+                "latitude": 10.8217671,
+                "longitude": 78.3828654
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 11.0,
+                "longitude": 78.5,
+                "distance_from_location_km": 23.586962723721513
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.4418,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.64,
+                "maximum_c": 43.99,
+                "minimum_c": 13.61,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 68.62,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.27,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.83,
+                "wind_speed_50m_ms": 5.43,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.07044744491577148,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\karur\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "karur",
+                "resolved_location": "Karur, Tamil Nadu, India",
+                "latitude": 10.8217671,
+                "longitude": 78.3828654
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 78.3328654,
+                "south": 10.7717671,
+                "east": 78.4328654,
+                "north": 10.871767100000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 6.033045291900635,
+                "maximum_ms": 6.313343524932861,
+                "mean_ms": 6.16545295715332,
+                "median_ms": 6.159134387969971,
+                "standard_deviation_ms": 0.04817712679505348
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.1476907730102539,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\karur\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\karur\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "karur",
+                "resolved_location": "Karur, Tamil Nadu, India",
+                "latitude": 10.8217671,
+                "longitude": 78.3828654
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 78.3328654,
+                "south": 10.7717671,
+                "east": 78.4328654,
+                "north": 10.871767100000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.372301183045067,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 91.0,
+                "maximum_m": 170.0,
+                "mean_m": 123.21938271604938,
+                "median_m": 122.0,
+                "standard_deviation_m": 13.088952706473266
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 12.609329124856714,
+                "mean_degrees": 2.2922113567287883,
+                "median_degrees": 2.0893822492879663,
+                "standard_deviation_degrees": 1.2870233724423759
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 101338,
+                    "percentage": 78.62912298942435
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 27451,
+                    "percentage": 21.29949333105733
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 92,
+                    "percentage": 0.07138367951831534
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.92861632048168,
+                "moderate_terrain_percentage": 0.07138367951831534,
+                "steep_terrain_percentage": 0.0
+            },
+            "processing": {
+                "processing_time_seconds": 2.571631908416748,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\karur\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\karur\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\karur\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "karur",
+            "total_pixels": 893136,
+            "valid_pixels": 806844,
+            "invalid_pixels": 86292,
+            "valid_percentage": 90.33831353791584,
+            "ndvi_statistics": {
+                "minimum": -0.27323222160339355,
+                "maximum": 0.6800292730331421,
+                "mean": 0.25799262523651123,
+                "median": 0.24620012938976288,
+                "standard_deviation": 0.11755882203578949
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.3884449005126953,
+                "mean": -0.064095638692379,
+                "median": -0.07705417275428772,
+                "standard_deviation": 0.09244418144226074
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 14052,
+                    "percentage": 1.5733326167571344
+                },
+                "3": {
+                    "class_name": "Cloud Shadows",
+                    "pixel_count": 29248,
+                    "percentage": 3.274753229071496
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 352368,
+                    "percentage": 39.45289407212339
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 452628,
+                    "percentage": 50.678508088353844
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 16,
+                    "percentage": 0.0017914404973038821
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 1832,
+                    "percentage": 0.2051199369412945
+                },
+                "8": {
+                    "class_name": "Cloud Medium Probability",
+                    "pixel_count": 31888,
+                    "percentage": 3.570340911126637
+                },
+                "9": {
+                    "class_name": "Cloud High Probability",
+                    "pixel_count": 11104,
+                    "percentage": 1.2432597051288943
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "KARUR",
+                "resolved_location": "Karur, Tamil Nadu, India",
+                "latitude": 10.8217671,
+                "longitude": 78.3828654
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 78.33713659991605,
+                    "south": 10.77685154125045,
+                    "east": 78.42859420008395,
+                    "north": 10.866682658749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.03399014472961426,
+                "bounding_box_matches": 301,
+                "features_inside_radius": 215
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "road": {
+                    "count": 209,
+                    "nearest_distance_km": 0.16063481853982406,
+                    "nearest_feature": {
+                        "feature_id": 25238827,
+                        "osm_id": 1358944577,
+                        "osm_type": "way",
+                        "center_latitude": 10.820612907409668,
+                        "center_longitude": 78.3819808959961
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 5,
+                    "nearest_distance_km": 4.669586953447488,
+                    "nearest_feature": {
+                        "feature_id": 1055601,
+                        "osm_id": 338030167,
+                        "osm_type": "way",
+                        "center_latitude": 10.863737106323242,
+                        "center_longitude": 78.38432693481445
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 4.658258430409623,
+                    "nearest_feature": {
+                        "feature_id": 1055643,
+                        "osm_id": 338065891,
+                        "osm_type": "way",
+                        "center_latitude": 10.863513946533203,
+                        "center_longitude": 78.38642120361328
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": false,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.16063481853982406,
+                "nearest_power_infrastructure_distance_km": 4.669586953447488,
+                "nearest_substation_distance_km": 4.658258430409623
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\karur",
+                "file": "datasets\\openstreetmap\\processed\\karur\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.2057
+            },
+            "status": "success",
+            "error": null
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 22.5,
+        "terrain_score": 20,
+        "sentinel_score": 13.95,
+        "osm_score": 11.0,
+        "category_scores": {
+            "renewable_resource": 90.0,
+            "terrain": 100.0,
+            "infrastructure": 73.33,
+            "environmental": 93.0,
+            "economic": 100.0
+        },
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 89.95,
+        "normalized_score": 89.95,
+        "recommendation": "HIGHLY SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "SUCCESS",
+                "score": 13.95,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 11.0,
+                "weight": 15
+            }
+        }
+    }
+}

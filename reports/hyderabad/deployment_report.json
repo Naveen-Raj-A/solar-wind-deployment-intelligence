@@ -1,0 +1,402 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-26T15:44:01",
+    "site_information": {
+        "requested_location": "hyderabad",
+        "resolved_location": "Hyderabad, Bahadurpura mandal, Hyderabad, Telangana, India",
+        "latitude": 17.360589,
+        "longitude": 78.4740613,
+        "country": "India",
+        "state": "Telangana",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "hyderabad",
+                "resolved_location": "Hyderabad, Bahadurpura mandal, Hyderabad, Telangana, India",
+                "latitude": 17.360589,
+                "longitude": 78.4740613
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 17.5,
+                "longitude": 78.5,
+                "distance_from_location_km": 15.74416817115121
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.3587,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 26.1,
+                "maximum_c": 45.0,
+                "minimum_c": 8.09,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 60.3,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.21,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.73,
+                "wind_speed_50m_ms": 5.35,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.11065196990966797,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\hyderabad\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "hyderabad",
+                "resolved_location": "Hyderabad, Bahadurpura mandal, Hyderabad, Telangana, India",
+                "latitude": 17.360589,
+                "longitude": 78.4740613
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 78.4240613,
+                "south": 17.310589,
+                "east": 78.5240613,
+                "north": 17.410589
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.232116222381592,
+                "maximum_ms": 6.1627421379089355,
+                "mean_ms": 5.556137561798096,
+                "median_ms": 5.486924171447754,
+                "standard_deviation_ms": 0.1914062350988388
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1562,
+                    "percentage": 97.625
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 38,
+                    "percentage": 2.375
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.361893892288208,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\hyderabad\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\hyderabad\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "hyderabad",
+                "resolved_location": "Hyderabad, Bahadurpura mandal, Hyderabad, Telangana, India",
+                "latitude": 17.360589,
+                "longitude": 78.4740613
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S16.5_N18.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 78.4240613,
+                "south": 17.310589,
+                "east": 78.5240613,
+                "north": 17.410589
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 29.513585079551437,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 470.0,
+                "maximum_m": 604.0,
+                "mean_m": 517.984475308642,
+                "median_m": 516.0,
+                "standard_deviation_m": 18.438519121095922
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 28.49195211597895,
+                "mean_degrees": 3.041175784174508,
+                "median_degrees": 2.6903256785600957,
+                "standard_deviation_degrees": 2.239525030255367
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 78724,
+                    "percentage": 61.08270419999845
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 45905,
+                    "percentage": 35.61812835095941
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 3771,
+                    "percentage": 2.9259549506909477
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 481,
+                    "percentage": 0.3732124983511922
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 96.70083255095787,
+                "moderate_terrain_percentage": 2.9259549506909477,
+                "steep_terrain_percentage": 0.3732124983511922
+            },
+            "processing": {
+                "processing_time_seconds": 2.5149173736572266,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\hyderabad\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\hyderabad\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\hyderabad\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "hyderabad",
+            "total_pixels": 1223880,
+            "valid_pixels": 1179248,
+            "invalid_pixels": 44632,
+            "valid_percentage": 96.35323724548158,
+            "ndvi_statistics": {
+                "minimum": -0.1666153371334076,
+                "maximum": 0.6913507580757141,
+                "mean": 0.14304028451442719,
+                "median": 0.0977233499288559,
+                "standard_deviation": 0.12323255091905594
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.6158642768859863,
+                "mean": -0.056767527014017105,
+                "median": -0.07064980268478394,
+                "standard_deviation": 0.08364218473434448
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 44632,
+                    "percentage": 3.646762754518417
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 46140,
+                    "percentage": 3.769977448769487
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 1131264,
+                    "percentage": 92.43259143053241
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 1844,
+                    "percentage": 0.15066836617969082
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "HYDERABAD",
+                "resolved_location": "Hyderabad, Bahadurpura mandal, Hyderabad, Telangana, India",
+                "latitude": 17.360589,
+                "longitude": 78.4740613
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 78.42700199205265,
+                    "south": 17.31567344125045,
+                    "east": 78.52112060794735,
+                    "north": 17.405504558749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 2.4446849822998047,
+                "bounding_box_matches": 114742,
+                "features_inside_radius": 92668
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 73676,
+                    "nearest_distance_km": 0.049933908387859036,
+                    "nearest_feature": {
+                        "feature_id": 18256131,
+                        "osm_id": 1082909791,
+                        "osm_type": "way",
+                        "center_latitude": 17.361027717590332,
+                        "center_longitude": 78.47396087646484
+                    }
+                },
+                "road": {
+                    "count": 18980,
+                    "nearest_distance_km": 0.037927903406646125,
+                    "nearest_feature": {
+                        "feature_id": 966196,
+                        "osm_id": 314683943,
+                        "osm_type": "way",
+                        "center_latitude": 17.360709190368652,
+                        "center_longitude": 78.47439575195312
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "substation": {
+                    "count": 12,
+                    "nearest_distance_km": 1.1832401287177634,
+                    "nearest_feature": {
+                        "feature_id": 26537297,
+                        "osm_id": 1467558700,
+                        "osm_type": "way",
+                        "center_latitude": 17.37056827545166,
+                        "center_longitude": 78.47793197631836
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": false,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.037927903406646125,
+                "nearest_power_infrastructure_distance_km": null,
+                "nearest_substation_distance_km": 1.1832401287177634
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\hyderabad",
+                "file": "datasets\\openstreetmap\\processed\\hyderabad\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 3.3175
+            }
+        }
+    }
+}

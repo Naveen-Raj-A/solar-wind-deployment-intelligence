@@ -1,0 +1,412 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-24T11:52:28",
+    "site_information": {
+        "requested_location": "chittoor",
+        "resolved_location": "Chittoor, Andhra Pradesh, India",
+        "latitude": 13.325036,
+        "longitude": 79.6480611,
+        "country": "India",
+        "state": "Andhra Pradesh",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "chittoor",
+                "resolved_location": "Chittoor, Andhra Pradesh, India",
+                "latitude": 13.325036,
+                "longitude": 79.6480611
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 13.5,
+                "longitude": 79.5,
+                "distance_from_location_km": 25.1986156096579
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.3364,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 26.63,
+                "maximum_c": 44.66,
+                "minimum_c": 11.97,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 69.3,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.7,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.48,
+                "wind_speed_50m_ms": 5.0,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.1465461254119873,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\chittoor\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "chittoor",
+                "resolved_location": "Chittoor, Andhra Pradesh, India",
+                "latitude": 13.325036,
+                "longitude": 79.6480611
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.59806110000001,
+                "south": 13.275036,
+                "east": 79.6980611,
+                "north": 13.375036000000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 4.2442169189453125,
+                "maximum_ms": 7.389222145080566,
+                "mean_ms": 4.794275283813477,
+                "median_ms": 4.765579700469971,
+                "standard_deviation_ms": 0.31855887174606323
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1568,
+                    "percentage": 98.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 32,
+                    "percentage": 2.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.34175944328308105,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\chittoor\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\chittoor\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "chittoor",
+                "resolved_location": "Chittoor, Andhra Pradesh, India",
+                "latitude": 13.325036,
+                "longitude": 79.6480611
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S12.5_N14.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.59806110000001,
+                "south": 13.275036,
+                "east": 79.6980611,
+                "north": 13.375036000000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.08974210860319,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 71.0,
+                "maximum_m": 762.0,
+                "mean_m": 117.97369598765432,
+                "median_m": 96.0,
+                "standard_deviation_m": 81.01557584056258
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 77.31829204961942,
+                "mean_degrees": 3.576931514459627,
+                "median_degrees": 2.0933886025983743,
+                "standard_deviation_degrees": 5.83824720420659
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 93758,
+                    "percentage": 72.74772852476316
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 24805,
+                    "percentage": 19.246436635345784
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 4009,
+                    "percentage": 3.110621425966589
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 6309,
+                    "percentage": 4.8952134139244725
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 91.99416516010895,
+                "moderate_terrain_percentage": 3.110621425966589,
+                "steep_terrain_percentage": 4.8952134139244725
+            },
+            "processing": {
+                "processing_time_seconds": 4.969452142715454,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\chittoor\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\chittoor\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\chittoor\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "chittoor",
+            "total_pixels": 1214283,
+            "valid_pixels": 388132,
+            "invalid_pixels": 826151,
+            "valid_percentage": 31.96388321338601,
+            "ndvi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.6995895504951477,
+                "mean": 0.23749324679374695,
+                "median": 0.21937668323516846,
+                "standard_deviation": 0.12875033915042877
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4767676889896393,
+                "mean": -0.06522782891988754,
+                "median": -0.08761368691921234,
+                "standard_deviation": 0.11657119542360306
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 826151,
+                    "percentage": 68.036116786614
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 6544,
+                    "percentage": 0.5389188517009627
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 71524,
+                    "percentage": 5.890224931091023
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 303244,
+                    "percentage": 24.97309111632132
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 24,
+                    "percentage": 0.001976475006238249
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 6796,
+                    "percentage": 0.5596718392664642
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "CHITTOOR",
+                "resolved_location": "Chittoor, Andhra Pradesh, India",
+                "latitude": 13.325036,
+                "longitude": 79.6480611
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.60190288156542,
+                    "south": 13.28012044125045,
+                    "east": 79.69421931843459,
+                    "north": 13.369951558749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.04765796661376953,
+                "bounding_box_matches": 137,
+                "features_inside_radius": 87
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 1,
+                    "nearest_distance_km": 1.82626811255378,
+                    "nearest_feature": {
+                        "feature_id": 716194,
+                        "osm_id": 245523861,
+                        "osm_type": "way",
+                        "center_latitude": 13.334917068481445,
+                        "center_longitude": 79.63457870483398
+                    }
+                },
+                "road": {
+                    "count": 84,
+                    "nearest_distance_km": 0.4565317018364113,
+                    "nearest_feature": {
+                        "feature_id": 22817698,
+                        "osm_id": 1253858328,
+                        "osm_type": "way",
+                        "center_latitude": 13.326937198638916,
+                        "center_longitude": 79.64432144165039
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "substation": {
+                    "count": 2,
+                    "nearest_distance_km": 1.82626811255378,
+                    "nearest_feature": {
+                        "feature_id": 716195,
+                        "osm_id": 245523861,
+                        "osm_type": "way",
+                        "center_latitude": 13.334917068481445,
+                        "center_longitude": 79.63457870483398
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": false,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.4565317018364113,
+                "nearest_power_infrastructure_distance_km": null,
+                "nearest_substation_distance_km": 1.82626811255378
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\chittoor",
+                "file": "datasets\\openstreetmap\\processed\\chittoor\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.2357
+            }
+        }
+    }
+}

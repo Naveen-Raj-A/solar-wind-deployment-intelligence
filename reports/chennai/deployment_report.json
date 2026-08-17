@@ -1,0 +1,664 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-08-16T14:54:12",
+    "site_information": {
+        "requested_location": "chennai",
+        "resolved_location": "Chennai Corporation, Chennai, Tamil Nadu, India",
+        "latitude": 13.0836939,
+        "longitude": 80.270186,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim",
+        "available_land_area_km2": 1.0,
+        "used_land_area_km2": 0.0,
+        "land_reserve_percent": 100.0
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "chennai",
+                "resolved_location": "Chennai Corporation, Chennai, Tamil Nadu, India",
+                "latitude": 13.0836939,
+                "longitude": 80.270186
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 13.0,
+                "longitude": 80.0,
+                "distance_from_location_km": 30.71232948411724
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.2224,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.95,
+                "maximum_c": 42.7,
+                "minimum_c": 17.24,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 72.39,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 3.43,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.0,
+                "wind_speed_50m_ms": 5.29,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.6808981895446777,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\chennai\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "chennai",
+                "resolved_location": "Chennai Corporation, Chennai, Tamil Nadu, India",
+                "latitude": 13.0836939,
+                "longitude": 80.270186
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 80.220186,
+                "south": 13.0336939,
+                "east": 80.32018599999999,
+                "north": 13.1336939
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.1076154708862305,
+                "maximum_ms": 6.140410423278809,
+                "mean_ms": 5.594207763671875,
+                "median_ms": 5.552997589111328,
+                "standard_deviation_ms": 0.30827444791793823
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1340,
+                    "percentage": 83.75
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 260,
+                    "percentage": 16.25
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4844803810119629,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\chennai\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\chennai\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "chennai",
+                "resolved_location": "Chennai Corporation, Chennai, Tamil Nadu, India",
+                "latitude": 13.0836939,
+                "longitude": 80.270186
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S12.5_N14.5_W80.0_E82.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 80.220186,
+                "south": 13.0336939,
+                "east": 80.32018599999999,
+                "north": 13.1336939
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.11949468227226,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": -13.0,
+                "maximum_m": 43.0,
+                "mean_m": 7.045316358024691,
+                "median_m": 8.0,
+                "standard_deviation_m": 5.286165014781306
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 29.20277168997798,
+                "mean_degrees": 1.838301433627833,
+                "median_degrees": 1.8647419238653338,
+                "standard_deviation_degrees": 1.8301476626308826
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 105447,
+                    "percentage": 81.8173353713891
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 22380,
+                    "percentage": 17.36485595239019
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 928,
+                    "percentage": 0.7200440716630069
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 126,
+                    "percentage": 0.09776460455769276
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.18219132377929,
+                "moderate_terrain_percentage": 0.7200440716630069,
+                "steep_terrain_percentage": 0.09776460455769276
+            },
+            "processing": {
+                "processing_time_seconds": 9.504732131958008,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\chennai\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\chennai\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\chennai\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "chennai",
+            "total_pixels": 1207680,
+            "valid_pixels": 1198868,
+            "invalid_pixels": 8812,
+            "valid_percentage": 99.27033651298358,
+            "ndvi_statistics": {
+                "minimum": -0.5243015885353088,
+                "maximum": 0.6524038314819336,
+                "mean": 0.10018286108970642,
+                "median": 0.08093490451574326,
+                "standard_deviation": 0.12279777973890305
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.5297792553901672,
+                "mean": -0.016253270208835602,
+                "median": -0.009235804900527,
+                "standard_deviation": 0.07860104739665985
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 8600,
+                    "percentage": 0.7121091679915209
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 888,
+                    "percentage": 0.07352941176470588
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 35580,
+                    "percentage": 2.9461446740858506
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 831212,
+                    "percentage": 68.82717276099629
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 331116,
+                    "percentage": 27.417527821939586
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 72,
+                    "percentage": 0.005961844197138314
+                },
+                "8": {
+                    "class_name": "Cloud Medium Probability",
+                    "pixel_count": 204,
+                    "percentage": 0.016891891891891893
+                },
+                "9": {
+                    "class_name": "Cloud High Probability",
+                    "pixel_count": 8,
+                    "percentage": 0.0006624271330153683
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "CHENNAI",
+                "resolved_location": "Chennai Corporation, Chennai, Tamil Nadu, India",
+                "latitude": 13.0836939,
+                "longitude": 80.270186
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 80.22407337747627,
+                    "south": 13.038778341250449,
+                    "east": 80.31629862252372,
+                    "north": 13.128609458749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 2.8149685859680176,
+                "bounding_box_matches": 76899,
+                "features_inside_radius": 60910
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 49457,
+                    "nearest_distance_km": 0.014736924616342698,
+                    "nearest_feature": {
+                        "feature_id": 19533369,
+                        "osm_id": 1120086443,
+                        "osm_type": "way",
+                        "center_latitude": 13.083605766296387,
+                        "center_longitude": 80.27008438110352
+                    }
+                },
+                "road": {
+                    "count": 11291,
+                    "nearest_distance_km": 0.028193560604729984,
+                    "nearest_feature": {
+                        "feature_id": 49323,
+                        "osm_id": 23499983,
+                        "osm_type": "way",
+                        "center_latitude": 13.083452224731445,
+                        "center_longitude": 80.27010726928711
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 150,
+                    "nearest_distance_km": 0.13984912491721746,
+                    "nearest_feature": {
+                        "feature_id": 37630,
+                        "osm_id": 12139194861,
+                        "osm_type": "node",
+                        "center_latitude": 13.082723617553711,
+                        "center_longitude": 80.2710075378418
+                    }
+                },
+                "substation": {
+                    "count": 12,
+                    "nearest_distance_km": 0.4275161264247334,
+                    "nearest_feature": {
+                        "feature_id": 13441901,
+                        "osm_id": 892117511,
+                        "osm_type": "way",
+                        "center_latitude": 13.080000400543213,
+                        "center_longitude": 80.27128219604492
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.028193560604729984,
+                "nearest_power_infrastructure_distance_km": 0.13984912491721746,
+                "nearest_substation_distance_km": 0.4275161264247334
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\chennai",
+                "file": "datasets\\openstreetmap\\processed\\chennai\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 3.6389
+            },
+            "status": "success",
+            "error": null
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 17.5,
+        "wind_score": 17.5,
+        "terrain_score": 20,
+        "sentinel_score": 15.0,
+        "osm_score": 13.0,
+        "category_scores": {
+            "renewable_resource": 70.0,
+            "terrain": 70.0,
+            "infrastructure": 86.67,
+            "environmental": 100.0,
+            "economic": 100.0
+        },
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 83.0,
+        "normalized_score": 83.0,
+        "recommendation": "SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 17.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 17.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "SUCCESS",
+                "score": 15.0,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 13.0,
+                "weight": 15
+            }
+        }
+    },
+    "technical_feasibility": {
+        "feasibility_status": "FEASIBLE",
+        "feasibility_score": 82.33,
+        "hard_constraints_passed": 6,
+        "hard_constraints_failed": 0,
+        "hard_constraints": [
+            {
+                "name": "site_coordinates",
+                "status": "PASS",
+                "message": "Site coordinates are valid."
+            },
+            {
+                "name": "land_availability",
+                "status": "PASS",
+                "message": "1.000 km² of land is available for deployment."
+            },
+            {
+                "name": "restricted_land",
+                "status": "PASS",
+                "message": "No explicit restricted/protected land condition was detected."
+            },
+            {
+                "name": "terrain_suitability",
+                "status": "PASS",
+                "message": "Mean terrain slope of 1.84° is within the acceptable limit of 15.00°."
+            },
+            {
+                "name": "resource_data",
+                "status": "PASS",
+                "message": "Required solar and wind resource data is available."
+            },
+            {
+                "name": "capacity_limit",
+                "status": "PASS",
+                "message": "Recommended capacity 2.55 MW is within the estimated site limit of 5.00 MW."
+            }
+        ],
+        "failed_constraints": [],
+        "passed_constraints": [
+            {
+                "name": "site_coordinates",
+                "status": "PASS",
+                "message": "Site coordinates are valid."
+            },
+            {
+                "name": "land_availability",
+                "status": "PASS",
+                "message": "1.000 km² of land is available for deployment."
+            },
+            {
+                "name": "restricted_land",
+                "status": "PASS",
+                "message": "No explicit restricted/protected land condition was detected."
+            },
+            {
+                "name": "terrain_suitability",
+                "status": "PASS",
+                "message": "Mean terrain slope of 1.84° is within the acceptable limit of 15.00°."
+            },
+            {
+                "name": "resource_data",
+                "status": "PASS",
+                "message": "Required solar and wind resource data is available."
+            },
+            {
+                "name": "capacity_limit",
+                "status": "PASS",
+                "message": "Recommended capacity 2.55 MW is within the estimated site limit of 5.00 MW."
+            }
+        ],
+        "soft_constraints": [
+            {
+                "name": "renewable_resource",
+                "score": 70.0,
+                "weight": 30
+            },
+            {
+                "name": "terrain",
+                "score": 70.0,
+                "weight": 20
+            },
+            {
+                "name": "infrastructure",
+                "score": 86.67,
+                "weight": 20
+            },
+            {
+                "name": "environmental",
+                "score": 100.0,
+                "weight": 15
+            },
+            {
+                "name": "economic",
+                "score": 100.0,
+                "weight": 15
+            }
+        ],
+        "soft_constraint_weights": {
+            "renewable_resource": 0.3,
+            "terrain": 0.2,
+            "infrastructure": 0.2,
+            "environmental": 0.15,
+            "economic": 0.15
+        },
+        "constraint_summary": "Site satisfies all hard constraints and has high soft-constraint feasibility."
+    },
+    "deployment_recommendation": {
+        "recommended_technology": "HYBRID",
+        "recommended_capacity_mw": 2.55,
+        "expansion_status": "Expandable",
+        "optimization_remarks": "Solar and wind resources are sufficiently complementary (70.0/100 solar, 70.0/100 wind), supporting a hybrid deployment strategy. Overall suitability is 83.0/100; terrain suitability is 70.0/100 and infrastructure suitability is 86.7/100. Expansion assessment: Expandable."
+    },
+    "energy_yield": {
+        "technology": "HYBRID",
+        "installed_capacity_mw": 2.55,
+        "solar_capacity_mw": 1.27,
+        "wind_capacity_mw": 1.27,
+        "solar_capacity_share": 0.5,
+        "wind_capacity_share": 0.5,
+        "solar": {
+            "technology": "SOLAR",
+            "installed_capacity_mw": 1.27,
+            "solar_irradiance_kwh_m2_day": 5.2224,
+            "capacity_factor": 0.2176,
+            "system_efficiency": 0.95,
+            "operational_loss": 0.05,
+            "annual_energy_mwh": 2193.41,
+            "annual_energy_gwh": 2.1934
+        },
+        "wind": {
+            "technology": "WIND",
+            "installed_capacity_mw": 1.27,
+            "wind_speed_ms": 5.5942,
+            "capacity_factor": 0.1441,
+            "system_efficiency": 0.95,
+            "operational_loss": 0.05,
+            "annual_energy_mwh": 1452.76,
+            "annual_energy_gwh": 1.4528
+        },
+        "annual_energy_mwh": 3646.17,
+        "annual_energy_gwh": 3.6462
+    },
+    "financial_analysis": {
+        "annual_energy_yield_kwh": 3646170.0,
+        "installed_capacity_mw": 2.55,
+        "electricity_tariff_inr_per_kwh": 5.0,
+        "cost_per_mw": 5000000.0,
+        "additional_installation_percent": 0.0,
+        "estimated_annual_revenue": 18230850.0,
+        "estimated_project_cost": 12750000.0,
+        "payback_period_years": 0.7,
+        "roi_percent": 142.99
+    },
+    "pipeline": {
+        "data_source": "LOCAL_DATASET_ENGINE",
+        "steps": [
+            "site_details_received",
+            "local_nasa_power_analysis",
+            "local_global_wind_atlas_analysis",
+            "local_srtm_analysis",
+            "local_sentinel_analysis",
+            "local_openstreetmap_analysis",
+            "deployment_score_calculated",
+            "deployment_optimized",
+            "technical_feasibility_validated",
+            "annual_energy_yield_estimated",
+            "financial_analysis_completed",
+            "final_response_generated"
+        ],
+        "completed": true
+    },
+    "status": "success"
+}

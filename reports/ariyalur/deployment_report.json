@@ -1,0 +1,403 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-26T15:54:31",
+    "site_information": {
+        "requested_location": "ariyalur",
+        "resolved_location": "Ariyalur, Tamil Nadu, India",
+        "latitude": 11.1530559,
+        "longitude": 79.2585797,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "ariyalur",
+                "resolved_location": "Ariyalur, Tamil Nadu, India",
+                "latitude": 11.1530559,
+                "longitude": 79.2585797
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 11.0,
+                "longitude": 79.5,
+                "distance_from_location_km": 31.363827807189722
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.401,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 28.22,
+                "maximum_c": 42.45,
+                "minimum_c": 16.34,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 70.7,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.77,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.06,
+                "wind_speed_50m_ms": 5.71,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.13387274742126465,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\ariyalur\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "ariyalur",
+                "resolved_location": "Ariyalur, Tamil Nadu, India",
+                "latitude": 11.1530559,
+                "longitude": 79.2585797
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.2085797,
+                "south": 11.1030559,
+                "east": 79.3085797,
+                "north": 11.2030559
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.910358428955078,
+                "maximum_ms": 6.30943489074707,
+                "mean_ms": 6.067714691162109,
+                "median_ms": 6.0539751052856445,
+                "standard_deviation_ms": 0.0785580724477768
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 338,
+                    "percentage": 21.125
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 1262,
+                    "percentage": 78.875
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.3306577205657959,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\ariyalur\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\ariyalur\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "ariyalur",
+                "resolved_location": "Ariyalur, Tamil Nadu, India",
+                "latitude": 11.1530559,
+                "longitude": 79.2585797
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.2085797,
+                "south": 11.1030559,
+                "east": 79.3085797,
+                "north": 11.2030559
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.338224141714594,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 40.0,
+                "maximum_m": 115.0,
+                "mean_m": 76.09882716049383,
+                "median_m": 76.0,
+                "standard_deviation_m": 17.519999203231652
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 13.346374052573658,
+                "mean_degrees": 1.8709984269068853,
+                "median_degrees": 1.8647419238653338,
+                "standard_deviation_degrees": 1.0881027551422358
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 114938,
+                    "percentage": 89.18149300517531
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 13896,
+                    "percentage": 10.782039245505544
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 47,
+                    "percentage": 0.03646774931913936
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.96353225068086,
+                "moderate_terrain_percentage": 0.03646774931913936,
+                "steep_terrain_percentage": 0.0
+            },
+            "processing": {
+                "processing_time_seconds": 4.182398080825806,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\ariyalur\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\ariyalur\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\ariyalur\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "ariyalur",
+            "total_pixels": 607130,
+            "valid_pixels": 598392,
+            "invalid_pixels": 8738,
+            "valid_percentage": 98.56076952217812,
+            "ndvi_statistics": {
+                "minimum": -0.3824446201324463,
+                "maximum": 0.729788601398468,
+                "mean": 0.3301251232624054,
+                "median": 0.31958436965942383,
+                "standard_deviation": 0.1315903514623642
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4676646590232849,
+                "mean": 0.0025003221817314625,
+                "median": -0.00962953269481659,
+                "standard_deviation": 0.1118798479437828
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 8738,
+                    "percentage": 1.4392304778218834
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 356476,
+                    "percentage": 58.714937492793965
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 240980,
+                    "percentage": 39.6916640587683
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 280,
+                    "percentage": 0.046118623688501635
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 656,
+                    "percentage": 0.10804934692734669
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "ARIYALUR",
+                "resolved_location": "Ariyalur, Tamil Nadu, India",
+                "latitude": 11.1530559,
+                "longitude": 79.2585797
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.21279953559745,
+                    "south": 11.108140341250449,
+                    "east": 79.30435986440254,
+                    "north": 11.197971458749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.05444049835205078,
+                "bounding_box_matches": 310,
+                "features_inside_radius": 165
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 6,
+                    "nearest_distance_km": 4.438488902518599,
+                    "nearest_feature": {
+                        "feature_id": 16448557,
+                        "osm_id": 1002020829,
+                        "osm_type": "way",
+                        "center_latitude": 11.186110973358154,
+                        "center_longitude": 79.28138732910156
+                    }
+                },
+                "road": {
+                    "count": 159,
+                    "nearest_distance_km": 0.40283195634989266,
+                    "nearest_feature": {
+                        "feature_id": 24469012,
+                        "osm_id": 1327149494,
+                        "osm_type": "way",
+                        "center_latitude": 11.155390739440918,
+                        "center_longitude": 79.25575637817383
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": false,
+                "substation_available": false,
+                "nearest_road_distance_km": 0.40283195634989266,
+                "nearest_power_infrastructure_distance_km": null,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\ariyalur",
+                "file": "datasets\\openstreetmap\\processed\\ariyalur\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4883
+            }
+        }
+    }
+}

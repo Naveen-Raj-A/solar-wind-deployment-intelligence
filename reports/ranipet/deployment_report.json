@@ -1,0 +1,427 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-28T15:52:36",
+    "site_information": {
+        "requested_location": "ranipet",
+        "resolved_location": "Ranipet, Tamil Nadu, India",
+        "latitude": 12.9186243,
+        "longitude": 79.4081921,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "ranipet",
+                "resolved_location": "Ranipet, Tamil Nadu, India",
+                "latitude": 12.9186243,
+                "longitude": 79.4081921
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 13.0,
+                "longitude": 79.5,
+                "distance_from_location_km": 13.448076909486321
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.3364,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.02,
+                "maximum_c": 44.89,
+                "minimum_c": 12.71,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 70.07,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.9,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.41,
+                "wind_speed_50m_ms": 4.97,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.5065937042236328,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\ranipet\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "ranipet",
+                "resolved_location": "Ranipet, Tamil Nadu, India",
+                "latitude": 12.9186243,
+                "longitude": 79.4081921
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.3581921,
+                "south": 12.868624299999999,
+                "east": 79.45819209999999,
+                "north": 12.9686243
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.0487518310546875,
+                "maximum_ms": 6.015297889709473,
+                "mean_ms": 5.260149002075195,
+                "median_ms": 5.269541263580322,
+                "standard_deviation_ms": 0.0938500240445137
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1599,
+                    "percentage": 99.9375
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 1,
+                    "percentage": 0.0625
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4184398651123047,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\ranipet\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\ranipet\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "ranipet",
+                "resolved_location": "Ranipet, Tamil Nadu, India",
+                "latitude": 12.9186243,
+                "longitude": 79.4081921
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S12.5_N14.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.3581921,
+                "south": 12.868624299999999,
+                "east": 79.45819209999999,
+                "north": 12.9686243
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.139536684222808,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 120.0,
+                "maximum_m": 271.0,
+                "mean_m": 148.731612654321,
+                "median_m": 147.0,
+                "standard_deviation_m": 13.165954529193018
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 34.49660261196079,
+                "mean_degrees": 2.6335990337672848,
+                "median_degrees": 2.1165344270285344,
+                "standard_deviation_degrees": 2.216579709674793
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 95546,
+                    "percentage": 74.13505481801042
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 30663,
+                    "percentage": 23.791714837718516
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 1879,
+                    "percentage": 1.4579340632055928
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 793,
+                    "percentage": 0.6152962810654791
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 97.92676965572893,
+                "moderate_terrain_percentage": 1.4579340632055928,
+                "steep_terrain_percentage": 0.6152962810654791
+            },
+            "processing": {
+                "processing_time_seconds": 2.8531463146209717,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\ranipet\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\ranipet\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\ranipet\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "ranipet",
+            "total_pixels": 1217602,
+            "valid_pixels": 1200428,
+            "invalid_pixels": 17174,
+            "valid_percentage": 98.58952268475248,
+            "ndvi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.7029299139976501,
+                "mean": 0.24564236402511597,
+                "median": 0.26234617829322815,
+                "standard_deviation": 0.16537895798683167
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4696299433708191,
+                "mean": -0.009835797362029552,
+                "median": -0.027100270614027977,
+                "standard_deviation": 0.1138349249958992
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 17142,
+                    "percentage": 1.4078491986708301
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 1020,
+                    "percentage": 0.08377121588170847
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 391228,
+                    "percentage": 32.13102475193043
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 684600,
+                    "percentage": 56.22526901237022
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 41984,
+                    "percentage": 3.4480889486055375
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 81596,
+                    "percentage": 6.701368755964593
+                },
+                "8": {
+                    "class_name": "Cloud Medium Probability",
+                    "pixel_count": 32,
+                    "percentage": 0.00262811657668105
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "RANIPET",
+                "resolved_location": "Ranipet, Tamil Nadu, India",
+                "latitude": 12.9186243,
+                "longitude": 79.4081921
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.36211014116165,
+                    "south": 12.873708741250448,
+                    "east": 79.45427405883834,
+                    "north": 12.96353985874955
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.08275747299194336,
+                "bounding_box_matches": 1040,
+                "features_inside_radius": 823
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 25,
+                    "nearest_distance_km": 1.570339203205787,
+                    "nearest_feature": {
+                        "feature_id": 19152575,
+                        "osm_id": 1104933398,
+                        "osm_type": "way",
+                        "center_latitude": 12.91586685180664,
+                        "center_longitude": 79.39398193359375
+                    }
+                },
+                "road": {
+                    "count": 796,
+                    "nearest_distance_km": 0.7198320470635035,
+                    "nearest_feature": {
+                        "feature_id": 23531581,
+                        "osm_id": 1292377177,
+                        "osm_type": "way",
+                        "center_latitude": 12.91269063949585,
+                        "center_longitude": 79.40553665161133
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 2,
+                    "nearest_distance_km": 1.8316115603750105,
+                    "nearest_feature": {
+                        "feature_id": 34533,
+                        "osm_id": 10880799753,
+                        "osm_type": "node",
+                        "center_latitude": 12.905033111572266,
+                        "center_longitude": 79.41773986816406
+                    }
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": false,
+                "nearest_road_distance_km": 0.7198320470635035,
+                "nearest_power_infrastructure_distance_km": 1.8316115603750105,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\ranipet",
+                "file": "datasets\\openstreetmap\\processed\\ranipet\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4962
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

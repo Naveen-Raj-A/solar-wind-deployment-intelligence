@@ -1,0 +1,444 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-28T15:58:55",
+    "site_information": {
+        "requested_location": "tirunelveli",
+        "resolved_location": "Tirunelveli, Tamil Nadu, India",
+        "latitude": 8.5495014,
+        "longitude": 77.5805178,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "tirunelveli",
+                "resolved_location": "Tirunelveli, Tamil Nadu, India",
+                "latitude": 8.5495014,
+                "longitude": 77.5805178
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 8.5,
+                "longitude": 77.5,
+                "distance_from_location_km": 10.425713599439252
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.2572,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 25.82,
+                "maximum_c": 39.75,
+                "minimum_c": 14.64,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 79.44,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 3.54,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.11,
+                "wind_speed_50m_ms": 5.63,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.06990885734558105,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\tirunelveli\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "tirunelveli",
+                "resolved_location": "Tirunelveli, Tamil Nadu, India",
+                "latitude": 8.5495014,
+                "longitude": 77.5805178
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 77.5305178,
+                "south": 8.4995014,
+                "east": 77.63051779999999,
+                "north": 8.599501400000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 4.08158540725708,
+                "maximum_ms": 8.046187400817871,
+                "mean_ms": 4.77919864654541,
+                "median_ms": 4.6326823234558105,
+                "standard_deviation_ms": 0.47124990820884705
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1563,
+                    "percentage": 97.6875
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 36,
+                    "percentage": 2.25
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 1,
+                    "percentage": 0.0625
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.15565109252929688,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\tirunelveli\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\tirunelveli\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "tirunelveli",
+                "resolved_location": "Tirunelveli, Tamil Nadu, India",
+                "latitude": 8.5495014,
+                "longitude": 77.5805178
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 2,
+                "intersecting_tiles": [
+                    "srtm_S6.5_N8.5_W76.0_E78.0.tif",
+                    "srtm_S8.5_N10.5_W76.0_E78.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 77.5305178,
+                "south": 8.4995014,
+                "east": 77.63051779999999,
+                "north": 8.599501400000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.57860807210039,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 59.0,
+                "maximum_m": 940.0,
+                "mean_m": 138.80404320987654,
+                "median_m": 117.0,
+                "standard_deviation_m": 96.50149792068724
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 71.90547392308798,
+                "mean_degrees": 4.5708670580836115,
+                "median_degrees": 2.0865222321141497,
+                "standard_deviation_degrees": 7.702864810211062
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 94704,
+                    "percentage": 73.48173896850582
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 18631,
+                    "percentage": 14.45597101201884
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 4468,
+                    "percentage": 3.4667639139981845
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 11078,
+                    "percentage": 8.595526105477145
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "SUITABLE",
+                "favorable_terrain_percentage": 87.93770998052466,
+                "moderate_terrain_percentage": 3.4667639139981845,
+                "steep_terrain_percentage": 8.595526105477145
+            },
+            "processing": {
+                "processing_time_seconds": 4.240131855010986,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\tirunelveli\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\tirunelveli\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\tirunelveli\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "tirunelveli",
+            "total_pixels": 1237650,
+            "valid_pixels": 1197308,
+            "invalid_pixels": 40342,
+            "valid_percentage": 96.74043550276734,
+            "ndvi_statistics": {
+                "minimum": -0.34173229336738586,
+                "maximum": 0.6841121315956116,
+                "mean": 0.35404255986213684,
+                "median": 0.3522210419178009,
+                "standard_deviation": 0.1494060605764389
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.5196977853775024,
+                "mean": 0.10017114877700806,
+                "median": 0.0813799500465393,
+                "standard_deviation": 0.13471563160419464
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 18738,
+                    "percentage": 1.5139983032359714
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 1044,
+                    "percentage": 0.0843534117076718
+                },
+                "3": {
+                    "class_name": "Cloud Shadows",
+                    "pixel_count": 9312,
+                    "percentage": 0.7523936492546358
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 782372,
+                    "percentage": 63.21431745646993
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 361536,
+                    "percentage": 29.21148951642225
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 8912,
+                    "percentage": 0.7200743344241102
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 43444,
+                    "percentage": 3.510200783743385
+                },
+                "8": {
+                    "class_name": "Cloud Medium Probability",
+                    "pixel_count": 8360,
+                    "percentage": 0.6754736799579849
+                },
+                "9": {
+                    "class_name": "Cloud High Probability",
+                    "pixel_count": 3932,
+                    "percentage": 0.31769886478406656
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "TIRUNELVELI",
+                "resolved_location": "Tirunelveli, Tamil Nadu, India",
+                "latitude": 8.5495014,
+                "longitude": 77.5805178
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 77.53509752169255,
+                    "south": 8.50458584125045,
+                    "east": 77.62593807830744,
+                    "north": 8.594416958749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.04826164245605469,
+                "bounding_box_matches": 1102,
+                "features_inside_radius": 326
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 51,
+                    "nearest_distance_km": 2.113539812550013,
+                    "nearest_feature": {
+                        "feature_id": 6392472,
+                        "osm_id": 548612292,
+                        "osm_type": "way",
+                        "center_latitude": 8.537424087524414,
+                        "center_longitude": 77.5953598022461
+                    }
+                },
+                "road": {
+                    "count": 273,
+                    "nearest_distance_km": 0.1373219186813047,
+                    "nearest_feature": {
+                        "feature_id": 25838463,
+                        "osm_id": 1393762921,
+                        "osm_type": "way",
+                        "center_latitude": 8.54833459854126,
+                        "center_longitude": 77.58010864257812
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 1,
+                    "nearest_distance_km": 3.928457053334846,
+                    "nearest_feature": {
+                        "feature_id": 935988,
+                        "osm_id": 309143403,
+                        "osm_type": "way",
+                        "center_latitude": 8.524831295013428,
+                        "center_longitude": 77.6060905456543
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 4.855832472657881,
+                    "nearest_feature": {
+                        "feature_id": 935986,
+                        "osm_id": 309143401,
+                        "osm_type": "way",
+                        "center_latitude": 8.50786304473877,
+                        "center_longitude": 77.56720733642578
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.1373219186813047,
+                "nearest_power_infrastructure_distance_km": 3.928457053334846,
+                "nearest_substation_distance_km": 4.855832472657881
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\tirunelveli",
+                "file": "datasets\\openstreetmap\\processed\\tirunelveli\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.5653
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

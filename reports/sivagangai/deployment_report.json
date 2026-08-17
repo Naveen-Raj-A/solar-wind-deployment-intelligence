@@ -1,0 +1,433 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-28T15:23:53",
+    "site_information": {
+        "requested_location": "sivagangai",
+        "resolved_location": "Sivagangai, Tamil Nadu, India",
+        "latitude": 9.9650599,
+        "longitude": 78.7204283,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "sivagangai",
+                "resolved_location": "Sivagangai, Tamil Nadu, India",
+                "latitude": 9.9650599,
+                "longitude": 78.7204283
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 10.0,
+                "longitude": 78.5,
+                "distance_from_location_km": 24.450121535819903
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.5457,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 28.17,
+                "maximum_c": 42.49,
+                "minimum_c": 15.63,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 69.93,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.51,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.83,
+                "wind_speed_50m_ms": 5.26,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.11126112937927246,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\sivagangai\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "sivagangai",
+                "resolved_location": "Sivagangai, Tamil Nadu, India",
+                "latitude": 9.9650599,
+                "longitude": 78.7204283
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 78.6704283,
+                "south": 9.9150599,
+                "east": 78.77042829999999,
+                "north": 10.0150599
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 4.592665672302246,
+                "maximum_ms": 5.0378007888793945,
+                "mean_ms": 4.849374294281006,
+                "median_ms": 4.865609169006348,
+                "standard_deviation_ms": 0.10757192969322205
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4274868965148926,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\sivagangai\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\sivagangai\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "sivagangai",
+                "resolved_location": "Sivagangai, Tamil Nadu, India",
+                "latitude": 9.9650599,
+                "longitude": 78.7204283
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S8.5_N10.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 78.6704283,
+                "south": 9.9150599,
+                "east": 78.77042829999999,
+                "north": 10.0150599
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.455713003005396,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 46.0,
+                "maximum_m": 91.0,
+                "mean_m": 66.17590277777778,
+                "median_m": 65.0,
+                "standard_deviation_m": 7.172770303728819
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 16.924860593876698,
+                "mean_degrees": 2.1252725355514364,
+                "median_degrees": 2.088219391123973,
+                "standard_deviation_degrees": 1.249575608530552
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 106791,
+                    "percentage": 82.8601578200045
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 21959,
+                    "percentage": 17.0381980276379
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 130,
+                    "percentage": 0.10086824279761952
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 1,
+                    "percentage": 0.0007759095599816886
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.8983558476424,
+                "moderate_terrain_percentage": 0.10086824279761952,
+                "steep_terrain_percentage": 0.0007759095599816886
+            },
+            "processing": {
+                "processing_time_seconds": 3.149181365966797,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\sivagangai\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\sivagangai\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\sivagangai\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "sivagangai",
+            "total_pixels": 816088,
+            "valid_pixels": 799068,
+            "invalid_pixels": 17020,
+            "valid_percentage": 97.91444059954318,
+            "ndvi_statistics": {
+                "minimum": -0.39020824432373047,
+                "maximum": 0.6837530136108398,
+                "mean": 0.3106558620929718,
+                "median": 0.30237287282943726,
+                "standard_deviation": 0.13011965155601501
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.40896013379096985,
+                "mean": -0.01424772385507822,
+                "median": -0.027967847883701324,
+                "standard_deviation": 0.10497132688760757
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 16780,
+                    "percentage": 2.056150807265883
+                },
+                "3": {
+                    "class_name": "Cloud Shadows",
+                    "pixel_count": 152,
+                    "percentage": 0.018625442354255912
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 478024,
+                    "percentage": 58.57505563125546
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 318968,
+                    "percentage": 39.085000637186184
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 716,
+                    "percentage": 0.08773563635294233
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 1360,
+                    "percentage": 0.16664869474860552
+                },
+                "8": {
+                    "class_name": "Cloud Medium Probability",
+                    "pixel_count": 88,
+                    "percentage": 0.010783150836674476
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "SIVAGANGAI",
+                "resolved_location": "Sivagangai, Tamil Nadu, India",
+                "latitude": 9.9650599,
+                "longitude": 78.7204283
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 78.67482474152307,
+                    "south": 9.920144341250449,
+                    "east": 78.76603185847692,
+                    "north": 10.009975458749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.05966973304748535,
+                "bounding_box_matches": 273,
+                "features_inside_radius": 191
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 6,
+                    "nearest_distance_km": 1.5276543157814297,
+                    "nearest_feature": {
+                        "feature_id": 14512019,
+                        "osm_id": 928179463,
+                        "osm_type": "way",
+                        "center_latitude": 9.951642513275146,
+                        "center_longitude": 78.7174301147461
+                    }
+                },
+                "road": {
+                    "count": 183,
+                    "nearest_distance_km": 0.5843877268370788,
+                    "nearest_feature": {
+                        "feature_id": 25926781,
+                        "osm_id": 1409693163,
+                        "osm_type": "way",
+                        "center_latitude": 9.9672212600708,
+                        "center_longitude": 78.72529220581055
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 1,
+                    "nearest_distance_km": 2.629784306744127,
+                    "nearest_feature": {
+                        "feature_id": 15989959,
+                        "osm_id": 986260251,
+                        "osm_type": "way",
+                        "center_latitude": 9.941702842712402,
+                        "center_longitude": 78.71665954589844
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 2.7079282325688316,
+                    "nearest_feature": {
+                        "feature_id": 26194352,
+                        "osm_id": 1432135177,
+                        "osm_type": "way",
+                        "center_latitude": 9.940760612487793,
+                        "center_longitude": 78.7220687866211
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.5843877268370788,
+                "nearest_power_infrastructure_distance_km": 2.629784306744127,
+                "nearest_substation_distance_km": 2.7079282325688316
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\sivagangai",
+                "file": "datasets\\openstreetmap\\processed\\sivagangai\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 3.4804
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import './styles/global.css';
+@import './styles/components.css';
+
+body { font-family: 'Inter', system-ui, sans-serif; background-color: var(--bg); color: var(--text-secondary); margin: 0; padding: 0; line-height: 1.7; font-size: 16px; }
+
+h1, h2, h3, h4 { color: var(--navy); font-weight: 800; }
+h1 { font-size: 64px; line-height: 1.05; }
+h2 { font-size: 32px; }
+h3 { font-size: 18px; }
+
+.navbar { padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+.nav-links a { text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 15px; }
+
+.hero { padding: 120px 60px; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: space-between; }
+.hero h1 { color: var(--white); margin-bottom: 24px; }
+.hero p { color: #D9E4EC; font-size: 18px; max-width: 600px; margin-bottom: 32px; }
+
+.btn { padding: 16px 32px; border-radius: 4px; font-weight: 700; font-size: 15px; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn-primary { background: var(--green); color: var(--white); }
+
+.card { background: var(--white); padding: 30px; border-radius: 12px; border: 1px solid var(--border); }
+
+/* Analysis Page */
+.form-control { font-size: 16px; padding: 12px; }
+.form-group label { font-size: 14px; font-weight: 700; letter-spacing: 0.8px; color: var(--navy); }
+.analysis-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }

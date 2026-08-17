@@ -1,0 +1,712 @@
+{
+    "site": {
+        "latitude": 12.5152075,
+        "longitude": 78.0093769,
+        "available_land_area_km2": 100.0,
+        "used_land_area_km2": 1.0,
+        "land_reserve_percent": 99.0
+    },
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-08-17T13:42:42",
+    "site_information": {
+        "requested_location": "Coordinates",
+        "resolved_location": "Coordinates",
+        "latitude": 12.5152075,
+        "longitude": 78.0093769,
+        "country": "Unknown",
+        "state": "Unknown",
+        "source": "Manual",
+        "available_land_area_km2": 100.0,
+        "used_land_area_km2": 1.0,
+        "land_reserve_percent": 99.0
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Coordinates",
+                "resolved_location": "Coordinates",
+                "latitude": 12.5152075,
+                "longitude": 78.0093769
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 12.5,
+                "longitude": 78.0,
+                "distance_from_location_km": 1.973737336821283
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.4382,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 24.83,
+                "maximum_c": 42.42,
+                "minimum_c": 9.47,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 69.01,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.46,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.82,
+                "wind_speed_50m_ms": 5.42,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.41887354850769043,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\coordinates\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Coordinates",
+                "resolved_location": "Coordinates",
+                "latitude": 12.5152075,
+                "longitude": 78.0093769
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 77.95937690000001,
+                "south": 12.4652075,
+                "east": 78.0593769,
+                "north": 12.565207500000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.330794811248779,
+                "maximum_ms": 7.899433612823486,
+                "mean_ms": 6.246746063232422,
+                "median_ms": 6.247593879699707,
+                "standard_deviation_ms": 0.26935479044914246
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 264,
+                    "percentage": 16.5
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 1336,
+                    "percentage": 83.5
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.7328469753265381,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\coordinates\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\coordinates\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Coordinates",
+                "resolved_location": "Coordinates",
+                "latitude": 12.5152075,
+                "longitude": 78.0093769
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 4,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W76.0_E78.0.tif",
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif",
+                    "srtm_S12.5_N14.5_W76.0_E78.0.tif",
+                    "srtm_S12.5_N14.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 77.95937690000001,
+                "south": 12.4652075,
+                "east": 78.0593769,
+                "north": 12.565207500000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.187464615793278,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 622.0,
+                "maximum_m": 951.0,
+                "mean_m": 712.3066358024691,
+                "median_m": 715.0,
+                "standard_deviation_m": 34.93650659415109
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 68.37763880725865,
+                "mean_degrees": 5.231245414011488,
+                "median_degrees": 3.7255417968535904,
+                "standard_deviation_degrees": 5.060141898288237
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 56130,
+                    "percentage": 43.55180360177218
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 49965,
+                    "percentage": 38.76832116448507
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 15617,
+                    "percentage": 12.117379598234029
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 7169,
+                    "percentage": 5.562495635508726
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "SUITABLE",
+                "favorable_terrain_percentage": 82.32012476625725,
+                "moderate_terrain_percentage": 12.117379598234029,
+                "steep_terrain_percentage": 5.562495635508726
+            },
+            "processing": {
+                "processing_time_seconds": 25.74035668373108,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\coordinates\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\coordinates\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\coordinates\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Coordinates",
+            "total_pixels": 87058,
+            "valid_pixels": 78828,
+            "invalid_pixels": 8230,
+            "valid_percentage": 90.5465321969262,
+            "ndvi_statistics": {
+                "minimum": -0.014936519786715508,
+                "maximum": 0.6574698090553284,
+                "mean": 0.2443474531173706,
+                "median": 0.22790856659412384,
+                "standard_deviation": 0.11834386736154556
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.37970924377441406,
+                "mean": -0.031124243512749672,
+                "median": -0.046297021210193634,
+                "standard_deviation": 0.10939891636371613
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 8230,
+                    "percentage": 9.453467803073814
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 48,
+                    "percentage": 0.055135656688644355
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 27504,
+                    "percentage": 31.592731282593213
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 50460,
+                    "percentage": 57.96135909393737
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 608,
+                    "percentage": 0.6983849847228284
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 208,
+                    "percentage": 0.23892117898412554
+                }
+            },
+            "requested_location": "Coordinates",
+            "resolved_location": "Coordinates",
+            "latitude": 12.5152075,
+            "longitude": 78.0093769,
+            "bounding_box": [
+                77.95937690000001,
+                12.4652075,
+                78.0593769,
+                12.565207500000001
+            ],
+            "coordinate_mode": true,
+            "geocoding": "SKIPPED",
+            "status": "SUCCESS"
+        },
+        "osm": {
+            "location": {
+                "requested_location": "COORDINATES",
+                "resolved_location": "Coordinates",
+                "latitude": 12.5152075,
+                "longitude": 78.0093769
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 77.96336810440998,
+                    "south": 12.47029194125045,
+                    "east": 78.05538569559003,
+                    "north": 12.560123058749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.14767837524414062,
+                "bounding_box_matches": 482,
+                "features_inside_radius": 329
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 2,
+                    "nearest_distance_km": 1.3937457889866611,
+                    "nearest_feature": {
+                        "feature_id": 16860816,
+                        "osm_id": 1020206980,
+                        "osm_type": "way",
+                        "center_latitude": 12.523131370544434,
+                        "center_longitude": 78.01932525634766
+                    }
+                },
+                "road": {
+                    "count": 325,
+                    "nearest_distance_km": 0.08387274538107226,
+                    "nearest_feature": {
+                        "feature_id": 25161209,
+                        "osm_id": 1352864858,
+                        "osm_type": "way",
+                        "center_latitude": 12.514968395233154,
+                        "center_longitude": 78.0086441040039
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 1,
+                    "nearest_distance_km": 4.045244287444657,
+                    "nearest_feature": {
+                        "feature_id": 22503673,
+                        "osm_id": 1236767139,
+                        "osm_type": "way",
+                        "center_latitude": 12.542455196380615,
+                        "center_longitude": 77.98468399047852
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 2.809309408228838,
+                    "nearest_feature": {
+                        "feature_id": 26193988,
+                        "osm_id": 1431998772,
+                        "osm_type": "way",
+                        "center_latitude": 12.505223751068115,
+                        "center_longitude": 78.03314971923828
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.08387274538107226,
+                "nearest_power_infrastructure_distance_km": 4.045244287444657,
+                "nearest_substation_distance_km": 2.809309408228838
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\coordinates",
+                "file": "datasets\\openstreetmap\\processed\\coordinates\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.3955
+            }
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 22.5,
+        "terrain_score": 18.0,
+        "sentinel_score": 13.95,
+        "osm_score": 12.0,
+        "category_scores": {
+            "renewable_resource": 90.0,
+            "terrain": 63.0,
+            "infrastructure": 80.0,
+            "environmental": 93.0,
+            "economic": 82.5
+        },
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 88.95,
+        "normalized_score": 88.95,
+        "recommendation": "HIGHLY SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 18.0,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "UNAVAILABLE",
+                "score": 13.95,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 12.0,
+                "weight": 15
+            }
+        }
+    },
+    "technical_feasibility": {
+        "feasibility_status": "FEASIBLE",
+        "feasibility_score": 81.92,
+        "hard_constraints_passed": 6,
+        "hard_constraints_failed": 0,
+        "hard_constraints": [
+            {
+                "name": "site_coordinates",
+                "status": "PASS",
+                "message": "Site coordinates are valid."
+            },
+            {
+                "name": "land_availability",
+                "status": "PASS",
+                "message": "99.000 km² of land is available for deployment."
+            },
+            {
+                "name": "restricted_land",
+                "status": "PASS",
+                "message": "No explicit restricted/protected land condition was detected."
+            },
+            {
+                "name": "terrain_suitability",
+                "status": "PASS",
+                "message": "Mean terrain slope of 5.23° is within the acceptable limit of 15.00°."
+            },
+            {
+                "name": "resource_data",
+                "status": "PASS",
+                "message": "Required solar and wind resource data is available."
+            },
+            {
+                "name": "capacity_limit",
+                "status": "PASS",
+                "message": "Recommended capacity 285.00 MW is within the estimated site limit of 500.00 MW."
+            }
+        ],
+        "failed_constraints": [],
+        "passed_constraints": [
+            {
+                "name": "site_coordinates",
+                "status": "PASS",
+                "message": "Site coordinates are valid."
+            },
+            {
+                "name": "land_availability",
+                "status": "PASS",
+                "message": "99.000 km² of land is available for deployment."
+            },
+            {
+                "name": "restricted_land",
+                "status": "PASS",
+                "message": "No explicit restricted/protected land condition was detected."
+            },
+            {
+                "name": "terrain_suitability",
+                "status": "PASS",
+                "message": "Mean terrain slope of 5.23° is within the acceptable limit of 15.00°."
+            },
+            {
+                "name": "resource_data",
+                "status": "PASS",
+                "message": "Required solar and wind resource data is available."
+            },
+            {
+                "name": "capacity_limit",
+                "status": "PASS",
+                "message": "Recommended capacity 285.00 MW is within the estimated site limit of 500.00 MW."
+            }
+        ],
+        "soft_constraints": [
+            {
+                "name": "renewable_resource",
+                "score": 90.0,
+                "weight": 30
+            },
+            {
+                "name": "terrain",
+                "score": 63.0,
+                "weight": 20
+            },
+            {
+                "name": "infrastructure",
+                "score": 80.0,
+                "weight": 20
+            },
+            {
+                "name": "environmental",
+                "score": 93.0,
+                "weight": 15
+            },
+            {
+                "name": "economic",
+                "score": 82.5,
+                "weight": 15
+            }
+        ],
+        "soft_constraint_weights": {
+            "renewable_resource": 0.3,
+            "terrain": 0.2,
+            "infrastructure": 0.2,
+            "environmental": 0.15,
+            "economic": 0.15
+        },
+        "constraint_summary": "All mandatory technical constraints passed.",
+        "failure_reasons": [],
+        "is_feasible": true
+    },
+    "feasibility_status": "FEASIBLE",
+    "feasibility_score": 81.92,
+    "passed_constraints": [
+        {
+            "name": "site_coordinates",
+            "status": "PASS",
+            "message": "Site coordinates are valid."
+        },
+        {
+            "name": "land_availability",
+            "status": "PASS",
+            "message": "99.000 km² of land is available for deployment."
+        },
+        {
+            "name": "restricted_land",
+            "status": "PASS",
+            "message": "No explicit restricted/protected land condition was detected."
+        },
+        {
+            "name": "terrain_suitability",
+            "status": "PASS",
+            "message": "Mean terrain slope of 5.23° is within the acceptable limit of 15.00°."
+        },
+        {
+            "name": "resource_data",
+            "status": "PASS",
+            "message": "Required solar and wind resource data is available."
+        },
+        {
+            "name": "capacity_limit",
+            "status": "PASS",
+            "message": "Recommended capacity 285.00 MW is within the estimated site limit of 500.00 MW."
+        }
+    ],
+    "failed_constraints": [],
+    "failure_reasons": [],
+    "constraint_summary": "All mandatory technical constraints passed.",
+    "deployment_recommendation": {
+        "recommended_technology": "HYBRID",
+        "recommended_capacity_mw": 285.0,
+        "expansion_status": "Expandable",
+        "optimization_remarks": "Solar and wind resources are sufficiently complementary (90.0/100 solar, 90.0/100 wind), supporting a hybrid deployment strategy. Overall suitability is 89.0/100; terrain suitability is 63.0/100 and infrastructure suitability is 80.0/100. Expansion assessment: Expandable."
+    },
+    "energy_yield": {
+        "technology": "HYBRID",
+        "installed_capacity_mw": 285.0,
+        "solar_capacity_mw": 142.5,
+        "wind_capacity_mw": 142.5,
+        "solar_capacity_share": 0.5,
+        "wind_capacity_share": 0.5,
+        "solar": {
+            "technology": "SOLAR",
+            "installed_capacity_mw": 142.5,
+            "solar_irradiance_kwh_m2_day": 5.4382,
+            "capacity_factor": 0.2266,
+            "system_efficiency": 0.95,
+            "operational_loss": 0.05,
+            "annual_energy_mwh": 255276.08,
+            "annual_energy_gwh": 255.2761
+        },
+        "wind": {
+            "technology": "WIND",
+            "installed_capacity_mw": 142.5,
+            "wind_speed_ms": 6.2467,
+            "capacity_factor": 0.1804,
+            "system_efficiency": 0.95,
+            "operational_loss": 0.05,
+            "annual_energy_mwh": 203208.56,
+            "annual_energy_gwh": 203.2086
+        },
+        "annual_energy_mwh": 458484.64,
+        "annual_energy_gwh": 458.4846
+    },
+    "financial_analysis": {
+        "annual_energy_yield_kwh": 458484640.0,
+        "installed_capacity_mw": 285.0,
+        "electricity_tariff_inr_per_kwh": 5.0,
+        "cost_per_mw": 5000000.0,
+        "additional_installation_percent": 0.0,
+        "estimated_annual_revenue": 2292423200.0,
+        "estimated_project_cost": 1425000000.0,
+        "payback_period_years": 0.62,
+        "roi_percent": 160.87
+    },
+    "pipeline": {
+        "data_source": "LOCAL_DATASET_ENGINE",
+        "steps": [
+            "site_details_received",
+            "local_nasa_power_analysis",
+            "local_global_wind_atlas_analysis",
+            "local_srtm_analysis",
+            "local_sentinel_analysis",
+            "local_openstreetmap_analysis",
+            "deployment_score_calculated",
+            "deployment_optimized",
+            "technical_feasibility_validated",
+            "annual_energy_yield_estimated",
+            "financial_analysis_completed",
+            "final_response_generated"
+        ],
+        "completed": true
+    },
+    "status": "success"
+}

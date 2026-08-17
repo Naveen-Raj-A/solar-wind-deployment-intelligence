@@ -1,0 +1,494 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-08-16T10:36:44",
+    "site_information": {
+        "requested_location": "madurai",
+        "resolved_location": "Madurai, Madurai South, Madurai, Tamil Nadu, India",
+        "latitude": 9.9261153,
+        "longitude": 78.1140983,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "madurai",
+                "resolved_location": "Madurai, Madurai South, Madurai, Tamil Nadu, India",
+                "latitude": 9.9261153,
+                "longitude": 78.1140983
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 10.0,
+                "longitude": 78.0,
+                "distance_from_location_km": 14.954676417119519
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.5457,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.31,
+                "maximum_c": 43.34,
+                "minimum_c": 13.64,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 68.93,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.63,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.11,
+                "wind_speed_50m_ms": 4.55,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.14809131622314453,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\madurai\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "madurai",
+                "resolved_location": "Madurai, Madurai South, Madurai, Tamil Nadu, India",
+                "latitude": 9.9261153,
+                "longitude": 78.1140983
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 78.0640983,
+                "south": 9.876115299999999,
+                "east": 78.16409829999999,
+                "north": 9.9761153
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 4.3297905921936035,
+                "maximum_ms": 5.392998695373535,
+                "mean_ms": 4.5017008781433105,
+                "median_ms": 4.495452880859375,
+                "standard_deviation_ms": 0.0829278901219368
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.3135204315185547,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\madurai\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\madurai\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "madurai",
+                "resolved_location": "Madurai, Madurai South, Madurai, Tamil Nadu, India",
+                "latitude": 9.9261153,
+                "longitude": 78.1140983
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S8.5_N10.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 78.0640983,
+                "south": 9.876115299999999,
+                "east": 78.16409829999999,
+                "north": 9.9761153
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.459343114454025,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 111.0,
+                "maximum_m": 315.0,
+                "mean_m": 138.33864969135803,
+                "median_m": 139.0,
+                "standard_deviation_m": 8.826398397449196
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 64.07678347470684,
+                "mean_degrees": 2.683315098017573,
+                "median_degrees": 2.098657959335619,
+                "standard_deviation_degrees": 2.1981063413744604
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 91695,
+                    "percentage": 71.14702710252094
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 35069,
+                    "percentage": 27.210372358997837
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 1650,
+                    "percentage": 1.2802507739697861
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 467,
+                    "percentage": 0.36234976451144857
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 98.35739946151878,
+                "moderate_terrain_percentage": 1.2802507739697861,
+                "steep_terrain_percentage": 0.36234976451144857
+            },
+            "processing": {
+                "processing_time_seconds": 4.809084892272949,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\madurai\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\madurai\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\madurai\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "madurai",
+            "total_pixels": 753011,
+            "valid_pixels": 640720,
+            "invalid_pixels": 112291,
+            "valid_percentage": 85.08773444212633,
+            "ndvi_statistics": {
+                "minimum": -0.11740192770957947,
+                "maximum": 1.0,
+                "mean": 0.20184853672981262,
+                "median": 0.1644868552684784,
+                "standard_deviation": 0.1531679630279541
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.48019322752952576,
+                "mean": -0.0168865118175745,
+                "median": -0.032579801976680756,
+                "standard_deviation": 0.10642390698194504
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 14035,
+                    "percentage": 1.8638505944800277
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 264,
+                    "percentage": 0.03505924880247433
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 154676,
+                    "percentage": 20.54100139307394
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 468208,
+                    "percentage": 62.178108951927655
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 1752,
+                    "percentage": 0.23266592387096602
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 15820,
+                    "percentage": 2.1008989244513026
+                },
+                "8": {
+                    "class_name": "Cloud Medium Probability",
+                    "pixel_count": 2212,
+                    "percentage": 0.2937540089055804
+                },
+                "9": {
+                    "class_name": "Cloud High Probability",
+                    "pixel_count": 812,
+                    "percentage": 0.10783375010458014
+                },
+                "10": {
+                    "class_name": "Thin Cirrus",
+                    "pixel_count": 95232,
+                    "percentage": 12.646827204383468
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "MADURAI",
+                "resolved_location": "Madurai, Madurai South, Madurai, Tamil Nadu, India",
+                "latitude": 9.9261153,
+                "longitude": 78.1140983
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 78.06850017650567,
+                    "south": 9.881199741250448,
+                    "east": 78.15969642349432,
+                    "north": 9.97103085874955
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 1.4990956783294678,
+                "bounding_box_matches": 38667,
+                "features_inside_radius": 32502
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 22976,
+                    "nearest_distance_km": 0.09187946178673856,
+                    "nearest_feature": {
+                        "feature_id": 9700590,
+                        "osm_id": 739788430,
+                        "osm_type": "way",
+                        "center_latitude": 9.925543785095215,
+                        "center_longitude": 78.11470413208008
+                    }
+                },
+                "road": {
+                    "count": 9512,
+                    "nearest_distance_km": 0.03225464150848485,
+                    "nearest_feature": {
+                        "feature_id": 10669895,
+                        "osm_id": 801018005,
+                        "osm_type": "way",
+                        "center_latitude": 9.925931930541992,
+                        "center_longitude": 78.11432647705078
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 7,
+                    "nearest_distance_km": 2.426640884376402,
+                    "nearest_feature": {
+                        "feature_id": 937708,
+                        "osm_id": 309568329,
+                        "osm_type": "way",
+                        "center_latitude": 9.904412269592285,
+                        "center_longitude": 78.11642074584961
+                    }
+                },
+                "substation": {
+                    "count": 7,
+                    "nearest_distance_km": 1.5088957139064736,
+                    "nearest_feature": {
+                        "feature_id": 26536077,
+                        "osm_id": 1467375229,
+                        "osm_type": "way",
+                        "center_latitude": 9.916146755218506,
+                        "center_longitude": 78.10475158691406
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.03225464150848485,
+                "nearest_power_infrastructure_distance_km": 2.426640884376402,
+                "nearest_substation_distance_km": 1.5088957139064736
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\madurai",
+                "file": "datasets\\openstreetmap\\processed\\madurai\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 2.3872
+            },
+            "status": "success",
+            "error": null
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 17.5,
+        "terrain_score": 20,
+        "sentinel_score": 13.05,
+        "osm_score": 10.0,
+        "category_scores": {
+            "renewable_resource": 80.0,
+            "terrain": 70.0,
+            "infrastructure": 66.67,
+            "environmental": 87.0,
+            "economic": 51.0
+        },
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 83.05,
+        "normalized_score": 83.05,
+        "recommendation": "SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 17.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "SUCCESS",
+                "score": 13.05,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 10.0,
+                "weight": 15
+            }
+        }
+    }
+}

@@ -1,0 +1,466 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-08-02T09:25:34",
+    "site_information": {
+        "requested_location": "Tiruvarur",
+        "resolved_location": "Tiruvarur - Kodavasal - Kumbakonam Road, Nachiyarkoil, Kumbakonam, Thanjavur, Tamil Nadu, 612602, India",
+        "latitude": 10.9177708,
+        "longitude": 79.4448962,
+        "country": "India",
+        "state": "612602",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Tiruvarur",
+                "resolved_location": "Tiruvarur - Kodavasal - Kumbakonam Road, Nachiyarkoil, Kumbakonam, Thanjavur, Tamil Nadu, 612602, India",
+                "latitude": 10.9177708,
+                "longitude": 79.4448962
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 11.0,
+                "longitude": 79.5,
+                "distance_from_location_km": 10.944857695796822
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.401,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 28.22,
+                "maximum_c": 42.45,
+                "minimum_c": 16.34,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 70.7,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.77,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.06,
+                "wind_speed_50m_ms": 5.71,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.10312962532043457,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\tiruvarur\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Tiruvarur",
+                "resolved_location": "Tiruvarur - Kodavasal - Kumbakonam Road, Nachiyarkoil, Kumbakonam, Thanjavur, Tamil Nadu, 612602, India",
+                "latitude": 10.9177708,
+                "longitude": 79.4448962
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.3948962,
+                "south": 10.867770799999999,
+                "east": 79.4948962,
+                "north": 10.9677708
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.925975799560547,
+                "maximum_ms": 6.265472888946533,
+                "mean_ms": 6.1108012199401855,
+                "median_ms": 6.116943836212158,
+                "standard_deviation_ms": 0.06703079491853714
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 123,
+                    "percentage": 7.6875
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 1477,
+                    "percentage": 92.3125
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.35199856758117676,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\tiruvarur\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\tiruvarur\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Tiruvarur",
+                "resolved_location": "Tiruvarur - Kodavasal - Kumbakonam Road, Nachiyarkoil, Kumbakonam, Thanjavur, Tamil Nadu, 612602, India",
+                "latitude": 10.9177708,
+                "longitude": 79.4448962
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.3948962,
+                "south": 10.867770799999999,
+                "east": 79.4948962,
+                "north": 10.9677708
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.36253048912863,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 13.0,
+                "maximum_m": 38.0,
+                "mean_m": 23.026064814814816,
+                "median_m": 23.0,
+                "standard_deviation_m": 3.444177804481856
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 12.415548991128956,
+                "mean_degrees": 2.162713457341428,
+                "median_degrees": 2.0895190488787314,
+                "standard_deviation_degrees": 1.364697351004344
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 104777,
+                    "percentage": 81.29747596620138
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 23838,
+                    "percentage": 18.496132090843492
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 266,
+                    "percentage": 0.20639194295512917
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.79360805704486,
+                "moderate_terrain_percentage": 0.20639194295512917,
+                "steep_terrain_percentage": 0.0
+            },
+            "processing": {
+                "processing_time_seconds": 3.6096701622009277,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\tiruvarur\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\tiruvarur\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\tiruvarur\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Tiruvarur",
+            "total_pixels": 1224300,
+            "valid_pixels": 1209164,
+            "invalid_pixels": 15136,
+            "valid_percentage": 98.76370170709792,
+            "ndvi_statistics": {
+                "minimum": -1.0,
+                "maximum": 1.0,
+                "mean": 0.37274104356765747,
+                "median": 0.3820297420024872,
+                "standard_deviation": 0.1709555983543396
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.5617837905883789,
+                "mean": 0.1624947339296341,
+                "median": 0.17757809162139893,
+                "standard_deviation": 0.10715649276971817
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 15136,
+                    "percentage": 1.2362982929020665
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 1192,
+                    "percentage": 0.09736175773911623
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 877044,
+                    "percentage": 71.63636363636363
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 254408,
+                    "percentage": 20.77987421383648
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 744,
+                    "percentage": 0.060769419259985295
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 75776,
+                    "percentage": 6.189332679898717
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "TIRUVARUR",
+                "resolved_location": "Tiruvarur - Kodavasal - Kumbakonam Road, Nachiyarkoil, Kumbakonam, Thanjavur, Tamil Nadu, 612602, India",
+                "latitude": 10.9177708,
+                "longitude": 79.4448962
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.39915268434058,
+                    "south": 10.872855241250448,
+                    "east": 79.49063971565943,
+                    "north": 10.96268635874955
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.21361947059631348,
+                "bounding_box_matches": 2449,
+                "features_inside_radius": 1666
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 267,
+                    "nearest_distance_km": 0.058920770686393543,
+                    "nearest_feature": {
+                        "feature_id": 12154506,
+                        "osm_id": 839388841,
+                        "osm_type": "way",
+                        "center_latitude": 10.917263507843018,
+                        "center_longitude": 79.44474029541016
+                    }
+                },
+                "road": {
+                    "count": 1398,
+                    "nearest_distance_km": 0.04650650633275098,
+                    "nearest_feature": {
+                        "feature_id": 1815897,
+                        "osm_id": 350057400,
+                        "osm_type": "way",
+                        "center_latitude": 10.918128490447998,
+                        "center_longitude": 79.44467544555664
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 1,
+                    "nearest_distance_km": 4.117790765890397,
+                    "nearest_feature": {
+                        "feature_id": 1079747,
+                        "osm_id": 341599827,
+                        "osm_type": "way",
+                        "center_latitude": 10.954663276672363,
+                        "center_longitude": 79.44162368774414
+                    }
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": false,
+                "nearest_road_distance_km": 0.04650650633275098,
+                "nearest_power_infrastructure_distance_km": 4.117790765890397,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\tiruvarur",
+                "file": "datasets\\openstreetmap\\processed\\tiruvarur\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 1.0783
+            },
+            "status": "success",
+            "error": null
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 22.5,
+        "terrain_score": 20,
+        "sentinel_score": 12.75,
+        "osm_score": 9.0,
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 86.75,
+        "normalized_score": 86.75,
+        "recommendation": "HIGHLY SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "SUCCESS",
+                "score": 12.75,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 9.0,
+                "weight": 15
+            }
+        }
+    }
+}

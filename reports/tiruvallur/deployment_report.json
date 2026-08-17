@@ -1,0 +1,428 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-29T14:38:00",
+    "site_information": {
+        "requested_location": "tiruvallur",
+        "resolved_location": "Tiruvallur, Thiruvallur, Tamil Nadu, 602001, India",
+        "latitude": 13.1394221,
+        "longitude": 79.9070839,
+        "country": "India",
+        "state": "602001",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "tiruvallur",
+                "resolved_location": "Tiruvallur, Thiruvallur, Tamil Nadu, 602001, India",
+                "latitude": 13.1394221,
+                "longitude": 79.9070839
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 13.0,
+                "longitude": 80.0,
+                "distance_from_location_km": 18.483293900547757
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.2224,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 27.95,
+                "maximum_c": 42.7,
+                "minimum_c": 17.24,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 72.39,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 3.43,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 4.0,
+                "wind_speed_50m_ms": 5.29,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.1735849380493164,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\tiruvallur\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "tiruvallur",
+                "resolved_location": "Tiruvallur, Thiruvallur, Tamil Nadu, 602001, India",
+                "latitude": 13.1394221,
+                "longitude": 79.9070839
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.8570839,
+                "south": 13.0894221,
+                "east": 79.9570839,
+                "north": 13.189422100000002
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.14602518081665,
+                "maximum_ms": 5.507863521575928,
+                "mean_ms": 5.333620548248291,
+                "median_ms": 5.335888385772705,
+                "standard_deviation_ms": 0.05961769074201584
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.6464290618896484,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\tiruvallur\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\tiruvallur\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "tiruvallur",
+                "resolved_location": "Tiruvallur, Thiruvallur, Tamil Nadu, 602001, India",
+                "latitude": 13.1394221,
+                "longitude": 79.9070839
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S12.5_N14.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.8570839,
+                "south": 13.0894221,
+                "east": 79.9570839,
+                "north": 13.189422100000002
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.11267196156835,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 28.0,
+                "maximum_m": 66.0,
+                "mean_m": 41.9358024691358,
+                "median_m": 41.0,
+                "standard_deviation_m": 4.857007693916012
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 18.284240177362996,
+                "mean_degrees": 2.172237597667019,
+                "median_degrees": 2.093059564527764,
+                "standard_deviation_degrees": 1.326727247679421
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 105447,
+                    "percentage": 81.8173353713891
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 23183,
+                    "percentage": 17.987911329055486
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 247,
+                    "percentage": 0.19164966131547706
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 4,
+                    "percentage": 0.0031036382399267544
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.8052467004446,
+                "moderate_terrain_percentage": 0.19164966131547706,
+                "steep_terrain_percentage": 0.0031036382399267544
+            },
+            "processing": {
+                "processing_time_seconds": 3.2116286754608154,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\tiruvallur\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\tiruvallur\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\tiruvallur\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "tiruvallur",
+            "total_pixels": 1212080,
+            "valid_pixels": 1198984,
+            "invalid_pixels": 13096,
+            "valid_percentage": 98.91954326447099,
+            "ndvi_statistics": {
+                "minimum": -0.2407732903957367,
+                "maximum": 0.6810224652290344,
+                "mean": 0.24718259274959564,
+                "median": 0.2558390498161316,
+                "standard_deviation": 0.14846380054950714
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4919254779815674,
+                "mean": 0.018802598118782043,
+                "median": 0.004149377811700106,
+                "standard_deviation": 0.11447048932313919
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 13096,
+                    "percentage": 1.080456735529008
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 72,
+                    "percentage": 0.005940201966866874
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 391264,
+                    "percentage": 32.28037753283612
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 655600,
+                    "percentage": 54.088839020526706
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 88132,
+                    "percentage": 7.271137218665434
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 63916,
+                    "percentage": 5.273249290475876
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "TIRUVALLUR",
+                "resolved_location": "Tiruvallur, Thiruvallur, Tamil Nadu, 602001, India",
+                "latitude": 13.1394221,
+                "longitude": 79.9070839
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.86096082959756,
+                    "south": 13.09450654125045,
+                    "east": 79.95320697040245,
+                    "north": 13.184337658749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.2255082130432129,
+                "bounding_box_matches": 3272,
+                "features_inside_radius": 3075
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 285,
+                    "nearest_distance_km": 0.023104054471872085,
+                    "nearest_feature": {
+                        "feature_id": 24110593,
+                        "osm_id": 1315314014,
+                        "osm_type": "way",
+                        "center_latitude": 13.139623641967773,
+                        "center_longitude": 79.90703201293945
+                    }
+                },
+                "road": {
+                    "count": 2652,
+                    "nearest_distance_km": 0.027889036243038356,
+                    "nearest_feature": {
+                        "feature_id": 18123991,
+                        "osm_id": 1078465443,
+                        "osm_type": "way",
+                        "center_latitude": 13.139376640319824,
+                        "center_longitude": 79.9073371887207
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 137,
+                    "nearest_distance_km": 0.06783351129389635,
+                    "nearest_feature": {
+                        "feature_id": 24112967,
+                        "osm_id": 1315434637,
+                        "osm_type": "way",
+                        "center_latitude": 13.138942241668701,
+                        "center_longitude": 79.907470703125
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 3.2359095640148205,
+                    "nearest_feature": {
+                        "feature_id": 719444,
+                        "osm_id": 247337873,
+                        "osm_type": "way",
+                        "center_latitude": 13.110367774963379,
+                        "center_longitude": 79.90877914428711
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.027889036243038356,
+                "nearest_power_infrastructure_distance_km": 0.06783351129389635,
+                "nearest_substation_distance_km": 3.2359095640148205
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\tiruvallur",
+                "file": "datasets\\openstreetmap\\processed\\tiruvallur\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4849
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

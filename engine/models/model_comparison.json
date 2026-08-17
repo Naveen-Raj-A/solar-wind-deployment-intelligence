@@ -1,0 +1,66 @@
+{
+  "data_source": "NASA POWER Daily API",
+  "target": "solar_radiation_kwh_m2_day",
+  "features": [
+    "year",
+    "month",
+    "day",
+    "day_of_year",
+    "week_number",
+    "wind_speed_ms"
+  ],
+  "latitude": 13.0827,
+  "longitude": 80.2707,
+  "total_records": 289,
+  "split": {
+    "training_percent": 70,
+    "validation_percent": 15,
+    "testing_percent": 15,
+    "strategy": "chronological",
+    "reason": "The data is time-series data, so chronological splitting prevents future observations from leaking into training.",
+    "training_records": 202,
+    "validation_records": 43,
+    "testing_records": 44
+  },
+  "models": {
+    "Decision Tree": {
+      "metrics": {
+        "train_mae": 0.4096,
+        "train_rmse": 0.582,
+        "train_r2": 0.8144,
+        "validation_mae": 1.4996,
+        "validation_rmse": 1.8106,
+        "validation_r2": -5.4228
+      },
+      "behavior": "Overfitting",
+      "test_metrics": null
+    },
+    "Random Forest": {
+      "metrics": {
+        "train_mae": 0.3738,
+        "train_rmse": 0.5149,
+        "train_r2": 0.8547,
+        "validation_mae": 1.0031,
+        "validation_rmse": 1.1597,
+        "validation_r2": -1.6352
+      },
+      "behavior": "Overfitting",
+      "test_metrics": {
+        "mae": 1.3122,
+        "rmse": 1.6427,
+        "r2": -1.8726
+      }
+    }
+  },
+  "best_model": "Random Forest",
+  "selection_metric": "validation_rmse",
+  "best_model_path": "C:\\Users\\anuma\\Downloads\\INFOSYS\\solar-wind-deployment-intelligence\\engine\\models\\best_solar_model.joblib",
+  "test_evaluation": {
+    "model": "Random Forest",
+    "metrics": {
+      "mae": 1.3122,
+      "rmse": 1.6427,
+      "r2": -1.8726
+    }
+  }
+}

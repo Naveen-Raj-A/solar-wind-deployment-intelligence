@@ -1,0 +1,418 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-29T12:22:45",
+    "site_information": {
+        "requested_location": "Jodhpur",
+        "resolved_location": "Jodhpur, Jodhpur Tehsil, Jodhpur, Rajasthan, India",
+        "latitude": 26.2967719,
+        "longitude": 73.0351433,
+        "country": "India",
+        "state": "Rajasthan",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Jodhpur",
+                "resolved_location": "Jodhpur, Jodhpur Tehsil, Jodhpur, Rajasthan, India",
+                "latitude": 26.2967719,
+                "longitude": 73.0351433
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 26.5,
+                "longitude": 73.0,
+                "distance_from_location_km": 22.86744271419522
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.6611,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 26.58,
+                "maximum_c": 47.65,
+                "minimum_c": 1.67,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 38.27,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 0.97,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.58,
+                "wind_speed_50m_ms": 5.16,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.18390798568725586,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\jodhpur\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Jodhpur",
+                "resolved_location": "Jodhpur, Jodhpur Tehsil, Jodhpur, Rajasthan, India",
+                "latitude": 26.2967719,
+                "longitude": 73.0351433
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 72.9851433,
+                "south": 26.2467719,
+                "east": 73.0851433,
+                "north": 26.3467719
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.396422863006592,
+                "maximum_ms": 6.727111339569092,
+                "mean_ms": 5.738632678985596,
+                "median_ms": 5.665764808654785,
+                "standard_deviation_ms": 0.22862711548805237
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1348,
+                    "percentage": 84.25
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 252,
+                    "percentage": 15.75
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.49852585792541504,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\jodhpur\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\jodhpur\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Jodhpur",
+                "resolved_location": "Jodhpur, Jodhpur Tehsil, Jodhpur, Rajasthan, India",
+                "latitude": 26.2967719,
+                "longitude": 73.0351433
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S24.5_N26.5_W72.0_E74.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 72.9851433,
+                "south": 26.2467719,
+                "east": 73.0851433,
+                "north": 26.3467719
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 27.72212448888723,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 191.0,
+                "maximum_m": 371.0,
+                "mean_m": 247.3513425925926,
+                "median_m": 240.0,
+                "standard_deviation_m": 29.094183740370394
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 47.42104343108391,
+                "mean_degrees": 3.0623927734004472,
+                "median_degrees": 2.131531873654415,
+                "standard_deviation_degrees": 3.1401804090463017
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 88084,
+                    "percentage": 68.34521768142704
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 32220,
+                    "percentage": 24.999806022610006
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 6892,
+                    "percentage": 5.347568687393797
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 1685,
+                    "percentage": 1.3074076085691453
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 93.34502370403705,
+                "moderate_terrain_percentage": 5.347568687393797,
+                "steep_terrain_percentage": 1.3074076085691453
+            },
+            "processing": {
+                "processing_time_seconds": 6.503131866455078,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\jodhpur\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\jodhpur\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\jodhpur\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Jodhpur",
+            "total_pixels": 1002608,
+            "valid_pixels": 978224,
+            "invalid_pixels": 24384,
+            "valid_percentage": 97.56794280516414,
+            "ndvi_statistics": {
+                "minimum": -0.15321670472621918,
+                "maximum": 0.7022669315338135,
+                "mean": 0.15201309323310852,
+                "median": 0.11905800551176071,
+                "standard_deviation": 0.1261557638645172
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.3457774221897125,
+                "mean": -0.03261229395866394,
+                "median": -0.04056517779827118,
+                "standard_deviation": 0.07048743963241577
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 24384,
+                    "percentage": 2.432057194835868
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 31208,
+                    "percentage": 3.1126821250179533
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 946140,
+                    "percentage": 94.36788854667029
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 876,
+                    "percentage": 0.08737213347589487
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "JODHPUR",
+                "resolved_location": "Jodhpur, Jodhpur Tehsil, Jodhpur, Rajasthan, India",
+                "latitude": 26.2967719,
+                "longitude": 73.0351433
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 72.98504292297277,
+                    "south": 26.25185634125045,
+                    "east": 73.08524367702724,
+                    "north": 26.34168745874955
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.7757031917572021,
+                "bounding_box_matches": 59839,
+                "features_inside_radius": 51134
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 42135,
+                    "nearest_distance_km": 0.057604501933534065,
+                    "nearest_feature": {
+                        "feature_id": 19881293,
+                        "osm_id": 1134603154,
+                        "osm_type": "way",
+                        "center_latitude": 26.296387672424316,
+                        "center_longitude": 73.03475570678711
+                    }
+                },
+                "road": {
+                    "count": 8992,
+                    "nearest_distance_km": 0.07048459263836288,
+                    "nearest_feature": {
+                        "feature_id": 17361983,
+                        "osm_id": 1047615534,
+                        "osm_type": "way",
+                        "center_latitude": 26.296966552734375,
+                        "center_longitude": 73.03581619262695
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 2,
+                    "nearest_distance_km": 1.010306711694256,
+                    "nearest_feature": {
+                        "feature_id": 16701,
+                        "osm_id": 3616991128,
+                        "osm_type": "node",
+                        "center_latitude": 26.28769302368164,
+                        "center_longitude": 73.03554153442383
+                    }
+                },
+                "substation": {
+                    "count": 5,
+                    "nearest_distance_km": 0.3363136383520285,
+                    "nearest_feature": {
+                        "feature_id": 26481392,
+                        "osm_id": 1462041764,
+                        "osm_type": "way",
+                        "center_latitude": 26.293821334838867,
+                        "center_longitude": 73.03588485717773
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.07048459263836288,
+                "nearest_power_infrastructure_distance_km": 1.010306711694256,
+                "nearest_substation_distance_km": 0.3363136383520285
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\jodhpur",
+                "file": "datasets\\openstreetmap\\processed\\jodhpur\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 1.3581
+            },
+            "status": "success",
+            "error": null
+        }
+    }
+}

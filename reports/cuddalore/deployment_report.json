@@ -1,0 +1,472 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-31T15:53:24",
+    "site_information": {
+        "requested_location": "Cuddalore",
+        "resolved_location": "Cuddalore, Tamil Nadu, India",
+        "latitude": 11.5202071,
+        "longitude": 79.3396356,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "Cuddalore",
+                "resolved_location": "Cuddalore, Tamil Nadu, India",
+                "latitude": 11.5202071,
+                "longitude": 79.3396356
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 11.5,
+                "longitude": 79.5,
+                "distance_from_location_km": 17.617005435056488
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.401,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 28.12,
+                "maximum_c": 42.9,
+                "minimum_c": 15.97,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 70.55,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.86,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.86,
+                "wind_speed_50m_ms": 5.46,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.17587614059448242,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\cuddalore\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "Cuddalore",
+                "resolved_location": "Cuddalore, Tamil Nadu, India",
+                "latitude": 11.5202071,
+                "longitude": 79.3396356
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.2896356,
+                "south": 11.4702071,
+                "east": 79.38963559999999,
+                "north": 11.570207100000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 5.368662357330322,
+                "maximum_ms": 5.785403251647949,
+                "mean_ms": 5.533115863800049,
+                "median_ms": 5.518882751464844,
+                "standard_deviation_ms": 0.07601191848516464
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1600,
+                    "percentage": 100.0
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.5977411270141602,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\cuddalore\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\cuddalore\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "Cuddalore",
+                "resolved_location": "Cuddalore, Tamil Nadu, India",
+                "latitude": 11.5202071,
+                "longitude": 79.3396356
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S10.5_N12.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.2896356,
+                "south": 11.4702071,
+                "east": 79.38963559999999,
+                "north": 11.570207100000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.299273353464745,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 21.0,
+                "maximum_m": 89.0,
+                "mean_m": 46.95597222222222,
+                "median_m": 41.0,
+                "standard_deviation_m": 15.579245051336692
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 18.37637505084184,
+                "mean_degrees": 2.053406027766325,
+                "median_degrees": 1.890309015159932,
+                "standard_deviation_degrees": 1.2207789836558371
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 109354,
+                    "percentage": 84.84881402223758
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 19357,
+                    "percentage": 15.019281352565544
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 164,
+                    "percentage": 0.12724916783699694
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 6,
+                    "percentage": 0.004655457359890131
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 99.86809537480312,
+                "moderate_terrain_percentage": 0.12724916783699694,
+                "steep_terrain_percentage": 0.004655457359890131
+            },
+            "processing": {
+                "processing_time_seconds": 7.176948547363281,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\cuddalore\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\cuddalore\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\cuddalore\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Cuddalore",
+            "total_pixels": 1223187,
+            "valid_pixels": 1206680,
+            "invalid_pixels": 16507,
+            "valid_percentage": 98.65049252485515,
+            "ndvi_statistics": {
+                "minimum": -1.0,
+                "maximum": 1.0,
+                "mean": 0.36453646421432495,
+                "median": 0.3843364715576172,
+                "standard_deviation": 0.1659485101699829
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.529411792755127,
+                "mean": 0.12171047180891037,
+                "median": 0.13879209756851196,
+                "standard_deviation": 0.11662457883358002
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 16507,
+                    "percentage": 1.349507475144847
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 152,
+                    "percentage": 0.012426554566063897
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 847760,
+                    "percentage": 69.30747301925216
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 298588,
+                    "percentage": 24.41065838665715
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 2692,
+                    "percentage": 0.22008082165686846
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 57488,
+                    "percentage": 4.699853742722904
+                }
+            },
+            "status": "success",
+            "error": null
+        },
+        "osm": {
+            "location": {
+                "requested_location": "CUDDALORE",
+                "resolved_location": "Cuddalore, Tamil Nadu, India",
+                "latitude": 11.5202071,
+                "longitude": 79.3396356
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.29379658357585,
+                    "south": 11.47529154125045,
+                    "east": 79.38547461642413,
+                    "north": 11.565122658749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.11105608940124512,
+                "bounding_box_matches": 2121,
+                "features_inside_radius": 1910
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 747,
+                    "nearest_distance_km": 0.052145172627197735,
+                    "nearest_feature": {
+                        "feature_id": 27384825,
+                        "osm_id": 1537173083,
+                        "osm_type": "way",
+                        "center_latitude": 11.519999027252197,
+                        "center_longitude": 79.33920669555664
+                    }
+                },
+                "road": {
+                    "count": 1158,
+                    "nearest_distance_km": 0.0833062594157949,
+                    "nearest_feature": {
+                        "feature_id": 25476770,
+                        "osm_id": 1375353312,
+                        "osm_type": "way",
+                        "center_latitude": 11.519550323486328,
+                        "center_longitude": 79.33926773071289
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 3,
+                    "nearest_distance_km": 0.9690440187451732,
+                    "nearest_feature": {
+                        "feature_id": 1071226,
+                        "osm_id": 340746386,
+                        "osm_type": "way",
+                        "center_latitude": 11.511554718017578,
+                        "center_longitude": 79.3406982421875
+                    }
+                },
+                "substation": {
+                    "count": 2,
+                    "nearest_distance_km": 1.1128971416359417,
+                    "nearest_feature": {
+                        "feature_id": 1071229,
+                        "osm_id": 340746389,
+                        "osm_type": "way",
+                        "center_latitude": 11.510263919830322,
+                        "center_longitude": 79.33847045898438
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.0833062594157949,
+                "nearest_power_infrastructure_distance_km": 0.9690440187451732,
+                "nearest_substation_distance_km": 1.1128971416359417
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\cuddalore",
+                "file": "datasets\\openstreetmap\\processed\\cuddalore\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.8929
+            },
+            "status": "success",
+            "error": null
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 17.5,
+        "terrain_score": 20,
+        "sentinel_score": 12.75,
+        "osm_score": 13.0,
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 85.75,
+        "normalized_score": 85.75,
+        "recommendation": "HIGHLY SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 17.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "SUCCESS",
+                "score": 12.75,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 13.0,
+                "weight": 15
+            }
+        }
+    }
+}

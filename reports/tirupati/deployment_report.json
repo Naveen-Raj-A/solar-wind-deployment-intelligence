@@ -1,0 +1,423 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-07-24T19:56:12",
+    "site_information": {
+        "requested_location": "tirupati",
+        "resolved_location": "Tirupati, Tirupati (Urban), Tirupati, Andhra Pradesh, 517500, India",
+        "latitude": 13.6316368,
+        "longitude": 79.4231711,
+        "country": "India",
+        "state": "517500",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "tirupati",
+                "resolved_location": "Tirupati, Tirupati (Urban), Tirupati, Andhra Pradesh, 517500, India",
+                "latitude": 13.6316368,
+                "longitude": 79.4231711
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 13.5,
+                "longitude": 79.5,
+                "distance_from_location_km": 16.829132744815936
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.3364,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 26.63,
+                "maximum_c": 44.66,
+                "minimum_c": 11.97,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 69.3,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.7,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.48,
+                "wind_speed_50m_ms": 5.0,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.12697672843933105,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\tirupati\\nasa_power_analysis_summary.json"
+            }
+        },
+        "wind": {
+            "location": {
+                "requested_location": "tirupati",
+                "resolved_location": "Tirupati, Tirupati (Urban), Tirupati, Andhra Pradesh, 517500, India",
+                "latitude": 13.6316368,
+                "longitude": 79.4231711
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.37317110000001,
+                "south": 13.5816368,
+                "east": 79.4731711,
+                "north": 13.681636800000001
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 4.1423444747924805,
+                "maximum_ms": 8.246071815490723,
+                "mean_ms": 5.199505805969238,
+                "median_ms": 5.04173469543457,
+                "standard_deviation_ms": 0.7056902647018433
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1391,
+                    "percentage": 86.9375
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 206,
+                    "percentage": 12.875
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 3,
+                    "percentage": 0.1875
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.28939008712768555,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\tirupati\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\tirupati\\wind_analysis_summary.json"
+            }
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "tirupati",
+                "resolved_location": "Tirupati, Tirupati (Urban), Tirupati, Andhra Pradesh, 517500, India",
+                "latitude": 13.6316368,
+                "longitude": 79.4231711
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S12.5_N14.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.37317110000001,
+                "south": 13.5816368,
+                "east": 79.4731711,
+                "north": 13.681636800000001
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.051174603930956,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 121.0,
+                "maximum_m": 832.0,
+                "mean_m": 250.68279320987654,
+                "median_m": 160.0,
+                "standard_deviation_m": 179.0481581285745
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 75.32329748355679,
+                "mean_degrees": 6.175998386036144,
+                "median_degrees": 2.1215472578153762,
+                "standard_deviation_degrees": 8.564653417858306
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 77036,
+                    "percentage": 59.77296886274935
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 21733,
+                    "percentage": 16.862842467082036
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 12912,
+                    "percentage": 10.018544238483562
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 17200,
+                    "percentage": 13.345644431685042
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "SUITABLE",
+                "favorable_terrain_percentage": 76.63581132983138,
+                "moderate_terrain_percentage": 10.018544238483562,
+                "steep_terrain_percentage": 13.345644431685042
+            },
+            "processing": {
+                "processing_time_seconds": 2.8535139560699463,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\tirupati\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\tirupati\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\tirupati\\srtm_analysis_summary.json"
+            }
+        },
+        "sentinel": {
+            "location": "tirupati",
+            "total_pixels": 1214260,
+            "valid_pixels": 230912,
+            "invalid_pixels": 983348,
+            "valid_percentage": 19.016685059213017,
+            "ndvi_statistics": {
+                "minimum": -0.2909388542175293,
+                "maximum": 1.0,
+                "mean": 0.22386431694030762,
+                "median": 0.1993516981601715,
+                "standard_deviation": 0.1328592151403427
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.4300749599933624,
+                "mean": -0.034915875643491745,
+                "median": -0.04950612783432007,
+                "standard_deviation": 0.10011649131774902
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 983088,
+                    "percentage": 80.9619027226459
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 47548,
+                    "percentage": 3.915800569894421
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 172156,
+                    "percentage": 14.177853178067302
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 3220,
+                    "percentage": 0.26518208620888445
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 7988,
+                    "percentage": 0.6578492250424127
+                },
+                "8": {
+                    "class_name": "Cloud Medium Probability",
+                    "pixel_count": 172,
+                    "percentage": 0.014165005847182648
+                },
+                "9": {
+                    "class_name": "Cloud High Probability",
+                    "pixel_count": 88,
+                    "percentage": 0.0072472122939074
+                }
+            }
+        },
+        "osm": {
+            "location": {
+                "requested_location": "TIRUPATI",
+                "resolved_location": "Tirupati, Tirupati (Urban), Tirupati, Andhra Pradesh, 517500, India",
+                "latitude": 13.6316368,
+                "longitude": 79.4231711
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.37695364237332,
+                    "south": 13.58672124125045,
+                    "east": 79.46938855762669,
+                    "north": 13.676552358749552
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.19927096366882324,
+                "bounding_box_matches": 7027,
+                "features_inside_radius": 6415
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 922,
+                    "nearest_distance_km": 0.12353644833655665,
+                    "nearest_feature": {
+                        "feature_id": 12047975,
+                        "osm_id": 836459606,
+                        "osm_type": "way",
+                        "center_latitude": 13.631353378295898,
+                        "center_longitude": 79.42206573486328
+                    }
+                },
+                "road": {
+                    "count": 5490,
+                    "nearest_distance_km": 0.060171442460278945,
+                    "nearest_feature": {
+                        "feature_id": 16280821,
+                        "osm_id": 996573668,
+                        "osm_type": "way",
+                        "center_latitude": 13.631861686706543,
+                        "center_longitude": 79.42266464233398
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 2,
+                    "nearest_distance_km": 2.975011115929628,
+                    "nearest_feature": {
+                        "feature_id": 716146,
+                        "osm_id": 245504464,
+                        "osm_type": "way",
+                        "center_latitude": 13.606704235076904,
+                        "center_longitude": 79.4131851196289
+                    }
+                },
+                "substation": {
+                    "count": 1,
+                    "nearest_distance_km": 1.5525973055802078,
+                    "nearest_feature": {
+                        "feature_id": 716149,
+                        "osm_id": 245504467,
+                        "osm_type": "way",
+                        "center_latitude": 13.619869232177734,
+                        "center_longitude": 79.43090438842773
+                    }
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": true,
+                "nearest_road_distance_km": 0.060171442460278945,
+                "nearest_power_infrastructure_distance_km": 2.975011115929628,
+                "nearest_substation_distance_km": 1.5525973055802078
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\tirupati",
+                "file": "datasets\\openstreetmap\\processed\\tirupati\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.4547
+            }
+        }
+    }
+}

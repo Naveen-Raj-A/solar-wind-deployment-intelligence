@@ -1,0 +1,482 @@
+{
+    "project": "Solar Wind Deployment Intelligence",
+    "generated_at": "2026-08-17T09:14:13",
+    "site_information": {
+        "requested_location": "vellore",
+        "resolved_location": "Vellore, Tamil Nadu, India",
+        "latitude": 12.9021849,
+        "longitude": 79.061104,
+        "country": "India",
+        "state": "Tamil Nadu",
+        "source": "Nominatim"
+    },
+    "datasets": {
+        "nasa_power": {
+            "location": {
+                "requested_location": "vellore",
+                "resolved_location": "Vellore, Tamil Nadu, India",
+                "latitude": 12.9021849,
+                "longitude": 79.061104
+            },
+            "dataset": {
+                "input_file": "datasets\\nasa_power\\raw\\nasa_power_india_climatology.csv",
+                "total_records": 1149,
+                "valid_coordinate_records": 1149,
+                "invalid_coordinate_records": 0
+            },
+            "nearest_grid_point": {
+                "latitude": 13.0,
+                "longitude": 79.0,
+                "distance_from_location_km": 12.733633157468121
+            },
+            "solar_resource": {
+                "solar_radiation_kwh_m2_day": 5.3364,
+                "classification": "GOOD",
+                "india_dataset_statistics": {
+                    "minimum": 3.4769,
+                    "maximum": 5.7706,
+                    "mean": 5.063933942558747,
+                    "median": 5.1312,
+                    "standard_deviation": 0.40517868369825016
+                }
+            },
+            "temperature": {
+                "mean_c": 25.37,
+                "maximum_c": 43.06,
+                "minimum_c": 10.14,
+                "india_dataset_statistics": {
+                    "minimum": -13.37,
+                    "maximum": 28.39,
+                    "mean": 23.013942558746734,
+                    "median": 25.79,
+                    "standard_deviation": 8.279315667379288
+                }
+            },
+            "relative_humidity": {
+                "percentage": 68.99,
+                "india_dataset_statistics": {
+                    "minimum": 31.11,
+                    "maximum": 84.53,
+                    "mean": 58.45863359442994,
+                    "median": 57.26,
+                    "standard_deviation": 11.520940028596163
+                }
+            },
+            "precipitation": {
+                "mm_per_day": 2.43,
+                "india_dataset_statistics": {
+                    "minimum": 0.2,
+                    "maximum": 9.89,
+                    "mean": 2.8480591818973022,
+                    "median": 2.59,
+                    "standard_deviation": 1.474547790123257
+                }
+            },
+            "wind_resource": {
+                "wind_speed_10m_ms": 3.77,
+                "wind_speed_50m_ms": 5.33,
+                "classification_50m": "MODERATE",
+                "wind_10m_india_statistics": {
+                    "minimum": 0.96,
+                    "maximum": 5.34,
+                    "mean": 3.1287728459530024,
+                    "median": 3.04,
+                    "standard_deviation": 0.7640458304850768
+                },
+                "wind_50m_india_statistics": {
+                    "minimum": 1.33,
+                    "maximum": 6.9,
+                    "mean": 4.436170583115753,
+                    "median": 4.49,
+                    "standard_deviation": 1.051644967245556
+                }
+            },
+            "processing": {
+                "processing_time_seconds": 0.12788748741149902,
+                "output_saved": true,
+                "output_valid": true,
+                "output_file": "datasets\\nasa_power\\processed\\vellore\\nasa_power_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "wind": {
+            "location": {
+                "requested_location": "vellore",
+                "resolved_location": "Vellore, Tamil Nadu, India",
+                "latitude": 12.9021849,
+                "longitude": 79.061104
+            },
+            "dataset": {
+                "input_file": "datasets\\global_wind_atlas\\IND_wind-speed_150m.tif",
+                "wind_measurement_height_m": 150,
+                "aoi_buffer_degrees": 0.05,
+                "source_crs": "EPSG:4326",
+                "source_width": 12627,
+                "source_height": 11404,
+                "source_band_count": 1,
+                "source_data_type": "float32",
+                "source_nodata_value": null,
+                "source_resolution": {
+                    "x": 0.002500000000000001,
+                    "y": 0.002500000000000001
+                },
+                "source_bounds": {
+                    "left": 65.61875000000009,
+                    "bottom": 4.768749999999969,
+                    "right": 97.1862500000001,
+                    "top": 33.27874999999998
+                }
+            },
+            "aoi": {
+                "west": 79.011104,
+                "south": 12.8521849,
+                "east": 79.111104,
+                "north": 12.9521849
+            },
+            "pixel_information": {
+                "total_cells": 1681,
+                "valid_wind_cells": 1600,
+                "nodata_cells": 81,
+                "valid_percentage": 95.18143961927424
+            },
+            "wind_speed_statistics": {
+                "minimum_ms": 4.554384231567383,
+                "maximum_ms": 8.815696716308594,
+                "mean_ms": 5.060945987701416,
+                "median_ms": 5.012425899505615,
+                "standard_deviation_ms": 0.36739352345466614
+            },
+            "wind_resource_classification": {
+                "low": {
+                    "minimum_wind_speed_ms": null,
+                    "maximum_wind_speed_ms": 4.0,
+                    "cells": 0,
+                    "percentage": 0.0
+                },
+                "moderate": {
+                    "minimum_wind_speed_ms": 4.0,
+                    "maximum_wind_speed_ms": 6.0,
+                    "cells": 1573,
+                    "percentage": 98.3125
+                },
+                "good": {
+                    "minimum_wind_speed_ms": 6.0,
+                    "maximum_wind_speed_ms": 8.0,
+                    "cells": 20,
+                    "percentage": 1.25
+                },
+                "excellent": {
+                    "minimum_wind_speed_ms": 8.0,
+                    "maximum_wind_speed_ms": null,
+                    "cells": 7,
+                    "percentage": 0.43750000000000006
+                },
+                "total_classified_cells": 1600,
+                "classification_valid": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.7973434925079346,
+                "output_saved": true,
+                "wind_raster_valid": true,
+                "summary_json_valid": true,
+                "wind_raster_output_file": "datasets\\global_wind_atlas\\processed\\vellore\\wind_speed.tif",
+                "summary_output_file": "datasets\\global_wind_atlas\\processed\\vellore\\wind_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "srtm": {
+            "location": {
+                "requested_location": "vellore",
+                "resolved_location": "Vellore, Tamil Nadu, India",
+                "latitude": 12.9021849,
+                "longitude": 79.061104
+            },
+            "dataset": {
+                "raw_tile_directory": "datasets\\srtm\\raw_tiles",
+                "available_tile_count": 121,
+                "intersecting_tile_count": 1,
+                "intersecting_tiles": [
+                    "srtm_S12.5_N14.5_W78.0_E80.0.tif"
+                ],
+                "crs": "EPSG:4326",
+                "data_type": "int16",
+                "nodata_value": -32768.0,
+                "aoi_offset_degrees": 0.05
+            },
+            "aoi": {
+                "west": 79.011104,
+                "south": 12.8521849,
+                "east": 79.111104,
+                "north": 12.9521849
+            },
+            "pixel_information": {
+                "total_cells": 130321,
+                "valid_elevation_cells": 129600,
+                "nodata_cells": 721,
+                "valid_percentage": 99.44675071554086,
+                "pixel_width_meters": 30.14151898668431,
+                "pixel_height_meters": 30.71500000000407
+            },
+            "elevation_statistics": {
+                "minimum_m": 206.0,
+                "maximum_m": 793.0,
+                "mean_m": 240.10861111111112,
+                "median_m": 232.0,
+                "standard_deviation_m": 44.3387448999806
+            },
+            "slope_statistics": {
+                "minimum_degrees": 0.0,
+                "maximum_degrees": 55.78434972195067,
+                "mean_degrees": 2.8673182984828074,
+                "median_degrees": 2.0926466090979208,
+                "standard_deviation_degrees": 4.394991035935963
+            },
+            "terrain_classification": {
+                "flat": {
+                    "minimum_slope_degrees": null,
+                    "maximum_slope_degrees": 3.0,
+                    "cells": 102940,
+                    "percentage": 79.87213010451501
+                },
+                "gentle": {
+                    "minimum_slope_degrees": 3.0,
+                    "maximum_slope_degrees": 8.0,
+                    "cells": 21538,
+                    "percentage": 16.711540102885607
+                },
+                "moderate": {
+                    "minimum_slope_degrees": 8.0,
+                    "maximum_slope_degrees": 15.0,
+                    "cells": 1034,
+                    "percentage": 0.8022904850210659
+                },
+                "steep": {
+                    "minimum_slope_degrees": 15.0,
+                    "maximum_slope_degrees": null,
+                    "cells": 3369,
+                    "percentage": 2.6140393075783086
+                },
+                "total_classified_cells": 128881,
+                "classification_valid": true
+            },
+            "terrain_suitability": {
+                "suitability_class": "HIGHLY SUITABLE",
+                "favorable_terrain_percentage": 96.58367020740062,
+                "moderate_terrain_percentage": 0.8022904850210659,
+                "steep_terrain_percentage": 2.6140393075783086
+            },
+            "processing": {
+                "processing_time_seconds": 4.98428750038147,
+                "output_saved": true,
+                "elevation_raster_valid": true,
+                "slope_raster_valid": true,
+                "summary_json_valid": true,
+                "elevation_output_file": "datasets\\srtm\\processed\\vellore\\elevation.tif",
+                "slope_output_file": "datasets\\srtm\\processed\\vellore\\slope.tif",
+                "summary_output_file": "datasets\\srtm\\processed\\vellore\\srtm_analysis_summary.json"
+            },
+            "status": "success",
+            "error": null
+        },
+        "sentinel": {
+            "location": "Vellore, Tamil Nadu, India",
+            "total_pixels": 1220925,
+            "valid_pixels": 1200976,
+            "invalid_pixels": 19949,
+            "valid_percentage": 98.36607490222578,
+            "ndvi_statistics": {
+                "minimum": -0.18984420597553253,
+                "maximum": 0.669623076915741,
+                "mean": 0.25963282585144043,
+                "median": 0.25394120812416077,
+                "standard_deviation": 0.12977302074432373
+            },
+            "ndmi_statistics": {
+                "minimum": -1.0,
+                "maximum": 0.41172701120376587,
+                "mean": -0.01754230633378029,
+                "median": -0.029323335736989975,
+                "standard_deviation": 0.0927518904209137
+            },
+            "scl_statistics": {
+                "0": {
+                    "class_name": "No Data",
+                    "pixel_count": 19949,
+                    "percentage": 1.6339250977742286
+                },
+                "2": {
+                    "class_name": "Dark Area Pixels",
+                    "pixel_count": 1068,
+                    "percentage": 0.08747466060568831
+                },
+                "4": {
+                    "class_name": "Vegetation",
+                    "pixel_count": 393900,
+                    "percentage": 32.262423981817065
+                },
+                "5": {
+                    "class_name": "Bare Soil / Non-Vegetated",
+                    "pixel_count": 755532,
+                    "percentage": 61.881933779716206
+                },
+                "6": {
+                    "class_name": "Water",
+                    "pixel_count": 988,
+                    "percentage": 0.08092225157155436
+                },
+                "7": {
+                    "class_name": "Unclassified",
+                    "pixel_count": 49488,
+                    "percentage": 4.053320228515265
+                }
+            },
+            "requested_location": "vellore",
+            "resolved_location": "Vellore, Tamil Nadu, India",
+            "latitude": 12.9021849,
+            "longitude": 79.061104,
+            "bounding_box": [
+                79.011104,
+                12.8521849,
+                79.111104,
+                12.9521849
+            ],
+            "coordinate_mode": true,
+            "geocoding": "SKIPPED",
+            "status": "SUCCESS"
+        },
+        "osm": {
+            "location": {
+                "requested_location": "VELLORE",
+                "resolved_location": "Vellore, Tamil Nadu, India",
+                "latitude": 12.9021849,
+                "longitude": 79.061104
+            },
+            "aoi": {
+                "radius_km": 5.0,
+                "bounds": {
+                    "west": 79.0150250718112,
+                    "south": 12.857269341250449,
+                    "east": 79.1071829281888,
+                    "north": 12.947100458749551
+                }
+            },
+            "database": {
+                "database_file": "datasets\\openstreetmap\\processed\\india_osm_spatial.db",
+                "database_size_gb": 2.6176185607910156,
+                "spatial_query_time_seconds": 0.11987590789794922,
+                "bounding_box_matches": 1301,
+                "features_inside_radius": 1026
+            },
+            "feature_analysis": {
+                "building": {
+                    "count": 126,
+                    "nearest_distance_km": 0.85260741498078,
+                    "nearest_feature": {
+                        "feature_id": 14796629,
+                        "osm_id": 940998580,
+                        "osm_type": "way",
+                        "center_latitude": 12.90967845916748,
+                        "center_longitude": 79.06277084350586
+                    }
+                },
+                "road": {
+                    "count": 899,
+                    "nearest_distance_km": 0.5894586760567065,
+                    "nearest_feature": {
+                        "feature_id": 17603362,
+                        "osm_id": 1058733880,
+                        "osm_type": "way",
+                        "center_latitude": 12.907376766204834,
+                        "center_longitude": 79.06220245361328
+                    }
+                },
+                "power_infrastructure": {
+                    "count": 1,
+                    "nearest_distance_km": 2.034771346376742,
+                    "nearest_feature": {
+                        "feature_id": 9795731,
+                        "osm_id": 751947960,
+                        "osm_type": "way",
+                        "center_latitude": 12.889882564544678,
+                        "center_longitude": 79.04720687866211
+                    }
+                },
+                "substation": {
+                    "count": 0,
+                    "nearest_distance_km": null,
+                    "nearest_feature": null
+                }
+            },
+            "infrastructure_indicators": {
+                "building_presence": true,
+                "road_access_available": true,
+                "power_infrastructure_available": true,
+                "substation_available": false,
+                "nearest_road_distance_km": 0.5894586760567065,
+                "nearest_power_infrastructure_distance_km": 2.034771346376742,
+                "nearest_substation_distance_km": null
+            },
+            "output": {
+                "directory": "datasets\\openstreetmap\\processed\\vellore",
+                "file": "datasets\\openstreetmap\\processed\\vellore\\osm_analysis_summary.json",
+                "validated": true
+            },
+            "processing": {
+                "processing_time_seconds": 0.1898
+            }
+        }
+    },
+    "deployment_assessment": {
+        "solar_score": 22.5,
+        "wind_score": 17.5,
+        "terrain_score": 20,
+        "sentinel_score": 14.4,
+        "osm_score": 0.0,
+        "category_scores": {
+            "renewable_resource": 80.0,
+            "terrain": 70.0,
+            "infrastructure": 0.0,
+            "environmental": 96.0,
+            "economic": 27.3
+        },
+        "weights": {
+            "solar": 25,
+            "wind": 25,
+            "terrain": 20,
+            "sentinel": 15,
+            "osm": 15
+        },
+        "overall_score": 74.4,
+        "normalized_score": 74.4,
+        "recommendation": "SUITABLE",
+        "dataset_status": {
+            "solar": {
+                "status": "SUCCESS",
+                "score": 22.5,
+                "weight": 25
+            },
+            "wind": {
+                "status": "SUCCESS",
+                "score": 17.5,
+                "weight": 25
+            },
+            "terrain": {
+                "status": "SUCCESS",
+                "score": 20,
+                "weight": 20
+            },
+            "sentinel": {
+                "status": "UNAVAILABLE",
+                "score": 14.4,
+                "weight": 15
+            },
+            "osm": {
+                "status": "SUCCESS",
+                "score": 0.0,
+                "weight": 15
+            }
+        }
+    }
+}

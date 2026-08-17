@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "data": {
+    "location": {
+      "latitude": 12.9716,
+      "longitude": 77.5946,
+      "district": "Bangalore Urban",
+      "address": "Bangalore, Karnataka, India"
+    },
+    "timestamp": "2026-08-03T10:30:00Z",
+    "analysis": {
+      "nasa_power": {
+        "solar_irradiance": 5.8,
+        "temperature": 27.5,
+        "humidity": 65,
+        "wind_speed": 3.2,
+        "cloud_cover": 40,
+        "solar_suitability": 78
+      },
+      "wind": {
+        "mean_wind_speed": 4.1,
+        "max_wind_speed": 6.8,
+        "wind_class": "3",
+        "power_density": 180,
+        "elevation": 920,
+        "wind_suitability": 65
+      },
+      "terrain": {
+        "elevation": 920,
+        "slope": 8.5,
+        "aspect": 180,
+        "terrain_suitability": 82
+      },
+      "sentinel": {
+        "ndvi": 0.62,
+        "ndmi": 0.28,
+        "vegetation_index": 71,
+        "water_bodies": 2.5,
+        "built_up_area": 15.3
+      },
+      "osm": {
+        "nearest_road": "State Highway",
+        "distance_to_road": 150,
+        "buildings_count": 45,
+        "accessibility_score": 88,
+        "infrastructure_density": 120
+      }
+    },
+    "scores": {
+      "overall": 75,
+      "solar": 78,
+      "wind": 65,
+      "combined": 72,
+      "classification": "Good",
+      "recommendation": "Solar PV installation recommended with battery storage"
+    }
+  }
+}
