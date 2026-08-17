@@ -60,11 +60,10 @@ export function generatePDF(data, location = {}, mapImage = null) {
     data.financial_analysis || {};
 
   const formatMoney = (value) => {
-    return new Intl.NumberFormat("en-IN", {
-      style: "currency",
-      currency: "INR",
+    const amount = Number(value || 0).toLocaleString('en-IN', {
       maximumFractionDigits: 0,
-    }).format(Number(value || 0));
+    });
+    return `INR ${amount}`;
   };
 
   let y = 20;
