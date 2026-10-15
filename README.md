@@ -226,7 +226,7 @@ you plan to distribute it publicly.
 
 ## Author
 
-Developed by **Monesh**
+Developed by **NAVEEN RAJ A**
 
 ------------------------------------------------------------------------
 
